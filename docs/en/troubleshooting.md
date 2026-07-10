@@ -648,7 +648,7 @@ Please provide the following information:
 ### Contact Methods
 
 **GitHub Issues**:
-- [VSA-MainApp Issues](https://github.com/your-repo/issues)
+- [VSA-MainApp Issues](https://github.com/fefaether/VSA-Mainapp/issues)
 - GitHub account is required
 - Provide detailed information according to the template
 

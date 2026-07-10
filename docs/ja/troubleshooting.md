@@ -648,7 +648,7 @@ logs/
 ### 問い合わせ先
 
 **GitHub Issues**:
-- [VSA-MainApp Issues](https://github.com/your-repo/issues)
+- [VSA-MainApp Issues](https://github.com/fefaether/VSA-Mainapp/issues)
 - GitHubアカウントが必要です
 - 詳細な情報をテンプレートに従って記載
 

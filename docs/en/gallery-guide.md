@@ -4,357 +4,48 @@
 
 ---
 
+## Overview
 
-The gallery screen allows you to view imported photos in a list format, check detailed information, and perform operations such as adding favorites.
+The gallery lets you browse imported photos, sort them, mark favorites, inspect details, and manage the trash. You can switch between grid and table views.
 
-> **Note (Integral support status)**
-> Integral support is currently in progress. Some Integral camera parameter values may not be recorded or displayed correctly.
+> **Note (Integral support)**
+> Integral support is still in progress. Some camera parameters may not be recorded or shown correctly.
 
-## Display Modes
+## How to open
 
-The gallery has two display modes.
+1. Open **Gallery** in the sidebar
+2. Use the top tabs for **Gallery**, **Favorites**, and **Trash**
+3. Use the toolbar for view mode, sorting, and selection mode
 
-### Grid View
+## Main operations
 
-Displays photos in a thumbnail grid format.
+### Browse and details
 
-- Easy to visually check images
-- Adjustable thumbnail size (50px-300px)
-- Date-based grouping (when thumbnail size is small)
+Click a photo to open the detail sidebar with world name, photographer, participants, and camera info.
 
-### Table View
+![Gallery overview](../../assets/screenshots/gallery-overview.webp)
 
-Displays photos in a list format.
+### Sort and favorites
 
-- View file name, capture time, world name at a glance
-- Click column headers to sort
-- Resizable columns
+Sort from the toolbar (created date, world name, file name, size, capture time, photographer, and more). Toggle ascending/descending with the arrow control. Use the star icon on thumbnails or in details to favorite a photo.
 
-Switch display modes using the toolbar button.
+![Sort and favorites](../../assets/screenshots/gallery-sort-and-favorites.webp)
 
-## Sorting
+### Trash
 
-You can sort by the following items.
+Photos removed from the gallery move to the Trash tab. You can restore them, permanently delete them, or empty the trash.
 
-| Sort Item | Description |
-|-----------|-------------|
-| Created Date | File creation date (default) |
-| World Name | VRChat world name |
-| File Name | Alphabetical order of file names |
-| File Size | File size |
-| Capture Time | Photo capture time |
-| Photographer | User who took the photo |
+![Trash](../../assets/screenshots/gallery-trash.webp)
 
-How to sort:
+### Other operations
 
-1. Select an item from the sort dropdown in the toolbar
-2. Toggle ascending/descending with the arrow button
-3. In table view, you can also click column headers to sort
+- Switch grid/table view; zoom thumbnails with `Ctrl` + `=` / `-` or the slider
+- Selection mode for bulk favorites or trash moves
+- X post mode (up to 4 photos); see the [X Posting Guide](x-post-guide.md)
+- Click a username in details to open [Person Search](person-search-guide.md)
 
-## Zoom Controls
+## Notes
 
-You can change the thumbnail size in grid view.
-
-### Keyboard Shortcuts
-
-| Action | Shortcut |
-|--------|----------|
-| Zoom In | `Ctrl` + `=` |
-| Zoom Out | `Ctrl` + `-` |
-
-### Mouse Controls
-
-- `Ctrl` + Mouse Wheel: Zoom centered on mouse position
-
-### Slider
-
-You can also adjust the size using the slider in the toolbar.
-
-## Image Detail Sidebar
-
-Click a photo to display a sidebar on the right showing detailed information.
-
-### Displayed Information
-
-**Basic Info:**
-- Preview image (click to open in default app)
-- File path
-- File hash
-
-**VRChat Info:**
-- World name (copyable)
-- Photographer name
-- Capture time
-- List of users in the instance
-
-**Camera Info:**
-- Camera type (VirtualLens2/Integral/Normal Camera)
-- VirtualLens2 parameters (Aperture, FocalLength, Exposure, etc.)
-- Integral parameters (ShutterSpeed, BokehShape, etc.)
-
-Camera information is displayed in an accordion format and can be expanded by clicking.
-
-### Image Detail Sidebar Buttons
-
-The following buttons are arranged at the top of the detail sidebar:
-
-#### QR Code Read Button
-
-A "Read QR Code" button displays above the preview image in the detail sidebar.
-
-**Features**:
-- Auto-detect QR codes in images
-- Support for multiple QR codes (detects all in image)
-- Detected QR codes display with overlay on image
-
-**How to Use**:
-1. Click photo to open detail sidebar
-2. Click "Read QR Code" button
-3. QR codes auto-detect
-4. Box displays on detected QR code
-
-**Processing Detected Results**:
-- **URL**: Click "Open in Browser" to open in browser
-- **Text**: Click "Copy to Clipboard" to copy content
-- Multiple code detection displays all codes
-
-#### X Post Button
-
-"Post to X" button displays in detail sidebar (per photo).
-
-**Features**:
-- Open selected photo in X post modal
-- Support simultaneous posting of multiple photos (maximum 4)
-
-**How to Use**:
-1. Click photo to open detail sidebar
-2. Click "Post to X" button
-3. X post modal displays
-4. Configure text and presets then post
-
-See [X Posting Feature Guide](x-post-guide.md) for details.
-
-## Favorites
-
-You can mark photos as favorites.
-
-### How to Use
-
-- Click the star icon on the thumbnail
-- Click the star button in the detail sidebar
-- Click the star icon in table view
-
-Favorite status is saved to the database and persists after restarting the app.
-
-## Deleting Images
-
-You can move unwanted images to the trash.
-
-1. Click an image to open the detail sidebar
-2. Click the trash icon
-3. Select "Delete" in the confirmation dialog
-
-Deleted images are moved to the system trash (not permanently deleted).
-
-## User Search
-
-Search for photos containing specific users from the user list displayed in the detail sidebar.
-
-### Click Username to Search
-
-**Steps**:
-1. Click photo to open detail sidebar
-2. Click username from "List of users in the instance" section
-3. Auto-navigate to user search screen
-4. Photos containing that user display in list
-
-### AND Search with Multiple Users
-
-Search multiple users simultaneously to display only photos with all users.
-
-See [Person Search Guide](person-search-guide.md) for details.
-
-## Bulk Selection Feature
-
-Select multiple photos simultaneously to perform bulk favorite registration or trash move operations.
-
-### Start Selection Mode
-
-**Steps**:
-1. Open Gallery tab
-2. Click "Selection Mode" button in toolbar
-3. Bulk selection mode enables
-4. Toolbar display changes showing selection operation buttons
-
-### Photo Selection and Deselection
-
-**Selection Method**:
-- Grid view: Click thumbnail to select
-- Table view: Click row to select
-- Click selected photos again to deselect
-
-**Select All**:
-1. Click "Select All" button in toolbar
-2. All photos on screen select
-
-**Deselect**:
-1. Click "Deselect" button in toolbar
-2. Clear all selections
-
-### Selection Display
-
-Selected photos show:
-
-- Grid view: Checkmark on thumbnail
-- Table view: Row highlight, checkbox on left
-- Toolbar shows "n selected"
-
-### Bulk Operations
-
-With multiple photos selected, perform these operations:
-
-#### Add Favorites in Bulk
-
-**Steps**:
-1. Select multiple photos
-2. Click "Add to Favorites" button in toolbar
-3. All selected photos add to favorites
-
-#### Move to Trash in Bulk
-
-**Steps**:
-1. Select multiple photos
-2. Click "Move to Trash" button in toolbar
-3. Click "Move" in confirmation dialog
-4. All selected photos move to trash
-
-### X Post Mode (Photo Selection)
-
-Special selection mode to select maximum 4 photos for X posting.
-
-**Start**:
-1. Click "X Post Mode" button in toolbar
-2. Special selection mode enables
-
-**Selection**:
-1. Click X post photos (maximum 4)
-2. Selection stops when reaching 4
-3. Click selected photos to deselect
-
-**Post**:
-1. Click "Post to X" button
-2. X post modal displays
-3. Configure text and presets then post
-
-See [X Posting Feature Guide](x-post-guide.md) for details.
-
-### Exit Selection Mode
-
-**Steps**:
-1. Click "End Selection Mode" button in toolbar again
-2. Or click "Cancel" button
-3. Selection mode ends, all selections clear
-
-## Trash Tab
-
-In the trash tab, confirm deleted photos, restore them, or permanently delete.
-
-### Access Trash Tab
-
-**Steps**:
-1. Check tab menu above Gallery
-2. Three tabs display: "Gallery", "Favorites", "Trash"
-3. Click "Trash"
-
-### Trash View Features
-
-Trash view supports same display formats as normal gallery (grid/table).
-
-**Deleted Photo List**:
-- All photos moved to trash display
-- Confirm file name, deletion time, original world name, etc.
-- Toggle grid or table view
-
-### Restore Feature
-
-Restore deleted photos to gallery.
-
-**Steps**:
-1. Open Trash tab
-2. Click photo to restore
-3. Click "Restore" button in detail sidebar
-4. Click "Restore" in confirmation dialog
-5. Photo returns to gallery
-
-**Bulk Restore**:
-1. Select multiple photos
-2. Click "Restore" button in toolbar
-3. All selected photos restore
-
-### Permanently Delete Feature
-
-Move photos to system trash, permanently delete from VSA.
-
-**Steps**:
-1. Select photo to delete from Trash tab
-2. Click "Permanently Delete" button in detail sidebar
-3. Click "Permanently Delete" in confirmation dialog
-4. Photo moves to system trash
-
-**Bulk Permanent Delete**:
-1. Select multiple photos
-2. Click "Permanently Delete" button in toolbar
-3. Click "Delete" in confirmation dialog
-4. All selected photos permanently delete
-
-### Notes
-
-**Restore Period**:
-- No limit on storage period in trash
-- Maintained until manually restored or permanently deleted
-
-**About Permanent Deletion**:
-- Moved to Windows trash, may be recoverable from Windows trash
-- Once Windows trash empties, recovery impossible
-- Recommend backup of important photos beforehand
-
-**Clear Trash**:
-- "Empty Trash" button permanently deletes all photos
-- This action cannot be undone
-
-## Keyboard Shortcuts
-
-| Action | Shortcut |
-|--------|----------|
-| Zoom In | `Ctrl` + `=` |
-| Zoom Out | `Ctrl` + `-` |
-| Fullscreen | `F11` |
-
-## Toolbar Operations
-
-The toolbar is displayed at the top of the screen.
-
-- Move mouse to the top of the screen (within 100px) to show
-- Expand/collapse button to pin display
-- Reload button to refresh the image list
-
-## Performance
-
-The gallery performs smoothly even with large numbers of images thanks to virtualization technology.
-
-- Only renders images visible on screen
-- Lazy loading of thumbnails
-- Page caching for fast redisplay
-
-## Cloud Save (Optional, Staged Rollout)
-
-Cloud backup for favorites is released in stages. Availability depends on release status, plan, account status, and environment. See the [Favorites Guide](favorites-guide.md) and [Account Guide](account-guide.md). Follow in-app UI for current controls.
-
-## Current Limitations
-
-The following features are currently under development.
-
-- Filter function (filtering by date, world, user, etc.)
-- Search function (keyword search)
-
-These features will be added in future updates.
+- Permanent delete from trash cannot be undone (Windows Recycle Bin may still allow recovery)
+- Cloud save for favorites is under staged rollout; see the [Favorites Guide](favorites-guide.md)
+- Integral-related values may be incomplete

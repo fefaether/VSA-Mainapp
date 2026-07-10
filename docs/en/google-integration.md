@@ -1,79 +1,35 @@
-# Cloud and Account Integration (formerly Google Integration)
+# Cloud and Account Integration
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---
 
-VSA provides and expands account-linked features such as cloud save, share links, and X posting. Some environments may use third-party authentication (e.g. Google OAuth, X OAuth), but **this guide does not assume Google Drive or Google Photos are generally available to all users**.
+## Overview
 
-## Feature Overview (Staged Rollout)
+Cloud save, share links, X posting, and related account features ship under **staged rollout**. This guide covers the rollout overview only. Follow in-app UI and the related guides for concrete steps.
 
-The following are subject to **staged rollout**. Availability depends on release status, plan, account status, and environment.
+## How to open
 
-- Sign-in with a VSA account
-- Cloud save (optional backup for favorites and related data)
-- Share link generation
-- X posting integration
-- Cross-device sync (when offered)
+1. Open **Account** in the sidebar
+2. Review rollout or availability messaging
+3. If sign-in is required, follow the VSA website prompts
 
-If the relevant UI does not appear in the app, the feature may not be enabled for your environment yet.
+## Main operations
 
-## Guide Update Status
+### Rollout status
 
-Earlier versions documented Google Photos and Google Drive steps in detail. Because public scope and implementation are evolving, **specific step-by-step instructions are being revised**.
+On the Account screen, review the high-level availability of linking features. Exact content varies by environment.
 
-For now, rely on:
+![Rollout status](../../assets/screenshots/account-rollout-status.webp)
 
-1. **In-app UI** (menus, buttons, error messages)
-2. **Canonical Terms and Privacy** on GitHub Pages
-   - [Terms of Service](./terms.md)
-   - [Privacy Policy](./privacy.md)
-3. Related guides
-   - [Account Management Guide](account-guide.md)
-   - [Favorites Guide](favorites-guide.md)
-   - [X Posting Feature Guide](x-post-guide.md)
+When a feature is available, see:
 
-## Typical Authentication Flow (When Shown)
+- [Account Guide](account-guide.md)
+- [Favorites Guide](favorites-guide.md)
+- [X Posting Guide](x-post-guide.md)
 
-When external account linking is enabled:
+## Notes
 
-1. Open Settings or the Account screen
-2. Follow prompts for the VSA account or linked service
-3. Complete authentication in the browser and return to the app
-4. Verify connection status and plan
-
-Requested permissions vary by service and rollout stage. See the auth screen and [Privacy Policy](./privacy.md).
-
-## Privacy and Security
-
-- Local data (favorites, settings) stays on your PC
-- Cloud save and sharing are described in the Privacy Policy
-- OAuth flows request least-privilege access where possible
-- Disconnect via the Account screen or the third-party service settings when available
-
-## Troubleshooting (General)
-
-### Linking Menu Not Visible
-
-- Your environment may not be in the current rollout
-- Update the app and check account status
-
-### Authentication Does Not Complete
-
-1. Verify internet connectivity
-2. Disable popup blockers
-3. Try another browser
-4. Restart VSA
-
-### Sync or Upload Fails
-
-1. Check plan, monthly limits, and free tiers in the app
-2. Use a stable network
-3. Keep local backups of important data
-4. See [Troubleshooting](troubleshooting.md) and [FAQ](faq.md) if issues persist
-
-## Related Documentation
-
-- [Account Management Guide](account-guide.md)
-- [Terms of Service](./terms.md)
-- [Privacy Policy](./privacy.md)
+- Older “Google integration” how-tos do not match the current public scope and are not covered here
+- Missing UI means the feature is not offered in that environment
+- Terms and data handling follow the [Terms of Service](terms.md) and [Privacy Policy](privacy.md)

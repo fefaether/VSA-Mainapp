@@ -13,7 +13,7 @@
 ## 手順
 
 1. リリースページから最新版をダウンロード
-   - https://github.com/fefaether/VSA-Mainapp-Release/releases/latest
+   - https://github.com/fefaether/VSA-Mainapp/releases/latest
 2. `VSA-Setup-vX.X.X.exe` を実行
 3. 画面の指示に従ってインストール
 4. デスクトップのアイコンから起動

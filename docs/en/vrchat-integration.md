@@ -4,149 +4,35 @@
 
 ---
 
+## Overview
 
-VSA automatically extracts and saves metadata from photos taken in VRChat. This guide explains the metadata VSA saves and how it works.
+VSA reads world, user, and camera metadata from VRChat screenshots and shows it in gallery details. Watch folders and OSC settings are configured in Game Config / Settings.
 
-> **Note (Integral support status)**
-> Integral support is currently in progress. Some Integral camera parameter values may not be recorded or displayed correctly.
+> **Note (Integral support)**
+> Integral support is still in progress. Some camera parameters may not be recorded or shown correctly.
 
-## Metadata Overview
+## How to open
 
-When you take a photo in VRChat, VSA automatically embeds the following information into the PNG image.
+1. Open **Game Config** in the sidebar, or **Settings > Game**
+2. Confirm watch folder, metadata output, and OSC
+3. Open a photo in the gallery and check VRChat info in the detail sidebar
 
-- World information
-- User information
-- Camera parameters
-- Capture time
+## Main operations
 
-This information is saved in the PNG file's tEXt chunk and can be read by other tools without using VSA.
+### Settings-side metadata linking
 
-## World Information
+Configure the watch folder, metadata output path, and OSC so screenshots are detected automatically.
 
-Information about the world you were in when the photo was taken is recorded.
+![VRChat settings and metadata](../../assets/screenshots/vrchat-settings-metadata.webp)
 
-| Item | Description | Example |
-|------|-------------|---------|
-| World Name | VRChat world name | "Japan Shrine" |
-| World ID | VRChat internal ID | "wrld_xxx..." |
-| Instance ID | Instance identifier | "12345~hidden(usr_xxx)" |
-| Instance Type | Access permissions | Public, Friends+, Friends, Invite+, InviteOnly |
+### Photo detail metadata
 
-## User Information
+Photo details show world name, photographer, participants, camera type, and parameters.
 
-User information at the time of capture is recorded.
+![Photo detail metadata](../../assets/screenshots/vrchat-photo-detail-metadata.webp)
 
-| Item | Description |
-|------|-------------|
-| Photographer Name | Username of the person who took the photo |
-| Photographer ID | VRChat user ID (usr_xxx format) |
-| Participants List | All usernames in the instance |
+## Notes
 
-The participants list includes the usernames of everyone who was in the instance at the time of capture.
-
-## Camera Parameters
-
-The camera settings used in VRChat are recorded. VSA supports the following cameras.
-
-### VirtualLens2
-
-Parameters recorded when using VirtualLens2:
-
-| Parameter | Description |
-|-----------|-------------|
-| Aperture | F-stop value |
-| Focal Length | Focal length |
-| Exposure | Exposure compensation |
-| Zoom | Zoom level |
-| Brightness | Brightness |
-| Contrast | Contrast |
-| Saturation | Saturation |
-| Sharpness | Sharpness |
-| FOV | Field of view |
-| Focus Distance | Focus distance |
-
-### Integral
-
-Parameters recorded when using Integral:
-
-| Parameter | Description |
-|-----------|-------------|
-| Aperture | F-stop value |
-| Focal Length | Focal length |
-| Exposure | Exposure compensation |
-| Shutter Speed | Shutter speed |
-| Bokeh Shape | Bokeh shape |
-| Resolution Scale | Resolution scale |
-| Render Distance | Render distance |
-
-### Normal Camera
-
-When using the standard VRChat camera, camera parameters are not recorded.
-
-## How OSC Communication Works
-
-VSA communicates with VRChat using the OSC (Open Sound Control) protocol to obtain camera settings.
-
-### How It Works
-
-1. Change camera settings in VRChat
-2. Camera sends OSC message
-3. VSA receives OSC message and saves to memory
-4. When photo is taken, saved camera settings are embedded in the image
-
-### Required Settings
-
-To enable OSC communication:
-
-1. Enable OSC in VRChat settings
-2. Enable OSC output on the supported camera (VirtualLens2 or Integral)
-
-## VRChat Log Analysis
-
-World and user information is extracted from VRChat log files.
-
-### Log File Location
-
-```
-%LOCALAPPDATA%Low\VRChat\VRChat\
-```
-
-Usually located at `C:\Users\[Username]\AppData\LocalLow\VRChat\VRChat\`.
-
-### Extracted Information
-
-- World entry/exit
-- User join/leave
-- Instance information
-
-## Checking Supported Cameras
-
-You can check which camera was used for each photo in the gallery detail view.
-
-- VirtualLens2: Displayed as "VL2" or "VirtualLens2"
-- Integral: Displayed as "Integral"
-- Normal camera: Displayed as "Normal Camera"
-
-Camera parameters are displayed in accordion format and can be expanded by clicking.
-
-## Troubleshooting
-
-### Metadata Not Being Recorded
-
-1. **Check if OSC is enabled in VRChat**
-   - VRChat Settings > OSC > Enable
-
-2. **Check if using a supported camera**
-   - VirtualLens2 or Integral is required
-
-3. **Check if VSA is running in the background**
-   - VSA must be running while VRChat is active
-
-### Missing World/User Information
-
-1. **Check VRChat log files**
-   - Verify log files are being output correctly
-
-2. **Check capture timing**
-   - Photos taken immediately after entering a world may miss log data
-
+- VSA is an unofficial tool and is not affiliated with or endorsed by VRChat Inc. or camera authors
+- Photos without metadata (older PNGs, unwatched folders) show empty detail fields
+- For folder setup details, see [Game Config](game-config.md)

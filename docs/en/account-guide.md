@@ -1,116 +1,44 @@
-# Account Management Guide
+# Account Guide
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---
 
-The Account Management screen lets you check your VSA account status and configure account-linked features such as cloud save, share links, and X posting. This guide covers what is generally available and how rollout-gated features are described.
-
 ## Overview
 
-Depending on your environment, Account Management may offer:
+The Account screen shows VSA account state, cloud save, and X posting status. Sign-in happens on the **VSA website**; the app syncs and displays that state.
 
-- **VSA Account**: Sign-in, plan, and connection status
-- **Cloud Save (optional)**: Cloud backup for favorites and related data
-- **Share Links (optional)**: Photo sharing via generated links
-- **X Posting**: X connection and posting status
+Cloud save, share links, and X posting are under **staged rollout**. If a menu is missing, it may not be available in your environment yet.
 
-## About Account-Linked Features (Important)
+## How to open
 
-Cloud save, share links, X posting, and related account-linked features are in **staged rollout**. Availability depends on **release status, plan, account status, and environment**.
+1. Open **Account** in the sidebar
+2. If signed out, follow prompts such as **Sign in on the website**
+3. After login, review cloud and X status
 
-If a menu or button does not appear in the app, that feature may not be available in your environment yet. Step-by-step instructions in this guide will be updated over time. For now, follow the **in-app UI** and these canonical documents:
+## Main operations
 
-- [Terms of Service](./terms.md)
-- [Privacy Policy](./privacy.md)
+### Account overview
 
-Pricing, monthly limits, free tiers, and eligible features follow the website or in-app display. This documentation does not promise fixed overage pricing or uniform feature availability.
+Check login state, plan, and links to the website account page.
 
-## Accessing Account Settings
+![Account overview](../../assets/screenshots/account-overview.webp)
 
-Click **Account** in the sidebar to open the Account Management screen.
+### Cloud save status
 
-## VSA Account
+When available, review cloud save enablement and sync status.
 
-A VSA account may be required for some optional features (cloud save, share links, X posting). Core local features—import, gallery, local favorites—do not require an account.
+![Cloud status](../../assets/screenshots/account-cloud-status.webp)
 
-**Typical flow** (when shown in the app):
+### X posting status
 
-1. Open the Account screen
-2. Follow on-screen prompts to sign in or connect services
-3. Review plan, connection status, and any error messages
+Review plan and remaining monthly posts. Unlink or manage X on the website account page.
 
-Sign-in and third-party connections may open a browser for OAuth. Your password is not stored in VSA; tokens are kept locally in encrypted form.
+![X posting status](../../assets/screenshots/account-x-status.webp)
 
-## Cloud Save and Favorites
+## Notes
 
-Favorites work **locally** without cloud features. When cloud save is available in your environment, settings may appear on the Account screen or in favorites-related UI. Labels, toggles, and manual upload options vary by version and rollout—**follow the in-app UI**.
-
-For local favorites usage, see the [Favorites Guide](favorites-guide.md).
-
-## Share Links
-
-Share links are released in stages. When available, you may create links from photo details or share menus. Scope, expiry, and pricing follow in-app display and the Terms of Service.
-
-## X Posting
-
-X posting is also subject to staged rollout. See the [X Posting Feature Guide](x-post-guide.md) for frames, presets, and posting workflow. Connection status may appear on the Account screen when enabled.
-
-## Privacy and Security
-
-### Where Data Is Stored
-
-- **Local favorites and metadata**: On your PC (e.g. under `%APPDATA%\VSA\`)
-- **Authentication tokens**: Encrypted locally; used only by VSA
-- **Cloud-saved data**: Depends on the cloud service and VSA delivery model—see the [Privacy Policy](./privacy.md)
-
-### External Communication
-
-VSA account, cloud save, share links, X posting, update checks, and server status may involve network requests.
-
-## Troubleshooting
-
-### Sign-In or Connection Does Not Complete
-
-**Symptom**: Browser auth finishes but the app does not return, or times out
-
-**Steps**:
-
-1. Allow pop-ups in your browser
-2. Try another browser (Chrome recommended)
-3. Check internet and firewall settings
-4. Restart VSA and try again
-
-### Cloud Save or Sharing Unavailable
-
-**Symptom**: Menus missing or operations fail
-
-**Possible causes**:
-
-- Feature not rolled out to your environment yet
-- Plan or account status does not meet requirements
-- Temporary network or third-party outage
-
-**Steps**:
-
-1. Update to the latest app version
-2. Check plan and connection status on the Account screen
-3. Review the [Terms of Service](./terms.md) and in-app pricing/limit display
-4. Keep important photos backed up locally
-
-### Logout and Disconnect
-
-Use logout or disconnect actions shown on the Account screen. After disconnecting, cloud save and share links may stop working. Local photos and favorites usually remain on disk.
-
-## Tips
-
-- **Local first**: Back up important photos locally regardless of cloud features
-- **Trust the UI**: During rollout, in-app labels and enabled items are the source of truth
-- **Read the terms**: Pricing and data handling are defined in Terms and Privacy on GitHub Pages
-
-## Related Documentation
-
-- [Favorites Guide](favorites-guide.md) - Local favorites and cloud save overview
-- [X Posting Feature Guide](x-post-guide.md) - X posting (staged rollout)
-- [Settings Guide](settings-guide.md) - App configuration
-- [Troubleshooting Guide](troubleshooting.md) - Detailed problem solutions
+- Local gallery and favorites do not require an account
+- Outside rollout, cloud or X UI may be hidden
+- Pricing and limits follow in-app display and the [Terms of Service](terms.md)
+- Related: [X Posting Guide](x-post-guide.md), [Favorites Guide](favorites-guide.md), [Cloud and Account Integration](google-integration.md)

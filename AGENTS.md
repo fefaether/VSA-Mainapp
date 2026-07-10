@@ -1,6 +1,6 @@
 # AGENTS.md
 
-このファイルは`VSA-Mainapp-Release`リポジトリ固有の運用ルールです。
+このファイルは`VSA-Mainapp`配布リポジトリ固有の運用ルールです。
 
 ## 役割
 
@@ -33,6 +33,8 @@
 - commitする場合は公開releaseページ側の表示ユーザー名を分けるため、必ずrepo-localの `fefaether <fefaether@users.noreply.github.com>` 名義で実行する。
 - commit前に `git config --local user.name` と `git config --local user.email` を確認し、`JUNSEI <junsei2005@outlook.jp>` またはglobal設定しか見えない場合は停止する。
 - push前に `git log --format="%an <%ae> / %cn <%ce>" --all` で `JUNSEI` と `junsei2005@outlook.jp` が履歴に残っていないことを確認する。
+- 誤った名義のcommitを一度GitHubへpushすると、force-pushでbranch/tagから外してもGitHub側のunreachable objectやcontributors集計に残ることがある。releaseページの表示ユーザー名だけを切り替える目的があるため、名義不一致はpush後修正ではなくpush前blockerとして扱う。
+- 誤った名義がGitHub上へ出た場合は、force-pushだけで完全削除できると判断しない。GitHub Supportへのキャッシュ/オブジェクト削除依頼、またはrepo再作成とrelease/assets再公開が必要になる可能性を明示して停止する。
 
 ## 関連skills
 

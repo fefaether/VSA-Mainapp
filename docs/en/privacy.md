@@ -33,7 +33,7 @@ The following features send data externally when used.
 
 For login, email verification, OAuth login, and desktop app linking, data such as email address, authentication state, device information, and OAuth results may be sent to and stored by the VSA website and Supabase. The desktop app stores authentication-related information in a protected area on your device.
 
-If Google OAuth is used, Google's authorization screen and Google account information are used for authentication. For Google OAuth app publishing settings, use the VSA website privacy policy page (Japanese: `/ja/privacy`, English: `/en/privacy`).
+If Google OAuth is used, Google's authorization screen and Google account information are used for authentication. For Google OAuth app publishing settings, use the GitHub Pages privacy policy (Japanese: `https://fefaether.github.io/VSA-Mainapp/ja/privacy.html`, English: `https://fefaether.github.io/VSA-Mainapp/en/privacy.html`).
 
 ### 3.2 Cloud Storage
 

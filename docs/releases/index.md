@@ -5,7 +5,7 @@
 ---
 
 
-このページは、`VSA-Mainapp-Release` の GitHub Release 本文を同期した履歴です。
+このページは、`VSA-Mainapp` の GitHub Release 本文を同期した履歴です。
 
 ## v0.6.0
 
