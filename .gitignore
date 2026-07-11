@@ -1,3 +1,6 @@
 
 # APM dependencies
 apm_modules/
+
+# Local agent instructions must not be published with the public docs repo.
+AGENTS.md
