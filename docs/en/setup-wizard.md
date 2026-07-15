@@ -24,19 +24,29 @@ Product intro with Next / Skip.
 
 ![Welcome](../../assets/screenshots/setup-wizard-welcome.webp)
 
+### Language and theme
+
+Choose the display language and theme.
+
+![Language and theme](../../assets/screenshots/setup-wizard-language-theme.webp)
+
 ### Folder settings
 
 Set paths such as the screenshot watch folder used for import.
 
 ![Folder settings](../../assets/screenshots/setup-wizard-folder-settings.webp)
 
+### Autostart
+
+Configure startup options such as launching with the OS.
+
+![Autostart](../../assets/screenshots/setup-wizard-auto-start.webp)
+
 ### Archive compression
 
 Configure initial JPEG XL / archive compression options.
 
 ![Archive compression](../../assets/screenshots/setup-wizard-archive-compression.webp)
-
-The wizard also includes language/theme and autostart steps. Exact order can vary by version.
 
 ## Notes
 

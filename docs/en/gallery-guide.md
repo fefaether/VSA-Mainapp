@@ -14,7 +14,7 @@ The gallery lets you browse imported photos, sort them, mark favorites, inspect 
 ## How to open
 
 1. Open **Gallery** in the sidebar
-2. Use the top tabs for **Gallery**, **Favorites**, and **Trash**
+2. Use the top tabs for **Gallery**, **Favorites**, **Trash**, and **Import**
 3. Use the toolbar for view mode, sorting, and selection mode
 
 ## Main operations
@@ -37,12 +37,18 @@ Photos removed from the gallery move to the Trash tab. You can restore them, per
 
 ![Trash](../../assets/screenshots/gallery-trash.webp)
 
+### Import
+
+Register and enable watch folders, and check import progress. If photos are not coming in automatically, start here.
+
+![Import](../../assets/screenshots/gallery-import.webp)
+
 ### Other operations
 
 - Switch grid/table view; zoom thumbnails with `Ctrl` + `=` / `-` or the slider
 - Selection mode for bulk favorites or trash moves
 - X post mode (up to 4 photos); see the [X Posting Guide](x-post-guide.md)
-- Click a username in details to open [Person Search](person-search-guide.md)
+- Click a username in details to open [Search](person-search-guide.md)
 
 ## Notes
 

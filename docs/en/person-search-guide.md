@@ -1,4 +1,4 @@
-# Person Search Guide
+# Search Guide
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
@@ -6,26 +6,40 @@
 
 ## Overview
 
-Person search filters photos by users who appear in them. It supports multi-user AND search and navigation from gallery details. Photos need VRChat metadata.
+The Search screen filters photos by friends who appear in them or by world name. Use the title bar tabs to switch between Friend Search, World Search, and Favorites. Photos need VRChat metadata.
 
 ## How to open
 
-1. Open **Person Search** in the sidebar
-2. Or click a username in the gallery detail participant list
+1. Open **Search** in the sidebar
+2. Or click a username in the gallery detail participant list (opens Friend Search)
 
 ## Main operations
 
-### Search screen
+### Friend search
 
-Type a username in the search bar and add a candidate as a tag. Matching photos appear below.
+Type a username in the search bar and add a candidate as a tag. With no selection, the user directory is shown.
 
-![Person search overview](../../assets/screenshots/person-search-overview.webp)
+![Friend search overview](../../assets/screenshots/person-search-overview.webp)
 
-### Search results
+Matching photos appear as a grid. Adding multiple users narrows results to photos that include all of them (AND search). Click a photo for details.
 
-Results show as a grid. Click a photo for details. Adding multiple users narrows results to photos that include all of them.
+![Friend search results](../../assets/screenshots/person-search-results.webp)
 
-![Person search results](../../assets/screenshots/person-search-results.webp)
+### World search
+
+Filter the world list by name, then select a world to show photos taken there. Use the heart icon to favorite a world.
+
+![World search overview](../../assets/screenshots/person-search-worlds-overview.webp)
+
+![World search results](../../assets/screenshots/person-search-worlds-results.webp)
+
+### Favorites
+
+Items favorited from Friend Search or World Search appear here. Switch the kind select between Friends and Worlds. Click a card to jump to the matching search results.
+
+![Favorites (friends)](../../assets/screenshots/person-search-favorites-friends.webp)
+
+![Favorites (worlds)](../../assets/screenshots/person-search-favorites-worlds.webp)
 
 ## Notes
 
