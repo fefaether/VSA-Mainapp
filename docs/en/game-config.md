@@ -33,7 +33,7 @@ Review past instance history and rejoin when available.
 
 ### Server status
 
-Check VRChat server availability and maintenance information.
+Check VRChat server availability and maintenance information. Use **Open official details** to open the relevant incident or the VRChat status page in your browser.
 
 ![Server status](../../assets/screenshots/game-config-server.webp)
 
