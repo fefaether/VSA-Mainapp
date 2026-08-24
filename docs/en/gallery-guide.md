@@ -23,25 +23,25 @@ The gallery lets you browse imported photos, sort them, mark favorites, inspect 
 
 Click a photo to open the detail sidebar with world name, photographer, participants, and camera info.
 
-![Gallery overview](../../assets/screenshots/gallery-overview.webp)
+![Gallery overview](../assets/screenshots/gallery-overview.webp)
 
 ### Sort and favorites
 
 Sort from the toolbar (created date, world name, file name, size, capture time, photographer, and more). Toggle ascending/descending with the arrow control. Use the star icon on thumbnails or in details to favorite a photo.
 
-![Sort and favorites](../../assets/screenshots/gallery-sort-and-favorites.webp)
+![Sort and favorites](../assets/screenshots/gallery-sort-and-favorites.webp)
 
 ### Trash
 
 Photos removed from the gallery move to the Trash tab. You can restore them, permanently delete them, or empty the trash.
 
-![Trash](../../assets/screenshots/gallery-trash.webp)
+![Trash](../assets/screenshots/gallery-trash.webp)
 
 ### Import
 
 Register and enable watch folders, and check import progress. If photos are not coming in automatically, start here.
 
-![Import](../../assets/screenshots/gallery-import.webp)
+![Import](../assets/screenshots/gallery-import.webp)
 
 ### Other operations
 

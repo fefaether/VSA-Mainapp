@@ -23,19 +23,19 @@ X連携と投稿は**段階的ロールアウト**対象です。利用可否は
 
 テキスト入力、プリセット適用、写真の確認、投稿実行を行います。
 
-![X投稿モーダル](../../assets/screenshots/xpost-modal.webp)
+![X投稿モーダル](../assets/screenshots/xpost-modal.webp)
 
 ### カメラ情報フレーム
 
 投稿前にカメラ情報フレームの有無や見た目を確認できます。フレーム付き画像を投稿に含められます。
 
-![カメラ情報フレーム](../../assets/screenshots/xpost-camera-frame.webp)
+![カメラ情報フレーム](../assets/screenshots/xpost-camera-frame.webp)
 
 ### 設定のプリセット
 
 設定のX投稿パネルで、投稿テキストテンプレートなどのプリセットを追加・編集・削除できます。アプリ内でのX OAuth認証フローはありません。
 
-![X投稿設定](../../assets/screenshots/settings-xpost.webp)
+![X投稿設定](../assets/screenshots/settings-xpost.webp)
 
 ### アカウントのXステータス
 

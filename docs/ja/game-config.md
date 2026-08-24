@@ -23,19 +23,19 @@
 
 監視のオン/オフ、スクリーンショット監視フォルダ、メタデータ出力先、ログフォルダ、OSC設定を行います。変更後は保存してください。
 
-![ゲーム側設定](../../assets/screenshots/game-config-settings.webp)
+![ゲーム側設定](../assets/screenshots/game-config-settings.webp)
 
 ### タイムマシーン
 
 過去のインスタンス履歴を確認し、再参加できる場合があります。
 
-![タイムマシーン](../../assets/screenshots/game-config-timeline.webp)
+![タイムマシーン](../assets/screenshots/game-config-timeline.webp)
 
 ### サーバーステータス
 
 VRChatサーバーの稼働・メンテナンス情報を確認できます。画面の「公式詳細を見る」から、該当する障害またはVRChat公式ステータスページをブラウザで開けます。
 
-![サーバーステータス](../../assets/screenshots/game-config-server.webp)
+![サーバーステータス](../assets/screenshots/game-config-server.webp)
 
 ## 注意点
 

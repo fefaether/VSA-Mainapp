@@ -19,27 +19,27 @@ The Search screen filters photos by friends who appear in them or by world name.
 
 Type a username in the search bar and add a candidate as a tag. With no selection, the user directory is shown.
 
-![Friend search overview](../../assets/screenshots/person-search-overview.webp)
+![Friend search overview](../assets/screenshots/person-search-overview.webp)
 
 Matching photos appear as a grid. Adding multiple users narrows results to photos that include all of them (AND search). Click a photo for details.
 
-![Friend search results](../../assets/screenshots/person-search-results.webp)
+![Friend search results](../assets/screenshots/person-search-results.webp)
 
 ### World search
 
 Filter the world list by name, then select a world to show photos taken there. Use the heart icon to favorite a world.
 
-![World search overview](../../assets/screenshots/person-search-worlds-overview.webp)
+![World search overview](../assets/screenshots/person-search-worlds-overview.webp)
 
-![World search results](../../assets/screenshots/person-search-worlds-results.webp)
+![World search results](../assets/screenshots/person-search-worlds-results.webp)
 
 ### Favorites
 
 Items favorited from Friend Search or World Search appear here. Switch the kind select between Friends and Worlds. Click a card to jump to the matching search results.
 
-![Favorites (friends)](../../assets/screenshots/person-search-favorites-friends.webp)
+![Favorites (friends)](../assets/screenshots/person-search-favorites-friends.webp)
 
-![Favorites (worlds)](../../assets/screenshots/person-search-favorites-worlds.webp)
+![Favorites (worlds)](../assets/screenshots/person-search-favorites-worlds.webp)
 
 ## Notes
 

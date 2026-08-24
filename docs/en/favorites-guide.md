@@ -20,13 +20,13 @@ Favorites mark photos with a star for quick local browsing. When cloud save is a
 
 The Favorites tab lists starred photos. Detail view and selection work like the gallery.
 
-![Favorites overview](../../assets/screenshots/favorites-overview.webp)
+![Favorites overview](../assets/screenshots/favorites-overview.webp)
 
 ### Cloud sync (rollout)
 
 When available, review cloud save status. If it is missing, your environment is outside the current rollout.
 
-![Cloud sync](../../assets/screenshots/favorites-cloud-sync.webp)
+![Cloud sync](../assets/screenshots/favorites-cloud-sync.webp)
 
 ## Notes
 

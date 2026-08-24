@@ -23,19 +23,19 @@ X linking and posting are under **staged rollout**. Availability depends on rele
 
 Enter text, apply a preset, review photos, and post.
 
-![X post modal](../../assets/screenshots/xpost-modal.webp)
+![X post modal](../assets/screenshots/xpost-modal.webp)
 
 ### Camera info frame
 
 Preview and include a camera-info frame with the post when desired.
 
-![Camera info frame](../../assets/screenshots/xpost-camera-frame.webp)
+![Camera info frame](../assets/screenshots/xpost-camera-frame.webp)
 
 ### Settings presets
 
 In the X Post settings panel, add, edit, or delete text-template presets. There is no in-app X OAuth flow here.
 
-![X post settings](../../assets/screenshots/settings-xpost.webp)
+![X post settings](../assets/screenshots/settings-xpost.webp)
 
 ### Account X status
 

@@ -20,13 +20,13 @@ VirtualLens Controller adjusts VirtualLens2 camera parameters in real time over 
 
 The controller shows parameters, presets, and OSC status.
 
-![Controller overview](../../assets/screenshots/controller-overview.webp)
+![Controller overview](../assets/screenshots/controller-overview.webp)
 
 ### Live controls
 
 Changing sliders or numeric values updates VRChat while connected. Save and load common combinations as presets.
 
-![Live controls](../../assets/screenshots/controller-live-controls.webp)
+![Live controls](../assets/screenshots/controller-live-controls.webp)
 
 ## Notes
 

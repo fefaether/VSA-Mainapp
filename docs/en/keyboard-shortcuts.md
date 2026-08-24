@@ -27,13 +27,13 @@ Review current bindings in the settings panel. Common defaults:
 | Gallery zoom in | `Ctrl` + `=` |
 | Gallery zoom out | `Ctrl` + `-` |
 
-![Shortcut settings](../../assets/screenshots/settings-shortcut.webp)
+![Shortcut settings](../assets/screenshots/settings-shortcut.webp)
 
 ### Customize
 
 Click a row, wait for key capture, then register a new combination. You can also reset to defaults from the panel.
 
-![Customize shortcuts](../../assets/screenshots/shortcut-customize.webp)
+![Customize shortcuts](../assets/screenshots/shortcut-customize.webp)
 
 ## Notes
 

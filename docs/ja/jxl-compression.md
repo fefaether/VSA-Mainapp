@@ -20,13 +20,13 @@ JPEG XL（JXL）圧縮で、PNGなどの写真を小さく保存できます。�
 
 よく使う圧縮設定を少ない項目で扱います。初めて使う場合はこちらから始めます。
 
-![シンプルモード](../../assets/screenshots/jxl-simple-mode.webp)
+![シンプルモード](../assets/screenshots/jxl-simple-mode.webp)
 
 ### 詳細モード
 
 品質、スケジュール、バックグラウンド処理など、より細かい項目を調整します。
 
-![詳細モード](../../assets/screenshots/jxl-detailed-mode.webp)
+![詳細モード](../assets/screenshots/jxl-detailed-mode.webp)
 
 ## 注意点
 

@@ -20,13 +20,13 @@
 
 お気に入りタブで登録済み写真を一覧表示します。ギャラリーと同様に詳細表示や選択操作ができます。
 
-![お気に入り概要](../../assets/screenshots/favorites-overview.webp)
+![お気に入り概要](../assets/screenshots/favorites-overview.webp)
 
 ### クラウド同期（ロールアウト）
 
 利用可能な環境では、クラウド保存の状態を確認できます。表示されない場合は未公開環境です。
 
-![クラウド同期](../../assets/screenshots/favorites-cloud-sync.webp)
+![クラウド同期](../assets/screenshots/favorites-cloud-sync.webp)
 
 ## 注意点
 

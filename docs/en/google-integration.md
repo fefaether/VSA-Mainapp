@@ -20,7 +20,7 @@ Cloud save, share links, X posting, and related account features ship under **st
 
 On the Account screen, review the high-level availability of linking features. Exact content varies by environment.
 
-![Rollout status](../../assets/screenshots/account-rollout-status.webp)
+![Rollout status](../assets/screenshots/account-rollout-status.webp)
 
 When a feature is available, see:
 

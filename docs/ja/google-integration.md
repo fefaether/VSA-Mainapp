@@ -20,7 +20,7 @@ VSAのクラウド保存、共有リンク、X投稿などのアカウント連�
 
 アカウント画面で、連携機能の公開状況や利用可否の概要を確認します。表示内容は環境により異なります。
 
-![ロールアウト状況](../../assets/screenshots/account-rollout-status.webp)
+![ロールアウト状況](../assets/screenshots/account-rollout-status.webp)
 
 利用できる場合の詳細は次を参照してください。
 

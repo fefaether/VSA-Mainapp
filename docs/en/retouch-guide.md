@@ -20,19 +20,19 @@ Retouch adjusts brightness, tone, and exposure parameters for gallery photos ins
 
 Use auto exposure to balance overall brightness, then fine-tune manually.
 
-![Auto exposure](../../assets/screenshots/retouch-auto-exposure.webp)
+![Auto exposure](../assets/screenshots/retouch-auto-exposure.webp)
 
 ### Tone curve
 
 Use the tone curve for finer highlight / midtone / shadow control.
 
-![Tone curve](../../assets/screenshots/retouch-tone-curve.webp)
+![Tone curve](../assets/screenshots/retouch-tone-curve.webp)
 
 ### Parameter adjustments
 
 Adjust brightness, contrast, saturation, color temperature, highlights, shadows, and more with sliders. Each control can be reset.
 
-![Parameters](../../assets/screenshots/retouch-parameters.webp)
+![Parameters](../assets/screenshots/retouch-parameters.webp)
 
 ## Notes
 

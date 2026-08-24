@@ -27,13 +27,13 @@ VSAのキーボードショートカットは設定のショートカットパ�
 | ギャラリーズームイン | `Ctrl` + `=` |
 | ギャラリーズームアウト | `Ctrl` + `-` |
 
-![ショートカット設定](../../assets/screenshots/settings-shortcut.webp)
+![ショートカット設定](../assets/screenshots/settings-shortcut.webp)
 
 ### カスタマイズ
 
 行をクリックしてキー入力待ちにし、新しい組み合わせを登録します。デフォルトへ戻す操作もパネルから行えます。
 
-![ショートカットのカスタマイズ](../../assets/screenshots/shortcut-customize.webp)
+![ショートカットのカスタマイズ](../assets/screenshots/shortcut-customize.webp)
 
 ## 注意点
 

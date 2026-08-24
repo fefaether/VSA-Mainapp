@@ -23,19 +23,19 @@ Game Config covers VRChat photo watching, folder/OSC settings, Time Machine (ins
 
 Toggle watching, set screenshot/metadata/log folders, and configure OSC. Save after changes.
 
-![Game config settings](../../assets/screenshots/game-config-settings.webp)
+![Game config settings](../assets/screenshots/game-config-settings.webp)
 
 ### Time Machine
 
 Review past instance history and rejoin when available.
 
-![Time Machine](../../assets/screenshots/game-config-timeline.webp)
+![Time Machine](../assets/screenshots/game-config-timeline.webp)
 
 ### Server status
 
 Check VRChat server availability and maintenance information. Use **Open official details** to open the relevant incident or the VRChat status page in your browser.
 
-![Server status](../../assets/screenshots/game-config-server.webp)
+![Server status](../assets/screenshots/game-config-server.webp)
 
 ## Notes
 

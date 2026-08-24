@@ -19,27 +19,27 @@
 
 検索バーにユーザー名を入力し、候補からタグとして追加します。未選択時はユーザー一覧が表示されます。
 
-![フレンド検索概要](../../assets/screenshots/person-search-overview.webp)
+![フレンド検索概要](../assets/screenshots/person-search-overview.webp)
 
 追加したユーザーが写っている写真がグリッドで表示されます。複数ユーザーを追加すると、全員が写っている写真だけに絞り込めます（AND検索）。写真をクリックすると詳細を確認できます。
 
-![フレンド検索結果](../../assets/screenshots/person-search-results.webp)
+![フレンド検索結果](../assets/screenshots/person-search-results.webp)
 
 ### ワールド検索
 
 ワールド名で一覧を絞り込み、ワールドを選ぶとそのワールドで撮影された写真を表示します。ハートアイコンでお気に入りに登録できます。
 
-![ワールド検索概要](../../assets/screenshots/person-search-worlds-overview.webp)
+![ワールド検索概要](../assets/screenshots/person-search-worlds-overview.webp)
 
-![ワールド検索結果](../../assets/screenshots/person-search-worlds-results.webp)
+![ワールド検索結果](../assets/screenshots/person-search-worlds-results.webp)
 
 ### お気に入り
 
 フレンド検索・ワールド検索でハートを付けた項目を、種別セレクトで切り替えて一覧できます。カードをクリックすると対応する検索結果へ移動します。
 
-![お気に入り（フレンド）](../../assets/screenshots/person-search-favorites-friends.webp)
+![お気に入り（フレンド）](../assets/screenshots/person-search-favorites-friends.webp)
 
-![お気に入り（ワールド）](../../assets/screenshots/person-search-favorites-worlds.webp)
+![お気に入り（ワールド）](../assets/screenshots/person-search-favorites-worlds.webp)
 
 ## 注意点
 

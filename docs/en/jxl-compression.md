@@ -20,13 +20,13 @@ JPEG XL (JXL) compression stores photos in a smaller format. Simple and detailed
 
 Use fewer controls for common compression settings. Start here if you are new to JXL.
 
-![Simple mode](../../assets/screenshots/jxl-simple-mode.webp)
+![Simple mode](../assets/screenshots/jxl-simple-mode.webp)
 
 ### Detailed mode
 
 Tune quality, schedule, and background processing in more detail.
 
-![Detailed mode](../../assets/screenshots/jxl-detailed-mode.webp)
+![Detailed mode](../assets/screenshots/jxl-detailed-mode.webp)
 
 ## Notes
 

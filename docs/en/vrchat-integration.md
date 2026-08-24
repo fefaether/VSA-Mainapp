@@ -23,13 +23,13 @@ VSA reads world, user, and camera metadata from VRChat screenshots and shows it 
 
 Configure the watch folder, metadata output path, and OSC so screenshots are detected automatically.
 
-![VRChat settings and metadata](../../assets/screenshots/vrchat-settings-metadata.webp)
+![VRChat settings and metadata](../assets/screenshots/vrchat-settings-metadata.webp)
 
 ### Photo detail metadata
 
 Photo details show world name, photographer, participants, camera type, and parameters.
 
-![Photo detail metadata](../../assets/screenshots/vrchat-photo-detail-metadata.webp)
+![Photo detail metadata](../assets/screenshots/vrchat-photo-detail-metadata.webp)
 
 ## Notes
 

@@ -22,31 +22,31 @@
 
 製品紹介と次へ／スキップの導線です。
 
-![ようこそ](../../assets/screenshots/setup-wizard-welcome.webp)
+![ようこそ](../assets/screenshots/setup-wizard-welcome.webp)
 
 ### 言語とテーマ
 
 表示言語とテーマを選びます。
 
-![言語とテーマ](../../assets/screenshots/setup-wizard-language-theme.webp)
+![言語とテーマ](../assets/screenshots/setup-wizard-language-theme.webp)
 
 ### フォルダ設定
 
 スクリーンショット監視フォルダなど、取り込みに必要なパスを設定します。
 
-![フォルダ設定](../../assets/screenshots/setup-wizard-folder-settings.webp)
+![フォルダ設定](../assets/screenshots/setup-wizard-folder-settings.webp)
 
 ### 自動起動
 
 OS起動時の自動起動など、起動まわりの初期設定を行います。
 
-![自動起動](../../assets/screenshots/setup-wizard-auto-start.webp)
+![自動起動](../assets/screenshots/setup-wizard-auto-start.webp)
 
 ### アーカイブ圧縮
 
 JPEG XLなどの圧縮・アーカイブ関連の初期設定を行います。
 
-![アーカイブ圧縮](../../assets/screenshots/setup-wizard-archive-compression.webp)
+![アーカイブ圧縮](../assets/screenshots/setup-wizard-archive-compression.webp)
 
 ## 注意点
 

@@ -22,19 +22,19 @@
 
 ログイン状態、プラン、ウェブサイトのアカウントページへの導線を確認します。
 
-![アカウント概要](../../assets/screenshots/account-overview.webp)
+![アカウント概要](../assets/screenshots/account-overview.webp)
 
 ### クラウド保存ステータス
 
 利用可能な環境では、クラウド保存の有効状態や同期状況を確認できます。
 
-![クラウドステータス](../../assets/screenshots/account-cloud-status.webp)
+![クラウドステータス](../assets/screenshots/account-cloud-status.webp)
 
 ### X投稿ステータス
 
 プランや月間の投稿残数など、X投稿の利用状況を確認します。X連携の解除・管理はウェブサイト側で行います。
 
-![X投稿ステータス](../../assets/screenshots/account-x-status.webp)
+![X投稿ステータス](../assets/screenshots/account-x-status.webp)
 
 ## 注意点
 

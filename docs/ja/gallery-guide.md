@@ -23,25 +23,25 @@
 
 写真をクリックすると右側に詳細サイドバーが開き、ワールド名・撮影者・参加者・カメラ情報などを確認できます。
 
-![ギャラリー概要](../../assets/screenshots/gallery-overview.webp)
+![ギャラリー概要](../assets/screenshots/gallery-overview.webp)
 
 ### ソートとお気に入り
 
 ツールバーのソート項目（作成日、ワールド名、ファイル名、サイズ、撮影日時、撮影者など）で並べ替え、矢印で昇順/降順を切り替えます。サムネイルや詳細の星アイコンでお気に入り登録できます。
 
-![ソートとお気に入り](../../assets/screenshots/gallery-sort-and-favorites.webp)
+![ソートとお気に入り](../assets/screenshots/gallery-sort-and-favorites.webp)
 
 ### ゴミ箱
 
 ギャラリーから削除した写真はゴミ箱タブに移ります。復元、完全削除、ゴミ箱を空にする操作ができます。
 
-![ゴミ箱](../../assets/screenshots/gallery-trash.webp)
+![ゴミ箱](../assets/screenshots/gallery-trash.webp)
 
 ### インポート
 
 監視フォルダの登録・有効化や取り込み状況を確認します。写真が自動で入らない場合は、まずこのタブを確認してください。
 
-![インポート](../../assets/screenshots/gallery-import.webp)
+![インポート](../assets/screenshots/gallery-import.webp)
 
 ### その他の操作
 

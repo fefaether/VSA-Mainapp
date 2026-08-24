@@ -20,19 +20,19 @@
 
 自動露光で全体の明るさを整え、必要なら手動で微調整します。
 
-![自動露光](../../assets/screenshots/retouch-auto-exposure.webp)
+![自動露光](../assets/screenshots/retouch-auto-exposure.webp)
 
 ### トーンカーブ
 
 トーンカーブでハイライト／ミッドトーン／シャドウを細かく調整します。
 
-![トーンカーブ](../../assets/screenshots/retouch-tone-curve.webp)
+![トーンカーブ](../assets/screenshots/retouch-tone-curve.webp)
 
 ### パラメータ調整
 
 明度、コントラスト、彩度、色温度、ハイライト、シャドウなどのスライダーで調整します。各項目はリセットできます。
 
-![パラメータ](../../assets/screenshots/retouch-parameters.webp)
+![パラメータ](../assets/screenshots/retouch-parameters.webp)
 
 ## 注意点
 

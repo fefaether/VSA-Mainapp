@@ -22,19 +22,19 @@ Cloud save, share links, and X posting are under **staged rollout**. If a menu i
 
 Check login state, plan, and links to the website account page.
 
-![Account overview](../../assets/screenshots/account-overview.webp)
+![Account overview](../assets/screenshots/account-overview.webp)
 
 ### Cloud save status
 
 When available, review cloud save enablement and sync status.
 
-![Cloud status](../../assets/screenshots/account-cloud-status.webp)
+![Cloud status](../assets/screenshots/account-cloud-status.webp)
 
 ### X posting status
 
 Review plan and remaining monthly posts. Unlink or manage X on the website account page.
 
-![X posting status](../../assets/screenshots/account-x-status.webp)
+![X posting status](../assets/screenshots/account-x-status.webp)
 
 ## Notes
 

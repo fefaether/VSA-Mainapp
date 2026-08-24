@@ -23,13 +23,13 @@ VSAはVRChatで撮影した写真からワールド・ユーザー・カメラ�
 
 監視フォルダ、メタデータ出力先、OSCなどを設定し、VRChatのスクリーンショットを自動検知できるようにします。
 
-![VRChat設定とメタデータ](../../assets/screenshots/vrchat-settings-metadata.webp)
+![VRChat設定とメタデータ](../assets/screenshots/vrchat-settings-metadata.webp)
 
 ### 写真詳細のメタデータ
 
 写真詳細ではワールド名、撮影者、参加者、カメラ種別とパラメータを確認できます。
 
-![写真詳細のメタデータ](../../assets/screenshots/vrchat-photo-detail-metadata.webp)
+![写真詳細のメタデータ](../assets/screenshots/vrchat-photo-detail-metadata.webp)
 
 ## 注意点
 

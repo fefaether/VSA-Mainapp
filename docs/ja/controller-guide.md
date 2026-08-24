@@ -20,13 +20,13 @@ VirtualLens Controllerは、OSC経由でVirtualLens2のカメラパラメータ�
 
 コントローラー画面ではパラメータ一覧、プリセット、OSC状態を確認できます。
 
-![コントローラー概要](../../assets/screenshots/controller-overview.webp)
+![コントローラー概要](../assets/screenshots/controller-overview.webp)
 
 ### ライブ操作
 
 スライダーや数値入力でパラメータを変更すると、接続中はVRChat側へ反映されます。よく使う組み合わせはプリセットとして保存・読み込みできます。
 
-![ライブ操作](../../assets/screenshots/controller-live-controls.webp)
+![ライブ操作](../assets/screenshots/controller-live-controls.webp)
 
 ## 注意点
 
