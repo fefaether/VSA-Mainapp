@@ -1,41 +1,171 @@
-# Retouch Guide
+# Retouch Feature Guide
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---
 
-## Overview
 
-Retouch adjusts brightness, tone, and exposure parameters for gallery photos inside the app. The main tools are auto exposure, tone curve, and individual parameters.
+The retouch feature lets you edit photos directly within the application. You can adjust brightness, contrast, color temperature, tone curves, and more.
 
-## How to open
+## Opening the Retouch Editor
 
-1. Select a photo in the gallery
-2. Open **Retouch**
-3. Adjust in the right panel and export when needed
+Select a photo in the gallery and click the "Retouch" button to open the retouch editor.
 
-## Main operations
+## Screen Layout
 
-### Auto exposure
+The retouch editor consists of three main areas:
 
-Use auto exposure to balance overall brightness, then fine-tune manually.
+### Left Area (Main Editing)
 
-![Auto exposure](../assets/screenshots/retouch-auto-exposure.webp)
+- **Zoom Controls** — Adjust the display scale of the photo
+- **Preview Canvas** — View real-time preview of edits
+- **Filmstrip** — Quick access to recent photos for fast switching
 
-### Tone curve
+### Right Panel (Parameter Adjustment)
 
-Use the tone curve for finer highlight / midtone / shadow control.
+Adjust editing parameters using sliders or numeric input.
 
-![Tone curve](../assets/screenshots/retouch-tone-curve.webp)
+## Editing Parameters
 
-### Parameter adjustments
+### Basic Parameters
 
-Adjust brightness, contrast, saturation, color temperature, highlights, shadows, and more with sliders. Each control can be reset.
+| Parameter | Description | Range |
+|-----------|-------------|-------|
+| **Brightness** | Adjust overall brightness of the photo | -100% ～ +100% |
+| **Contrast** | Adjust the difference between light and dark areas | -100% ～ +100% |
+| **Saturation** | Adjust color vividness | -100% ～ +100% |
+| **Color Temperature** | Adjust warm/cool color tone | 2000K ～ 10000K |
+| **Highlights** | Adjust bright areas (whites) | -100% ～ +100% |
+| **Shadows** | Adjust dark areas (blacks) | -100% ～ +100% |
 
-![Parameters](../assets/screenshots/retouch-parameters.webp)
+### How to Adjust Parameters
+
+#### Using Sliders
+
+Drag the slider next to each parameter to adjust the value.
+
+#### Direct Numeric Input
+
+Click the numeric field to enter values directly or as percentages.
+
+- `50` or `50%` for +50%
+- `-30` or `-30%` for -30%
+
+#### Reset to Default
+
+Click the reset button (↻ icon) at the end of each parameter row to restore the default value.
+
+## Tone Curve Editor
+
+Use the tone curve editor for more detailed color correction.
+
+### Tone Curve Basics
+
+The tone curve shows the relationship between input values (horizontal axis) and output values (vertical axis).
+
+- **RGB** — Adjust all color channels simultaneously
+- **R (Red)** — Adjust red channel only
+- **G (Green)** — Adjust green channel only
+- **B (Blue)** — Adjust blue channel only
+
+### Operating the Tone Curve
+
+1. Open the "Tone Curve" section in the parameter panel on the right
+2. Click a channel button (RGB/R/G/B) to select the channel to adjust
+3. Click anywhere on the curve to add a point
+4. Drag the point to adjust the curve
+5. Select an unnecessary point and remove it with the `Delete` key or the delete action
+
+Basic adjustments, color controls, and tone curves are arranged in collapsible sections. Keep only the section you are editing open to leave more room for the preview.
+
+### Tone Curve Adjustment Examples
+
+**Lift Shadows** — Drag the lower-left portion of the curve upward to brighten dark areas
+
+**Control Highlights** — Drag the upper-right portion of the curve downward to manage bright area exposure
+
+**Enhance Contrast** — Create an S-curve to emphasize the difference between shadows and highlights
+
+## Zoom Operations
+
+### Zoom Buttons
+
+Use the zoom controls above the preview canvas:
+
+- **Zoom In (+)** — Enlarge details
+- **Zoom Out (-)** — Display smaller
+- **Fit Window** — Fit entire photo to screen (default)
+
+### Keyboard Shortcuts
+
+| Action | Shortcut |
+|--------|----------|
+| Zoom In | `Ctrl` + `=` |
+| Zoom Out | `Ctrl` + `-` |
+| Fit Window | `Ctrl` + `0` |
+
+## Filmstrip
+
+The filmstrip at the bottom displays recent photos and loads more as you move toward the end.
+
+### Filmstrip Operations
+
+- **Photo Selection** — Click a photo in the filmstrip to switch instantly
+- **Scroll** — Scroll left/right using mouse wheel or scrollbar
+
+## Toolbar Buttons
+
+### Edit Operations
+
+| Button | Function |
+|--------|----------|
+| **Undo** | Cancel the last operation (`Ctrl` + `Z`) |
+| **Redo** | Reapply the last undone operation (`Ctrl` + `Shift` + `Z`) |
+| **Reset** | Reset all parameters to default values |
+
+### Export Feature
+
+Click the **Export** button to save with these options:
+
+- **File Format** — Select PNG or JPEG
+- **Filename** — Specify save location and new filename
+- **Quality** — Adjust compression quality for JPEG saving
+
+## Common Operations
+
+### Brighten a Dark Photo
+
+1. Move the **Brightness** slider to the right to brighten overall
+2. Adjust **Highlights** as needed to prevent blown-out whites
+
+### Warm Up Photo Color
+
+1. Move the **Color Temperature** slider to the right (higher = warmer)
+2. Preview the result
+
+### Increase Color Vividness
+
+Move the **Saturation** slider to the right for more vivid colors
+
+### Balance Shadows and Light
+
+1. Adjust **Shadows** to fine-tune dark areas
+2. Adjust **Highlights** to fine-tune bright areas
+3. Verify overall balance and make fine adjustments
 
 ## Notes
 
-- Follow on-screen guidance for save/export destinations
-- Prefer not overwriting originals
-- Zoom shortcuts are listed in [Keyboard Shortcuts](keyboard-shortcuts.md)
+- **Auto-save** — Adjustments are not saved automatically. Export the result you want to keep
+- **Original File Impact** — Export asks for a destination and filename, then saves the edited result as a separate file
+- **Large File Processing** — High-resolution photos may take time to process
+- **Memory Usage** — Retouching multiple photos simultaneously consumes memory
+
+## Keyboard Shortcuts Summary
+
+| Action | Shortcut |
+|--------|----------|
+| Undo | `Ctrl` + `Z` |
+| Redo | `Ctrl` + `Shift` + `Z` |
+| Zoom In | `Ctrl` + `=` |
+| Zoom Out | `Ctrl` + `-` |
+| Fit Window | `Ctrl` + `0` |

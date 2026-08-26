@@ -10,13 +10,13 @@ VSA（Virtual Snap Archive）の使い方、セットアップ、規約、プラ
 
 配布物やアプリ内の設定画面から参照する重要文書です。販売・配布ページでも以下の公開URLを明示してください。
 
-- 利用規約（日本語）: https://fefaether.github.io/VSA-Mainapp/ja/terms.html
-- プライバシーポリシー（日本語）: https://fefaether.github.io/VSA-Mainapp/ja/privacy.html
-- Terms of Service: https://fefaether.github.io/VSA-Mainapp/en/terms.html
-- Privacy Policy: https://fefaether.github.io/VSA-Mainapp/en/privacy.html
-- ライセンス情報: https://fefaether.github.io/VSA-Mainapp/license.html
+- [利用規約（日本語）](https://fefaether.github.io/VSA-Mainapp/ja/terms.html)
+- [プライバシーポリシー（日本語）](https://fefaether.github.io/VSA-Mainapp/ja/privacy.html)
+- [Terms of Service](https://fefaether.github.io/VSA-Mainapp/en/terms.html)
+- [Privacy Policy](https://fefaether.github.io/VSA-Mainapp/en/privacy.html)
+- [ライセンス情報](https://fefaether.github.io/VSA-Mainapp/license.html)
 
-Google OAuthの公開設定に掲載するプライバシーポリシーURLは、本 GitHub Pages 上のプライバシーポリシーを使用してください。
+Google OAuthの公開設定に掲載するプライバシーポリシーURLは、VSAウェブサイトのプライバシーポリシーページ（`/ja/privacy` または `/en/privacy`）を使用します。条項全文の最新正本は本 GitHub Pages 上の利用規約・プライバシーポリシーを参照してください。
 
 アプリ内では、**設定 > その他** から規約、プライバシーポリシー、ライセンス情報、GitHub Releases、ドキュメントトップを開けます。
 
@@ -24,24 +24,27 @@ Google OAuthの公開設定に掲載するプライバシーポリシーURLは�
 
 - [インストール](./installation.md)
 - [はじめに（初回セットアップ）](./guide/getting-started.md)
-- [基本操作ガイド](./guide/basic-usage.md)
+- チュートリアル
+  - [チュートリアル：はじめに](./tutorial/getting-started.md)
+  - [フォルダのインポート](./tutorial/import-folder.md)
 
-## サポート
+## ドキュメント
+
+- [基本操作ガイド](./guide/basic-usage.md)
+- [サポート](#サポート)
+- [リリース履歴](./releases/index.md)
+- [ライセンス情報](./license.md)
+
+### サポート
 
 - [FAQ](./faq.md)
 - [トラブルシューティング](./troubleshooting.md)
-
-## リリース履歴
-
-- [Release Notes](./releases/index.md)
-
-## ドキュメント
 
 ### 日本語版
 
 #### 基本操作
 - [ギャラリー操作ガイド](./ja/gallery-guide.md) - 写真表示、ソート、お気に入り、ゴミ箱機能
-- [検索](./ja/person-search-guide.md) - フレンド／ワールド検索とお気に入り
+- [ユーザー検索](./ja/person-search-guide.md) - 特定ユーザーが写っている写真検索
 
 #### VRChat連携・カメラ制御
 - [VRChat連携](./ja/vrchat-integration.md) - VRChatメタデータ取得
@@ -59,7 +62,7 @@ Google OAuthの公開設定に掲載するプライバシーポリシーURLは�
 - [クラウド・アカウント連携](./ja/google-integration.md) - ロールアウト中の連携機能の概要
 
 #### カスタマイズと設定
-- [設定ガイド](./ja/settings-guide.md) - 撮影者モードを含む設定パネルの使い方
+- [設定ガイド](./ja/settings-guide.md) - 全設定パネル詳細（外観、アニメーション、ファイル、システム、X投稿など）
 - [キーボードショートカット](./ja/keyboard-shortcuts.md) - ショートカット一覧とカスタマイズ
 - [セットアップウィザード](./ja/setup-wizard.md) - 初回セットアップガイド
 
@@ -75,7 +78,7 @@ Google OAuthの公開設定に掲載するプライバシーポリシーURLは�
 
 #### Basic Operations
 - [Gallery Guide](./en/gallery-guide.md) - Photo display, sorting, favorites, trash
-- [Search Guide](./en/person-search-guide.md) - Friend/world search and favorites
+- [Person Search Guide](./en/person-search-guide.md) - Search photos with specific users
 
 #### VRChat Integration & Camera Control
 - [VRChat Integration](./en/vrchat-integration.md) - VRChat metadata retrieval
@@ -93,7 +96,7 @@ Google OAuthの公開設定に掲載するプライバシーポリシーURLは�
 - [Cloud and Account Integration](./en/google-integration.md) - Overview of rollout-gated linking features
 
 #### Customization & Settings
-- [Settings Guide](./en/settings-guide.md) - Settings panels including photographer mode
+- [Settings Guide](./en/settings-guide.md) - All settings panels (appearance, animation, file, system, X post, etc.)
 - [Keyboard Shortcuts](./en/keyboard-shortcuts.md) - Shortcut list and customization
 - [Setup Wizard](./en/setup-wizard.md) - Initial setup guide
 
@@ -105,22 +108,12 @@ Google OAuthの公開設定に掲載するプライバシーポリシーURLは�
 - [Terms of Service](./en/terms.md)
 - [Privacy Policy](./en/privacy.md)
 
-### チュートリアル
-
-- [はじめに](./tutorial/getting-started.md)
-- [フォルダのインポート](./tutorial/import-folder.md)
-
-### その他
-
-- [基本的な使い方](./basic-usage.md)
-- [ライセンス情報](./license.md)
-
 ## バージョン情報
 
-このドキュメントは **VSA v0.6** リリース準備時点の現行実装を基準にしています。
+このドキュメントは **VSA v0.7.4** の現行実装を基準にしています。
 
-- 最終更新日: 2026-07-09
-- 対象バージョン: v0.6（リリース準備）
+- 最終更新日: 2026-08-26
+- 対象バージョン: v0.7.4
 - 主な対応機能: ローカル写真管理、VSAアカウント、クラウド保存（段階的公開）、共有リンク（段階的公開）、X投稿（段階的公開）、JPEG XL圧縮、VirtualLens Controller、サーバーステータス、カメラ情報フレーム
 
 ## 重要なお知らせ
@@ -131,4 +124,4 @@ Google OAuthの公開設定に掲載するプライバシーポリシーURLは�
 - クラウド保存、共有リンク、X投稿などのアカウント連携機能は段階的なロールアウト中です。利用可否は公開状況、プラン、アカウント状態、利用環境により異なります。詳細手順は順次更新します。現時点ではアプリ内UIとGitHub Pages上の[利用規約](./ja/terms.md)・[プライバシーポリシー](./ja/privacy.md)を正本として参照してください。
 - VSAアカウント、クラウド保存、共有リンク、X投稿、Turnstile、アップデート確認、サーバーステータス表示では外部通信が発生する場合があります。
 - Windows版インストーラーは未署名の場合があり、SmartScreenやセキュリティソフトの警告が出ることがあります。
-- アプリ内では **設定 > その他 > ドキュメントトップ** から本ドキュメントを開けます。
+- アプリ内の「ドキュメント」ボタン、または「設定 > その他」からも関連ページを開けます。

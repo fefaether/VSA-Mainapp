@@ -183,33 +183,25 @@ Refer to [Checking Log Files](#how-to-check-log-files) to examine detailed error
 
 #### Compression Does Not Start
 
-**Symptom**: Auto-compression does not start at the scheduled time, or the scheduling feature is not working
+**Symptom**: Older photos are not processed after automatic archiving is enabled
 
 **Possible Causes**:
-- Auto-compression feature is disabled
-- VRChat is running
-- System time is incorrect
+- Automatic archiving is disabled
+- No photos are older than the selected threshold
+- The photo output folder, archive destination, or free disk space has a problem
 
 **Solution (Step-by-Step)**:
 
-**Step 1: Verify Auto-Compression Is Enabled**
-1. Open the Game-Side Settings
-2. Expand Advanced Settings
-3. Verify that "Auto-Compression Feature" is enabled (toggle ON)
-4. If disabled, enable it and save
+**Step 1: Verify Automatic Archiving**
+1. Open the JXL Compression screen
+2. Confirm automatic archiving is enabled and the age threshold is appropriate
 
-**Step 2: Check VRChat Status**
-1. Verify that VRChat is not running
-2. If it is, close it
-3. Wait until the scheduled time after completely closing VRChat
+**Step 2: Check the Destination and Problem Status**
+1. Confirm VSA can read and write the photo output folder and its `VSA-Archive` subfolder
+2. Check available disk space
+3. Open the archive manager’s Problems tab and retry the available action
 
-**Step 3: Verify System Time**
-1. Check Windows system time
-2. Click the time in the taskbar
-3. Verify the time is accurate
-4. If incorrect, synchronize with the time server (usually automatic)
-
-**Step 4: Manually Run Compression**
+**Step 3: Manually Run Compression**
 1. Open the JPEG XL Compression view
 2. Click "Select Folder" to choose the folder to compress
 3. Click the "Run Compression" button

@@ -33,7 +33,7 @@ The following features send data externally when used.
 
 For login, email verification, OAuth login, and desktop app linking, data such as email address, authentication state, device information, and OAuth results may be sent to and stored by the VSA website and Supabase. The desktop app stores authentication-related information in a protected area on your device.
 
-If Google OAuth is used, Google's authorization screen and Google account information are used for authentication. For Google OAuth app publishing settings, use the GitHub Pages privacy policy (Japanese: `https://fefaether.github.io/VSA-Mainapp/ja/privacy.html`, English: `https://fefaether.github.io/VSA-Mainapp/en/privacy.html`).
+If Google OAuth is used, Google's authorization screen and Google account information are used for authentication. For Google OAuth app publishing settings, use the VSA website privacy policy page (Japanese: `/ja/privacy`, English: `/en/privacy`).
 
 ### 3.2 Cloud Storage
 
@@ -82,8 +82,6 @@ Each third-party service may also apply its own privacy policy and terms.
 ## 6. Data Deletion
 
 Local data can be deleted by removing the App's storage folders, database, and settings files. To request deletion of cloud data, account data, share link data, or X account linking data, use the account features on the related website or contact the Operator.
-
-After cloud data is deleted or an account is cancelled, cloud data may be retained for up to 30 days for recovery or operational reasons.
 
 ## 7. Security
 

@@ -70,8 +70,9 @@ This section covers frequently asked questions and solutions for common problems
    - Read permission for input folder
    - Write permission for output folder
 
-3. **Check if VRChat is running**
-   - If "Consider VRChat State" is enabled, compression pauses while VRChat is running
+3. **Check automatic archive status**
+   - Confirm automatic archiving is enabled on the JXL Compression screen
+   - Open the archive manager’s Problems tab and retry any available action
 
 4. **Check process in Task Manager**
    - Verify VSA process is responding

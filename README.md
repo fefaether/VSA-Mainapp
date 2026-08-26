@@ -50,14 +50,14 @@ VSAは、ローカル管理を基本にしつつ、ユーザーが選択した�
 
 最新のドキュメントはGitHub Pagesで公開しています。
 
-- ドキュメントトップ: https://fefaether.github.io/VSA-Mainapp/
-- 利用規約: https://fefaether.github.io/VSA-Mainapp/ja/terms.html
-- プライバシーポリシー: https://fefaether.github.io/VSA-Mainapp/ja/privacy.html
-- ライセンス情報: https://fefaether.github.io/VSA-Mainapp/license.html
-- English Terms: https://fefaether.github.io/VSA-Mainapp/en/terms.html
-- English Privacy Policy: https://fefaether.github.io/VSA-Mainapp/en/privacy.html
+- [ドキュメントトップ](https://fefaether.github.io/VSA-Mainapp/)
+- [利用規約](https://fefaether.github.io/VSA-Mainapp/ja/terms.html)
+- [プライバシーポリシー](https://fefaether.github.io/VSA-Mainapp/ja/privacy.html)
+- [ライセンス情報](https://fefaether.github.io/VSA-Mainapp/license.html)
+- [English Terms](https://fefaether.github.io/VSA-Mainapp/en/terms.html)
+- [English Privacy Policy](https://fefaether.github.io/VSA-Mainapp/en/privacy.html)
 
-Google OAuthの公開設定に掲載するプライバシーポリシーURLは、上記 GitHub Pages のプライバシーポリシーを使用します。
+Google OAuthの公開設定に掲載するプライバシーポリシーURLは、VSAウェブサイトのプライバシーポリシーページ（`/ja/privacy` または `/en/privacy`）を使用します。条項全文の最新正本は上記 GitHub Pages の文書を参照してください。
 
 ---
 
