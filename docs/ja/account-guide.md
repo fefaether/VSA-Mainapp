@@ -1,5 +1,11 @@
 # アカウント管理ガイド
 
+## 開き方
+
+VSAのサイドバーから「アカウント」を開きます。
+
+![アカウント画面](../assets/screenshots/account-overview.webp)
+
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
 ---

@@ -1,5 +1,11 @@
 # Account Management Guide
 
+## How to open
+
+Open **Account** from the VSA sidebar.
+
+![Account screen](../assets/screenshots/account-overview.webp)
+
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---

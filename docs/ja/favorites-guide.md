@@ -1,5 +1,11 @@
 # お気に入り機能ガイド
 
+## 開き方
+
+ギャラリーから「お気に入り」を開きます。
+
+![お気に入り画面](../assets/screenshots/favorites-overview.webp)
+
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
 ---

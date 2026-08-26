@@ -1,5 +1,11 @@
 # クラウド・アカウント連携（旧 Google 連携）
 
+## 開き方
+
+アカウント画面からクラウド連携の状態を確認します。
+
+![クラウド連携画面](../assets/screenshots/account-rollout-status.webp)
+
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
 ---

@@ -1,5 +1,11 @@
 # VirtualLens Controllerガイド
 
+## 開き方
+
+VSAのサイドバーから「VirtualLens Controller」を開きます。
+
+![VirtualLens Controller画面](../assets/screenshots/controller-overview.webp)
+
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
 ---

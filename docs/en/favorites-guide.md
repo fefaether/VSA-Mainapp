@@ -1,5 +1,11 @@
 # Favorites Feature Guide
 
+## How to open
+
+Open **Favorites** from the Gallery.
+
+![Favorites screen](../assets/screenshots/favorites-overview.webp)
+
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---

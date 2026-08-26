@@ -1,5 +1,11 @@
 # 設定画面完全ガイド
 
+## 開き方
+
+VSAのサイドバーから「設定」を開きます。
+
+![設定画面](../assets/screenshots/settings-system.webp)
+
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
 ---

@@ -1,5 +1,11 @@
 # Settings Guide - Complete Reference
 
+## How to open
+
+Open **Settings** from the VSA sidebar.
+
+![Settings screen](../assets/screenshots/settings-system.webp)
+
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---

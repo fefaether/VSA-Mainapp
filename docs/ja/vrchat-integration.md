@@ -1,5 +1,11 @@
 # VRChat連携
 
+## 開き方
+
+設定画面からVRChat連携設定を開きます。
+
+![VRChat連携設定](../assets/screenshots/vrchat-settings-metadata.webp)
+
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
 ---

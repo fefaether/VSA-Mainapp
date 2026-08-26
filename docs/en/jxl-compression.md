@@ -1,5 +1,11 @@
 # JXL Compression Guide
 
+## How to open
+
+Open **JXL Compression** from the VSA sidebar.
+
+![JXL Compression screen](../assets/screenshots/jxl-simple-mode.webp)
+
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---

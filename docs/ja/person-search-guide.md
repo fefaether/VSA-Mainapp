@@ -1,5 +1,11 @@
 # ユーザー検索機能ガイド
 
+## 開き方
+
+VSAのサイドバーから「ユーザー検索」を開きます。
+
+![ユーザー検索画面](../assets/screenshots/person-search-overview.webp)
+
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
 ---

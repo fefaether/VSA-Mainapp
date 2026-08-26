@@ -1,5 +1,11 @@
 # VirtualLens Controller Guide
 
+## How to open
+
+Open **VirtualLens Controller** from the VSA sidebar.
+
+![VirtualLens Controller screen](../assets/screenshots/controller-overview.webp)
+
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---

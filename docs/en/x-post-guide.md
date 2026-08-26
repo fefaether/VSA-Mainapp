@@ -1,5 +1,11 @@
 # X Posting Feature Guide
 
+## How to open
+
+Select a photo and open the X posting screen from its sharing actions.
+
+![X posting screen](../assets/screenshots/xpost-modal.webp)
+
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---

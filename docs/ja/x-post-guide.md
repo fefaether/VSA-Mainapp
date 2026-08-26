@@ -1,5 +1,11 @@
 # X投稿機能ガイド
 
+## 開き方
+
+写真の共有操作からX投稿画面を開きます。
+
+![X投稿画面](../assets/screenshots/xpost-modal.webp)
+
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
 ---

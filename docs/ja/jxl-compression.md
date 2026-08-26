@@ -1,5 +1,11 @@
 # JXL圧縮ガイド
 
+## 開き方
+
+VSAのサイドバーから「JXL圧縮」を開きます。
+
+![JXL圧縮画面](../assets/screenshots/jxl-simple-mode.webp)
+
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
 ---

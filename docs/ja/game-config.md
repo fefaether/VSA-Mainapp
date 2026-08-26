@@ -1,5 +1,11 @@
 # ゲーム側設定ガイド
 
+## 開き方
+
+VSAのサイドバーから「ゲーム側設定」を開きます。
+
+![ゲーム側設定画面](../assets/screenshots/game-config-settings.webp)
+
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
 ---

@@ -1,5 +1,11 @@
 # Retouch Feature Guide
 
+## How to open
+
+Select a photo and open the Retouch screen.
+
+![Retouch screen](../assets/screenshots/retouch-auto-exposure.webp)
+
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---

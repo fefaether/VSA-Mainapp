@@ -1,5 +1,11 @@
 # Game Configuration Guide
 
+## How to open
+
+Open **Game Configuration** from the VSA sidebar.
+
+![Game Configuration screen](../assets/screenshots/game-config-settings.webp)
+
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---

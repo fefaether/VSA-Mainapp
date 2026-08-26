@@ -1,5 +1,11 @@
 # Keyboard Shortcuts List
 
+## How to open
+
+Open **Shortcuts** from Settings.
+
+![Shortcut settings](../assets/screenshots/settings-shortcut.webp)
+
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---

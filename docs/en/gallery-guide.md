@@ -1,5 +1,11 @@
 # Gallery Guide
 
+## How to open
+
+Open **Gallery** from the VSA sidebar.
+
+![Gallery screen](../assets/screenshots/gallery-overview.webp)
+
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---

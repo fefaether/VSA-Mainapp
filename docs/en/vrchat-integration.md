@@ -1,5 +1,11 @@
 # VRChat Integration
 
+## How to open
+
+Open the VRChat integration options from Settings.
+
+![VRChat integration settings](../assets/screenshots/vrchat-settings-metadata.webp)
+
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---

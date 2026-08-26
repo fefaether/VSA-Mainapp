@@ -1,5 +1,11 @@
 # レタッチ機能ガイド
 
+## 開き方
+
+写真を選択し、レタッチ画面を開きます。
+
+![レタッチ画面](../assets/screenshots/retouch-auto-exposure.webp)
+
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
 ---

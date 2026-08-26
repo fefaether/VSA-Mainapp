@@ -1,5 +1,11 @@
 # キーボードショートカット一覧
 
+## 開き方
+
+設定画面から「ショートカット」を開きます。
+
+![ショートカット設定](../assets/screenshots/settings-shortcut.webp)
+
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
 ---

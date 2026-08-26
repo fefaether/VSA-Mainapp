@@ -1,5 +1,11 @@
 # Cloud and Account Integration (formerly Google Integration)
 
+## How to open
+
+Open the Account screen to check cloud integration status.
+
+![Cloud integration screen](../assets/screenshots/account-rollout-status.webp)
+
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---
