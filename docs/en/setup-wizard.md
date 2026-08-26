@@ -188,7 +188,7 @@ Setup is complete and move to main screen.
 2. Main screen appears
 3. Gallery view displays
 4. VSA performs the selected migration and import while showing counts, percentage, and the current file
-5. If finalization fails, retry it or return to Folder Settings from the same screen
+5. If finalization fails, completed work is kept and you can close setup or return to Folder Settings
 
 ## Skipping Setup
 
