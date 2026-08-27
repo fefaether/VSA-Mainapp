@@ -121,6 +121,20 @@ This section covers frequently asked questions and solutions for common problems
 
 ---
 
+### Start VSA when Steam VRChat launches
+
+On Windows Steam VRChat (App ID 438100), enable **Steam integration** in the setup wizard's **Startup method** step or in Game Settings. VSA is added to Steam Launch Options and starts minimized when VRChat starts. VRChat still launches if VSA cannot be started.
+
+If Steam is running, VSA will ask you to quit Steam and retry because Steam may overwrite a file changed while it is open. Existing third-party wrappers, cmd/PowerShell commands, complex syntax, and multiple `%command%` placeholders are not changed automatically for safety. Steam-side changes take precedence.
+
+### VRChat still launches after uninstalling VSA
+
+The uninstaller attempts to restore VSA-managed Launch Options when they have not been changed. If Steam is running or another app changed the options, it leaves them untouched and continues uninstalling.
+
+In that case, before uninstalling, open VRChat's Steam properties and remove only the VSA portion containing `vsa-mainapp.exe` and `--minimized`. Keep wrappers for other apps and VRChat's own arguments.
+
+---
+
 ### Cloud Save Fails or Is Unavailable
 
 **Symptom:** Favorite cloud save fails, menus are missing, or errors appear

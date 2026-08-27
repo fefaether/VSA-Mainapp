@@ -128,6 +128,14 @@ Configure automatic processes when VRChat is detected.
 
 Configure automatic JXL archiving on the “JXL Compression” screen as described in the [JXL Compression Guide](jxl-compression.md).
 
+### Virtual Desktop auto-launch
+
+On Windows, enable **Launch VRChat when Virtual Desktop connects** to launch Steam VRChat after the Virtual Desktop Streamer and headset connection are confirmed. It is off by default and VSA must be running.
+
+### Steam integration
+
+Enable **Start VSA with VRChat (Steam)** to add VSA to Steam VRChat's Launch Options (App ID 438100). Existing safe arguments are preserved. If Steam-side options were changed outside VSA, VSA does not overwrite them. Disabling the integration or uninstalling VSA restores VSA-managed options when they have not been changed.
+
 ### OSC Settings
 
 OSC (Open Sound Control) enables camera parameter extraction from VRChat.

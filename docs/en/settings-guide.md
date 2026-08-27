@@ -22,14 +22,13 @@ The left menu includes these panels:
 1. **System** - startup and background behavior
 2. **Appearance** - theme, color, and language
 3. **Animation** - motion and transition settings
-4. **Game Settings** - watched folders, OSC, logs, and related settings
-5. **File** - file operation settings
-6. **Notification** - notification settings
-7. **Shortcut** - keyboard shortcuts
-8. **X Post** - posting presets and posting-related settings
-9. **Favorites** - favorites management
-10. **Update** - update checks and release notes
-11. **Other** - terms, privacy policy, licenses, external links, and important notices
+4. **Game Settings** - watched folders, OSC, Virtual Desktop, and Steam integration
+5. **Notification** - notification settings
+6. **Shortcut** - keyboard shortcuts
+7. **X Post** - posting presets and posting-related settings
+8. **Favorites** - favorites management
+9. **Update** - update checks and release notes
+10. **Other** - terms, privacy policy, licenses, external links, and important notices
 
 ## System Panel
 
@@ -77,15 +76,10 @@ Choose the UI language for the entire application.
 
 Choose an accent color for the application interface.
 
-**15 Preset Colors Available**:
-- Blues: Sky Blue, Blue, Steel Blue
-- Purples: Purple, Lavender, Violet
-- Reds: Red, Pink, Hot Pink
-- Oranges: Orange, Amber
-- Greens: Green, Lime Green
-- Teals: Cyan, Turquoise
-- Grays: Gray, Charcoal
-- Others: Gold, Custom
+**3 Preset Colors Available**:
+- **Darkroom**: Graphite and amber
+- **Night Scene**: Blue-black and cobalt
+- **Print**: Warm white and teal ink
 
 **How to Use**:
 1. Click on desired color swatch
@@ -121,39 +115,6 @@ Enable or disable UI animations and transition effects.
 **Use Cases**:
 - Enable for modern, polished feel
 - Disable if animations cause discomfort or on low-end systems
-
-## File Panel
-
-Manage file handling and history settings.
-
-### Auto-Save Configuration
-
-Control automatic file saving behavior.
-
-**Options**:
-- Enable/Disable auto-save
-- Set save interval (configurable)
-- Manual save still available via Ctrl+S
-
-### History Management
-
-**Recent Files Display**:
-- Control how many recent items are shown
-- Range: 5 to 50 items
-
-**Clear History**:
-1. Click "Clear History" button
-2. Confirm in dialog
-3. Recent files list clears
-
-### Preview Settings
-
-Configure preview quality and performance.
-
-**Preview Quality**:
-- Low: Faster loading, lower quality previews
-- Medium: Balanced quality and speed
-- High: Best quality (may impact performance with large libraries)
 
 ## Notification Panel
 
@@ -246,21 +207,17 @@ Manage keyboard shortcuts for frequent operations.
 
 See [Keyboard Shortcuts Complete List](keyboard-shortcuts.md) for detailed information.
 
-## VDI Panel
+## Game Settings Panel
 
-Configure VDI (Virtual Desktop Infrastructure) integration features.
+Configure folders, OSC, Virtual Desktop, and Steam integration for VRChat.
 
-### VDI Linked Features
+### Virtual Desktop auto-launch
 
-**VDI Auto-Launch**:
-- Automatically launch associated VDI when starting VSA
-- Useful for remote desktop workflows
+On Windows, enable **Launch VRChat when Virtual Desktop connects** to launch Steam VRChat after the Virtual Desktop Streamer and headset connection are confirmed. It is off by default and VSA must be running.
 
-### Camera Integration
+### Steam integration
 
-**VDI Camera Options**:
-- Configure camera access in VDI environments
-- May vary depending on VDI setup
+Enable **Start VSA with VRChat (Steam)** to add VSA to Steam VRChat's Launch Options (App ID 438100). Existing safe arguments are preserved. If Steam-side options were changed outside VSA, VSA does not overwrite them. Disabling the integration or uninstalling VSA restores VSA-managed options when they have not been changed.
 
 ## Favorites Panel
 

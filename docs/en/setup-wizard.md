@@ -82,11 +82,10 @@ Select the app display language and visual theme.
 
 Select the accent color for the app.
 
-**15 Color Presets**:
-- Blue, Sky Blue, Purple, Lavender
-- Pink, Hot Pink, Red, Orange
-- Green, Lime Green, Turquoise, Cyan
-- Gray, Gold, and more
+**3 Color Presets**:
+- **Darkroom**: Graphite and amber
+- **Night Scene**: Blue-black and cobalt
+- **Print**: Warm white and teal ink
 
 **How to Select**:
 1. Click desired color
@@ -147,31 +146,23 @@ Windows: C:\Users\[Username]\Pictures\VRChat
 
 If photos are stored outside the VRChat output folder, you can register additional import folders. Existing images start importing when a folder is added. Continue without adding one if it is not needed.
 
-### Step 5: Auto-Launch Setting
+### Step 5: Startup Method
 
-Configure whether to auto-launch VSA when Windows starts.
+Choose how VSA starts alongside your VRChat workflow. Both options can be changed later.
 
 **Options**:
-- **Enabled**: VSA automatically launches each time Windows starts
-- **Disabled**: Must launch VSA manually
+- **Start with Steam VRChat** (recommended): On Windows, adds VSA to Steam VRChat's Launch Options (App ID 438100). Existing safe arguments are preserved.
+- **Start when Windows signs in**: Keeps VSA resident in the background after Windows login.
 
-**Benefits of Enabling**:
-- VSA always runs when playing VRChat
-- Automatic photo import possible
-- No configuration forgotten
-
-**Benefits of Disabling**:
-- Don't launch VSA when not needed
-- Minimize resource consumption
-- Manual complete control
+Steam integration is available only for Steam VRChat on Windows. If Steam-side Launch Options were changed outside VSA, VSA leaves them untouched for safety.
 
 **How to Select**:
-1. Select with toggle or checkbox
-2. Turn on to enable, off to disable
+1. Turn on the switch for the startup method you want.
+2. If Steam is running, quit Steam and retry the change.
 
 **Change Later**:
-- Settings > System > Auto-launch
-- Or from Windows startup settings
+- Steam integration: Settings > Game Settings
+- Windows startup: Settings > System
 
 ### Step 6: JXL Archive and Complete
 

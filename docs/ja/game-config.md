@@ -128,6 +128,14 @@ VRChatの活動に応じた自動処理を設定します。
 
 JXLの自動アーカイブはこの画面ではなく、[JXL圧縮ガイド](jxl-compression.md)に従って「JXL圧縮」画面で設定します。
 
+#### Virtual Desktop自動起動
+
+Windowsで**Virtual Desktop接続時にVRChatを自動起動**を有効にすると、Virtual Desktop Streamerとゴーグルの接続確立を確認してからSteam版VRChatを起動します。既定ではオフで、VSAの起動中に動作します。
+
+#### Steam連携
+
+**VRChat起動時にVSAを起動（Steam）**を有効にすると、Steam版VRChat（App ID 438100）のLaunch OptionsへVSAを追加します。既存の安全な引数は保持します。Steam側の設定が外部で変更されている場合は上書きしません。無効化またはアンインストール時は、VSAが管理していた設定が変更されていない場合に元へ戻します。
+
 ### OSC設定
 
 VRChatとの双方向通信（Open Sound Control）を設定します。これにより、VirtualLens2などのカメラパラメータを取得できます。
