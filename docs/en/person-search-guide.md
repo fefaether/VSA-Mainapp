@@ -402,10 +402,8 @@ See [Game Settings Guide](game-config.md) for details.
 4. Example: "haruka" vs "haruuka" (with long vowel)
 
 **Full Spelling**:
-- Try complete full name
-- Not just first syllables
-- Example: "yam" won't work for "yamada"
-- Must be "yamada"
+- If a short query does not locate the expected name, try a longer part or its full spelling.
+- For example, extend "yam" to "yamada".
 
 ## Tips
 

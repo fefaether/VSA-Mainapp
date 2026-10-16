@@ -258,7 +258,6 @@ You can open:
 - Terms of Service
 - Privacy Policy
 - License information
-- The latest privacy policy URL used for Google OAuth publishing settings
 
 ### External Links
 

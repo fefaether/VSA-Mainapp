@@ -13,7 +13,7 @@ VSAのサイドバーから「カメラコントローラー」を開きます�
 
 カメラコントローラーは、OSC（Open Sound Control）経由でVRChatのカメラパラメータを操作する画面です。画面上部のタブで次のカメラを切り替えます。
 
-- **VirtualLenz2（VirtualLens2）**
+- **VirtualLens2**
 - **Integral**
 - **FishEye**
 - **TelePortraitLens**

@@ -258,7 +258,7 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 2. Click on "Firewall & network protection"
 3. Click on "Advanced settings"
 4. Verify that the OSC ports (9001, 9000, etc.) are allowed in both "Inbound rules" and "Outbound rules"
-5. If not allowed, add a new rule
+5. If communication is blocked, contact support with the log and symptoms
 
 **Step 4: Check for Port Conflicts**
 1. Open Command Prompt (Windows + R → cmd)

@@ -1,3 +1,8 @@
+---
+layout: default
+title: ライセンス情報
+---
+
 # ライセンス情報
 
 [🏠 ドキュメントトップ](./index.md) | [⚖️ 利用規約](./ja/terms.md) | [🔒 プライバシーポリシー](./ja/privacy.md)

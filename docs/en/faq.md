@@ -111,10 +111,7 @@ This section covers frequently asked questions and solutions for common problems
    - Check if VSA process remains in Task Manager
    - If so, end it and restart
 
-2. **Run as administrator**
-   - Right-click > "Run as administrator"
-
-3. **Check settings state**
+2. **Check settings state**
    - Settings files may be corrupted
    - Do not delete the settings folder manually; if a restart does not help, contact support with logs and the symptoms
 

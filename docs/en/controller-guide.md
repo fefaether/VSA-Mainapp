@@ -13,7 +13,7 @@ Open **Camera Controller** from the VSA sidebar.
 
 Camera Controller sends camera parameters to VRChat over OSC (Open Sound Control). Use the top tabs to switch between:
 
-- **VirtualLenz2 (VirtualLens2)**
+- **VirtualLens2**
 - **Integral**
 - **FishEye**
 - **TelePortraitLens**

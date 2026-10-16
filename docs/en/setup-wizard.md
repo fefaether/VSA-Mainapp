@@ -219,10 +219,9 @@ Do not delete or replace settings files manually.
 
 **Causes and Solutions**:
 
-**Insufficient Administrator Rights**:
-1. Run VSA as administrator
-2. Right-click > "Run as Administrator"
-3. Run wizard again
+**Dialog hidden behind another window**:
+1. Check behind VSA and other windows for the folder picker
+2. If it is not there, restart VSA and try selecting the folder again
 
 **Folder Access Permissions**:
 1. Right-click target folder
