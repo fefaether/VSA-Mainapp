@@ -15,7 +15,7 @@ Here is a list of keyboard shortcuts available in the VSA app. This guide explai
 
 ## Implemented Shortcuts
 
-Currently, the following 4 shortcuts are implemented.
+Currently, the following 9 shortcuts are implemented.
 
 ### Display Shortcuts
 
@@ -25,6 +25,11 @@ Currently, the following 4 shortcuts are implemented.
 | Fullscreen Toggle | `F11` | Toggle between windowed and fullscreen modes |
 | Gallery Zoom In | `Ctrl` + `=` | Increase gallery thumbnail size |
 | Gallery Zoom Out | `Ctrl` + `-` | Decrease gallery thumbnail size |
+| Retouch Fit to Window | `F` | Fit the retouch preview to the window |
+| Retouch Zoom In | `Ctrl` + `;` | Increase the retouch preview size |
+| Retouch Zoom Out | `Ctrl` + `-` | Decrease the retouch preview size |
+| Retouch Rotate Left | Check the current binding in Settings > Shortcut | Rotate the retouch preview 90 degrees left |
+| Retouch Rotate Right | Check the current binding in Settings > Shortcut | Rotate the retouch preview 90 degrees right |
 
 ### Shortcut Details
 
@@ -61,10 +66,7 @@ Switch between windowed and fullscreen modes.
 
 Increase the thumbnail size in the gallery.
 
-**Behavior**:
-- Each press increases thumbnail size by approximately 10px
-- Maximum size: 300×300px
-- Further expansion is not possible when maximum is reached
+**Behavior**: Each press increases the gallery thumbnail or row size by one step.
 
 **Use Cases**:
 - View photo details in larger size
@@ -74,15 +76,18 @@ Increase the thumbnail size in the gallery.
 
 Decrease the thumbnail size in the gallery.
 
-**Behavior**:
-- Each press decreases thumbnail size by approximately 10px
-- Minimum size: 50×50px
-- Further reduction is not possible when minimum is reached
+**Behavior**: Each press decreases the gallery thumbnail or row size by one step.
 
 **Use Cases**:
 - Display many photos at once
 - Quick review of large photo collections
 - View date grouping
+
+#### Retouch Shortcuts
+
+- `F`: Fit the preview to the window
+- `Ctrl + ;` / `Ctrl + -`: Zoom in and out
+- Rotation: Check the current binding in Settings > Shortcut. In development build v0.9.0, it may be unassigned.
 
 ## Customization
 
@@ -109,9 +114,9 @@ You can change default shortcuts to different key combinations.
 2. Input appears on screen
 3. Release keys to confirm
 
-**Step 5: Save**
-1. Click the "Save" button
-2. Shortcut is updated
+**Step 5: Automatic Save**
+1. The shortcut is updated as soon as the key input is accepted
+2. There is no manual Save button
 
 ### Input Examples
 
@@ -121,13 +126,13 @@ You can change default shortcuts to different key combinations.
 3. Hold Shift key
 4. Press = key
 5. "Ctrl + Shift + =" appears
-6. Click "Save"
+6. The new binding is saved automatically.
 
 **Example 2: Change to Single Key Only**
 1. Click the shortcut to change
 2. Press only the main key without modifier keys
-3. Example: "F5"
-4. Click "Save"
+3. Example: "F2" (reserved keys such as F5 cannot be registered)
+4. The new binding is saved automatically.
 
 ### Reset to Default
 
@@ -135,10 +140,8 @@ To restore all shortcuts to default values:
 
 **Steps**:
 1. Open Settings > "Shortcut" panel
-2. Look for "Reset to Default" button
-3. Click it
-4. Select "Reset" in the confirmation dialog
-5. All shortcuts return to defaults
+2. Click **Reset all**
+3. All shortcuts return to defaults
 
 **Note**: This action cannot be undone. If important, note current settings beforehand.
 
@@ -154,22 +157,20 @@ Conflicts may occur with Windows system shortcuts.
 - `Ctrl + V`: Paste
 - `Win` key combinations: Windows-specific operations
 
-**If Conflict Occurs**:
-- VSA shortcuts may take priority in some cases
-- System shortcuts may take priority in others
-- Behavior varies by environment
+**If Conflict Occurs**: Browser/OS-reserved shortcuts and duplicate bindings on the same screen cannot be registered.
 
 **Solution**:
 - Change to a different key combination
 - Use non-conflicting keys in Windows settings
 
-### Application-Wide Scope
+### Shortcut Scope
 
-Shortcuts are active throughout the application.
+Shortcuts are active while VSA is in focus, with some limited to a specific screen.
 
 **Shortcuts Active Only in Specific Screens**:
-- Gallery Zoom (In/Out): Active only in gallery view
-- Other shortcuts work on most screens
+- Gallery Zoom (In/Out): Active only in the gallery screen
+- Retouch shortcuts: Active only in the retouch screen
+- Screen size and fullscreen: Active throughout VSA
 
 ### Keyboard Layout Differences
 
@@ -182,29 +183,6 @@ Display may differ depending on your keyboard layout.
 **Solution**:
 - Test input to confirm expected keys are entered
 - If different, change to another key
-
-## Future Additions
-
-The following shortcuts are planned for future updates:
-
-### File Operations
-- Save (Ctrl + S)
-- Save As (Ctrl + Shift + S)
-
-### Navigation
-- Go to Gallery (Ctrl + G)
-- Go to Favorites (Ctrl + F)
-- Open Search (Ctrl + /)
-
-### Editing
-- Delete (Delete)
-- Undo (Ctrl + Z)
-- Redo (Ctrl + Y)
-
-### Display
-- Show/Hide Sidebar (Ctrl + B)
-
-See [Settings Guide](settings-guide.md) "Shortcut" section for details.
 
 ## Troubleshooting
 
@@ -239,7 +217,7 @@ See [Settings Guide](settings-guide.md) "Shortcut" section for details.
 **Solution**:
 1. Reconfigure settings
 2. Restart app
-3. If still unresolved, rebuild database in developer mode
+3. If still unresolved, check write permission and free space for the settings folder
 
 ### Keyboard Layout Not Recognized
 
@@ -253,7 +231,8 @@ See [Settings Guide](settings-guide.md) "Shortcut" section for details.
 ## Tips
 
 - **Frequent Shortcuts**: Screen size toggle is convenient in large monitor environments
-- **Zoom Feature**: Ctrl + = and Ctrl + - quickly adjust thumbnail sizes
+- **Zoom Feature**: Ctrl + = and Ctrl + - quickly adjust gallery sizes
+- **Retouch**: Use F, Ctrl + ;, and Ctrl + - to control the preview. Check Settings for the current rotation binding.
 - **Fullscreen**: F11 for fullscreen to view photos on large display
 - **Dual Monitor**: Use F10 to adjust size and move windows between monitors
 

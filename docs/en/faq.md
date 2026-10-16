@@ -7,8 +7,8 @@
 
 This section covers frequently asked questions and solutions for common problems.
 
-> **Note (Integral support status)**
-> Integral support is currently in progress. Some Integral camera parameter values may not be recorded or displayed correctly.
+> **Note (Integral parameters)**
+> Integral is supported, but some camera parameter values may not be recorded or displayed correctly.
 
 ## Frequently Asked Questions
 
@@ -19,12 +19,12 @@ This section covers frequently asked questions and solutions for common problems
 **Solutions:**
 
 1. **Check if folders are properly imported**
-   - Go to "Import" in the sidebar and verify folders are added
+   - Open **Gallery** > **Import** and verify the folder is listed
    - Confirm folder status shows "Enabled"
 
-2. **Check if image files are PNG format**
-   - VSA only supports PNG files
-   - JPG and other formats are automatically skipped
+2. **Check the image format**
+   - Import supports PNG, JPG, JPEG, GIF, BMP, and WebP
+   - Unsupported formats are skipped automatically
 
 3. **Check if files are corrupted**
    - Verify you can open the images in an image viewer
@@ -41,15 +41,15 @@ This section covers frequently asked questions and solutions for common problems
 **Solutions:**
 
 1. **Confirm VRChat was running**
-   - Metadata is captured in real-time from VRChat
-   - If photos were taken without VRChat running, metadata won't be recorded
+   - VSA uses information embedded in the photo together with VRChat log/OSC data
+   - Photos taken without VRChat running may not include world or user information
 
 2. **Confirm VSA was running in background**
    - VSA must be running at the time of capture
 
 3. **Check OSC settings**
    - Verify OSC is enabled in VRChat settings
-   - Verify OSC output is enabled on supported cameras (VirtualLens2/Integral)
+   - Verify OSC output is enabled on the camera you use (VirtualLens2, Integral, FishEye, or TelePortraitLens)
 
 4. **Check log files**
    - Verify VRChat log files are being output correctly
@@ -96,9 +96,8 @@ This section covers frequently asked questions and solutions for common problems
 3. **Check sort mode**
    - Sorting loads all data, which may cause slowdowns
 
-4. **Optimize database**
-   - The database may become fragmented after long-term use
-   - Run database optimization from the settings screen
+4. **Restart the application**
+   - Restart VSA after processing completes and check the gallery again
 
 ---
 
@@ -115,15 +114,15 @@ This section covers frequently asked questions and solutions for common problems
 2. **Run as administrator**
    - Right-click > "Run as administrator"
 
-3. **Reset settings files**
+3. **Check settings state**
    - Settings files may be corrupted
-   - Delete the `%APPDATA%\vsa-mainapp` folder and restart
+   - Do not delete the settings folder manually; if a restart does not help, contact support with logs and the symptoms
 
 ---
 
 ### Start VSA when Steam VRChat launches
 
-On Windows Steam VRChat (App ID 438100), enable **Steam integration** in the setup wizard's **Startup method** step or in Game Settings. VSA is added to Steam Launch Options and starts minimized when VRChat starts. VRChat still launches if VSA cannot be started.
+On Windows Steam VRChat (App ID 438100), open Game Settings from the sidebar and enable **Start VSA with VRChat** in **Plugins**. VSA is added to Steam Launch Options and starts with VRChat. VRChat still launches if VSA cannot be started.
 
 If Steam is running, VSA will ask you to quit Steam and retry because Steam may overwrite a file changed while it is open. Existing third-party wrappers, cmd/PowerShell commands, complex syntax, and multiple `%command%` placeholders are not changed automatically for safety. Steam-side changes take precedence.
 
@@ -135,28 +134,26 @@ In that case, before uninstalling, open VRChat's Steam properties and remove onl
 
 ---
 
-### Cloud Save Fails or Is Unavailable
+### Game Settings tabs are missing
 
-**Symptom:** Favorite cloud save fails, menus are missing, or errors appear
+Open **Game Settings** from the sidebar. The screen has **Display Settings**, **Plugins**, and **Time Machine** tabs. The similarly named Game Settings panel under Settings contains only folders and OSC.
 
-**Solutions:**
+### Notifications are not displayed
 
-1. **Check rollout and plan**
-   - Cloud save is in staged rollout; verify plan and connection on the Account screen
-   - Menus may be hidden if not offered in your environment
+1. In Settings > **Notification**, enable **OS notifications** or **Toast notifications**.
+2. Enable the notification types you want.
+3. Allow VSA notifications in Windows settings when using OS notifications.
+4. Turn on **Play notification sound** if you also want sound.
 
-2. **Check network connection**
-   - Verify internet and Wi-Fi are active
+### A shortcut does not work
 
-3. **Re-sign-in**
-   - Log out and sign in again from the Account screen
-
-4. **Local backup**
-   - Back up `favorites.db` separately for important favorites
-
-Pricing and limits follow in-app display and the [Terms of Service](./terms.md). See the [Favorites Guide](favorites-guide.md) and [Account Guide](account-guide.md).
+Open Settings > **Shortcut** and confirm the binding. Gallery shortcuts work in the gallery, retouch shortcuts work in retouch, and browser/OS-reserved or duplicate bindings cannot be registered.
 
 ---
+
+### Account or Cloud Controls Are Missing
+
+Accounts, cloud save, X posting, and event capture are being prepared for general availability and are hidden with normal settings. Local import, albums, and favorites work without an account. Keep important photos backed up separately.
 
 ## Troubleshooting
 
@@ -181,24 +178,13 @@ To check if OSC communication is working correctly:
 3. Verify "OSC" is enabled
 4. If needed, enable "OSC Debug Console" to monitor communication
 
-### Rebuilding the Database
+### Photo data problems
 
-If there are database issues, rebuilding may be necessary.
-
-**Warning:** This operation will lose favorites and other saved information.
-
-1. Close VSA
-2. Delete the `%APPDATA%\vsa-mainapp\database` folder
-3. Restart VSA
-4. Re-import folders
+Manual deletion or replacement of VSA-managed data can remove photos and favorites. Make a backup first, then contact support with logs and the symptoms instead of changing managed data directly.
 
 ### Checking Log Files
 
-VSA log files are located at:
-
-```
-%APPDATA%\vsa-mainapp\logs\
-```
+Check the log folder in Game Settings > **Display Settings > Log folder**. When unset, VSA uses the OS default.
 
 When problems occur, error information is recorded in these log files.
 
@@ -220,8 +206,4 @@ If the above methods don't solve your issue, please contact us through the follo
 
 ## Known Issues
 
-The following are known issues we are aware of. Fixes are planned for future updates.
-
-- Filter function not implemented
-- Search function not implemented
-- Metadata may not be correctly captured in some VRChat worlds
+The currently known limitation is that metadata may not be captured correctly in some VRChat worlds.

@@ -1,16 +1,20 @@
 # Account Management Guide
 
+> **Provisional — not generally available; for v0.9.0 in development.** The Account screen is hidden with normal settings. The following describes test environments where the screen is visible, and does not announce general availability or a release date. Controls and behavior may change.
+
 ## How to open
 
-Open **Account** from the VSA sidebar.
+In a test environment where **Account** appears in the sidebar, open that entry.
 
 ![Account screen](../assets/screenshots/account-overview.webp)
+
+The image is a reference from the released app. Sign-in and backup controls in development may differ.
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---
 
-The Account Management screen lets you check your VSA account status and configure account-linked features such as cloud save, share links, and X posting. This guide covers what is generally available and how rollout-gated features are described.
+In test environments, Account Management lets you check your VSA account status and configure features such as cloud save, share links, and X posting. This is a provisional guide for features in development. Basic local photo management does not require an account.
 
 ## Overview
 
@@ -25,7 +29,7 @@ Depending on your environment, Account Management may offer:
 
 Cloud save, share links, X posting, and related account-linked features are in **staged rollout**. Availability depends on **release status, plan, account status, and environment**.
 
-If a menu or button does not appear in the app, that feature may not be available in your environment yet. Step-by-step instructions in this guide will be updated over time. For now, follow the **in-app UI** and these canonical documents:
+If a menu or button does not appear in the app, that feature may not be available in your environment yet. For concrete operations, follow the relevant feature guide and the **in-app UI**; use these documents as the canonical source for pricing and data handling:
 
 - [Terms of Service](./terms.md)
 - [Privacy Policy](./privacy.md)
@@ -46,7 +50,15 @@ A VSA account may be required for some optional features (cloud save, share link
 2. Follow on-screen prompts to sign in or connect services
 3. Review plan, connection status, and any error messages
 
-Sign-in and third-party connections may open a browser for OAuth. Your password is not stored in VSA; tokens are kept locally in encrypted form.
+When using the new VSA sign-in service, choose **Sign in on website** from **Account** to open a browser. The app updates its sign-in status after you finish. Third-party service connections may require a separate browser authorization. Your password is not stored in VSA; tokens are kept locally in encrypted form.
+
+### Using a New Account
+
+When using the new sign-in service, create a new account on the VSA website and enter the verification code sent to your email. Accounts, cloud photos, and share links from the previous service do not transfer to the new account automatically.
+
+In a compatible test environment for MainApp v0.9.0 in development, open **Account** from the sidebar and choose **Sign in on website**. Sign in to the new account in the browser; the app updates its status when you finish. These are not instructions for released v0.8.2.
+
+Signing in alone does not enable automatic cloud saving for new photos or backup of registered photos. If you want either feature, enable **Automatically save new photos to the cloud** and **Automatically back up registered photos** separately in Account.
 
 ## Cloud Save and Favorites
 
@@ -55,6 +67,8 @@ Favorites work **locally** without cloud features. When cloud save is available 
 ### Cloud Albums
 
 Cloud storage can be enabled only for the local albums you choose. The Albums screen shows syncing and review-required states. If both local and cloud copies changed, review differences in the title, sharing settings, photos, and ordering, then choose which version to keep.
+
+To save an album under a new account, first handle any account-mismatch message on an album linked to the previous cloud account. Choose **Disconnect previous cloud link**, review the confirmation, then select **Disconnect link**. Memberships that exist only in the cloud are removed from this device's album; local photo files and local album memberships remain, and the cloud album itself is not deleted. After disconnecting, choose **Save to cloud too** and confirm to save the album under the new account.
 
 ### Manual Photo Uploads
 
@@ -68,7 +82,7 @@ Share links are released in stages. When available, you may create links from ph
 
 ## X Posting
 
-X posting is also subject to staged rollout. See the [X Posting Feature Guide](x-post-guide.md) for frames, presets, and posting workflow. Connection status may appear on the Account screen when enabled.
+X posting is also being prepared for general availability. Connection status may appear on the Account screen in test environments.
 
 ## Privacy and Security
 
@@ -125,6 +139,5 @@ Use logout or disconnect actions shown on the Account screen. After disconnectin
 ## Related Documentation
 
 - [Favorites Guide](favorites-guide.md) - Local favorites and cloud save overview
-- [X Posting Feature Guide](x-post-guide.md) - X posting (staged rollout)
 - [Settings Guide](settings-guide.md) - App configuration
 - [Troubleshooting Guide](troubleshooting.md) - Detailed problem solutions

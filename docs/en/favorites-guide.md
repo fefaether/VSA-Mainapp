@@ -2,16 +2,18 @@
 
 ## How to open
 
-Open **Favorites** from the Gallery.
+Open **Gallery** from the sidebar, then select the **Favorites** tab at the top.
 
 ![Favorites screen](../assets/screenshots/favorites-overview.webp)
+
+This image is a reference from released v0.8.2. The current v0.9.0 development build may look different.
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---
 
 
-The Favorites feature lets you mark important screenshots and manage them in a dedicated view on your PC. When cloud save is available in your environment, you may also back up favorites to the cloud. This guide focuses on local favorites operations.
+The Favorites feature lets you mark important screenshots and manage them locally. When a favorites folder is configured, VSA copies favorited photos there.
 
 ## Overview
 
@@ -19,7 +21,7 @@ With Favorites, you can:
 
 - **Mark Important Photos**: Add star marks to special screenshots
 - **Dedicated View**: Browse only your favorite photos in one place
-- **Cloud Save (optional)**: Cloud backup for favorites in rollout-enabled environments
+- **Export**: Copy selected favorites to any folder
 - **Efficient Management**: Organize and access your best moments quickly
 
 ## Adding Favorites
@@ -61,8 +63,8 @@ Mark favorites from the list/table display.
 ### Accessing Favorites
 
 **Steps**:
-1. Click "Favorites" in the sidebar
-2. Dedicated Favorites view opens
+1. Open **Gallery** from the sidebar
+2. Select the **Favorites** tab at the top
 3. All marked favorite photos display
 
 ### Display Format
@@ -70,7 +72,6 @@ Mark favorites from the list/table display.
 **Grid Display**:
 - Thumbnails organized in grid layout
 - Responsive columns based on window size
-- Same zoom controls as gallery view
 
 **Displayed Information**:
 - Thumbnail image
@@ -78,102 +79,27 @@ Mark favorites from the list/table display.
 - Capture timestamp
 - World information
 
-### Sorting Options
+### Selection Mode and Bulk Operations
 
-Arrange your favorite photos in different orders:
+Click **Selection Mode** to select multiple photos. The selection toolbar provides **Select all**, **Cancel**, **Export selected**, and **Remove Selected**. VSA asks for a destination folder each time you export.
 
-**Sort by Addition Date**:
-- Newest favorites first
-- Shows most recently marked photos at top
+### Removing a Favorite
 
-**Sort by Capture Date**:
-- Photos ordered by screenshot time
-- Chronological organization
-
-**Sort by File Size**:
-- Smallest or largest files first
-- Useful for storage management
-
-**How to Sort**:
-1. Open Favorites view
-2. Click sort dropdown menu
-3. Select desired sort order
-4. List updates immediately
-
-### Selection and Bulk Operations
-
-Select multiple photos for batch actions.
-
-**Selection Methods**:
-1. Click photo (single select)
-2. Ctrl+Click for multiple select
-3. Checkbox at photo corner (if available)
-
-**Bulk Operations**:
-- **Save to Cloud** (when shown): Send selected favorites to cloud storage
-- **Remove from Favorites**: Bulk delete from favorites (keeps original files)
-
-## Cloud Save (Optional, Staged Rollout)
-
-Cloud backup for favorites is in **staged rollout**. Availability depends on release status, plan, account status, and environment.
-
-When enabled, auto-save or manual save settings may appear on the Account screen or in favorites-related UI. Labels and controls vary by version—**follow the in-app UI**.
-
-Detailed steps in this guide will be updated over time. For now, see:
-
-- [Account Management Guide](account-guide.md)
-- [Terms of Service](./terms.md) / [Privacy Policy](./privacy.md)
-
-**Local favorites work without cloud features.** Back up `%APPDATA%\VSA\favorites.db` locally for important data.
-
-### When Cloud Save Fails or Is Unavailable
-
-- Check internet and account connection status
-- Review plan, monthly limits, and free tiers in the app
-- Allow browser pop-ups and try signing in again on auth errors
-- See [Troubleshooting](troubleshooting.md) if problems persist
+To remove one photo, open the photo detail sidebar and click the star button again. To remove several at once, choose **Selection Mode** in Favorites, select the photos, then choose **Remove Selected**. Removing one favorite with the star button in the detail sidebar leaves the original photo in Gallery and deletes the copy tracked by VSA. Choosing Remove selected in Selection Mode only clears favorite status; it leaves both the original photo and the copy in the favorites folder.
 
 ## Data Management
 
-### Favorites Database
+### Favorites Folder
 
-Favorite information stored locally in SQLite database.
+Choose the destination in Settings > **Favorites**. When a folder is configured, favoriting a photo copies the original there. Removing one favorite with the star button in the detail sidebar also deletes the copy tracked by VSA. Copies remain when favorites are removed in bulk from Selection Mode.
 
-**Database Location**:
-```
-%APPDATA%\VSA\favorites.db
-```
+If you changed the destination and want to copy existing favorites there, use **Migrate favorite photos** in the same panel. The result shows successful and failed counts and details for failed photos.
 
-**Characteristics**:
-- Encrypted and secured
-- Persistent across restarts
-- Auto-backed up with VSA data
-- Private to your computer
+Migration copies the currently marked photos to the selected folder and clears the migrated favorite state. Confirm the result before deleting or reorganizing any source files.
 
-### Creating Backups
+### Export and Backups
 
-Backup your favorite photos metadata.
-
-**Backup Steps**:
-1. Close VSA completely
-2. Navigate to: `%APPDATA%\VSA\`
-3. Copy `favorites.db` file
-4. Save copy to safe location
-   - USB drive
-   - Cloud storage
-   - External hard drive
-
-### Restoring from Backup
-
-Restore favorites from previous backup.
-
-**Restore Steps**:
-1. Close VSA
-2. Obtain your backup `favorites.db` file
-3. Copy it to `%APPDATA%\VSA\`
-4. Overwrite current file (confirm replacement)
-5. Restart VSA
-6. Favorites restored
+From Favorites > **Selection Mode**, choose **Export selected** and select any destination folder. To make a long-term backup, close VSA and copy the configured favorites folder and the original photo folder. Do not edit or replace VSA-managed data manually.
 
 ## Troubleshooting
 
@@ -196,56 +122,23 @@ Restore favorites from previous backup.
 4. Verify Write permission enabled
 5. Apply if needed
 
-**Database Corruption**:
-1. Enable Developer Mode
-2. Open Developer menu
-3. Rebuild database
-4. Restart VSA
-
-### Cloud Save Fails or Is Unavailable
-
-**Symptom**: No cloud menu, or save stops with an error
-
-**Solutions**:
-
-**Check Rollout and Plan**:
-- Verify plan and connection on the Account screen
-- Menus may be hidden if the feature is not offered in your environment
-
-**Network Connection**:
-- Verify internet connectivity
-- Ensure VSA is allowed through the firewall
-
-**Re-sign-in**:
-1. Log out or disconnect on the Account screen
-2. Sign in again following on-screen prompts
-3. Try manual save in smaller batches if offered
-
-**Keep Local Backups**:
-- Copy `favorites.db` regularly; do not rely on cloud save alone
+**If the problem persists**:
+- Check free space and write permission for the configured favorites folder
+- Contact support with the VSA log and reproduction steps
 
 ## Privacy and Security
 
 ### Data Protection
 
-**Authentication Tokens** (when account linking is used):
-- Stored locally, encrypted
-- VSA application access only
-- Deleted on logout when applicable
-
 **Favorite Data**:
-- Stored locally in `favorites.db` on your PC
-- Cloud copies, when enabled, follow the Privacy Policy and in-app display
+- Favorite state is stored locally by VSA, and copied images are stored in the configured folder
 
 ## Tips
 
-- **Regular Backups**: Backup favorites.db periodically
-- **Share links**: Available in rollout-enabled environments ([Account Guide](account-guide.md))
-- **Offline use**: Mark favorites offline; cloud save runs when connectivity returns
-- **Selective backup**: Only favorites may be eligible for cloud save—not the entire library
+- **Regular Backups**: Back up the configured favorites folder periodically
+- **Offline use**: You can mark and view favorites without an internet connection.
 
 ## Related Documentation
 
-- [Account Management Guide](account-guide.md) - VSA account and cloud save overview
 - [Gallery Operation Guide](gallery-guide.md) - Photo browsing and selection
 - [Troubleshooting Guide](troubleshooting.md) - Detailed problem solutions

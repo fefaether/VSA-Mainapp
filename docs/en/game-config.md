@@ -1,479 +1,167 @@
-# Game Configuration Guide
+# Game Settings Guide
 
 ## How to open
 
-Open **Game Configuration** from the VSA sidebar.
+Open **Game Settings** from the VSA sidebar.
 
-![Game Configuration screen](../assets/screenshots/game-config-settings.webp)
+![Game Settings screen](../assets/screenshots/game-config-settings.webp)
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---
 
+Game Settings controls VRChat photo import, log parsing, OSC communication, and the optional startup plugins. Changes are saved automatically; there is no Save button. The **Game Settings** panel under Settings contains only Display Settings (folders and OSC); open the three-tab screen from the sidebar.
 
-The Game Config panel allows you to configure VRChat integration settings and enable automatic metadata extraction for your screenshots.
+Some current labels in these screens are Japanese even when the rest of the app is localized.
 
-> **Note (Integral support status)**
-> Integral support is currently in progress. Some Integral camera parameter values may not be recorded or displayed correctly.
+> **Note (Integral parameters)**
+> Some Integral camera parameter values may not be recorded or displayed correctly in the current implementation.
 
-## Overview
+## Tabs
 
-Game Config consists of the following 3 tabs:
+The top tab bar contains three tabs:
 
-- **Display Settings Tab**: Configure file monitoring on/off, folder paths, and OSC communication
-- **Time Machine Tab**: Display VRChat instance history and rejoin features
-- **Server Tab**: Monitor VRChat server status
+- **Display Settings**: Watch, output, and log folders plus OSC
+- **Plugins**: Steam, Virtual Desktop, and VRChat outage notifications
+- **Time Machine**: VRChat log event timeline
 
-Each tab can be switched from the tab menu at the top of the screen.
+### Monitoring status
 
-**Access Method**:
-1. Click the settings gear icon (⚙️) in the sidebar
-2. Select "Game Config" from the left menu
+The current screen does not have a manual start/stop monitoring switch. Monitoring starts according to the app configuration, and the sidebar shows its current status. Keep VSA running with a watch folder configured to import new screenshots automatically.
 
-## Tab Composition
+## Display Settings
 
-### Display Settings Tab
+### Folder settings
 
-This is the default tab. Configure VRChat photo detection and OSC communication.
+#### Watch folder
 
-See "Monitoring Status Management" and "Detailed Settings" sections below for details.
+Select the folder where VRChat saves screenshots by clicking **Change**. The usual default is:
 
-### Time Machine Tab
+```
+C:\Users\[Username]\Pictures\VRChat
+```
 
-Display VRChat past instance history and rejoin worlds previously visited.
+VSA watches this folder for new game screenshots. The **Watch interval (seconds)** field offers 1–60 seconds in the UI and defaults to 10 seconds.
 
-See "Time Machine Feature" section for details.
+#### Output folder
 
-### Server Tab
+Enable **Change output folder** to show the output-folder selector. The setting becomes active after you choose a folder; when it is off, VSA uses the VRChat folder.
 
-Monitor VRChat server status and maintenance information.
+After choosing an output folder, VSA checks the watch folder for VSA-managed photos.
 
-See "Server Status Feature" section for details.
+- If candidates are found, choose **Move photos too** to move the listed items.
+- If no candidates are found, choose **Change path only**.
+- If a same-name file with different content is found, migration detects the conflict and attempts a rollback; the originals and settings are kept.
+- The migration dialog shows the count, percentage, and current file.
 
-## Monitoring Status Management
+The watch folder itself, a parent/child folder of it, and a folder that does not exist cannot be selected. The migration dialog has no cancel action.
 
-### Starting/Stopping Monitoring
+Use **Reset** to return to the default output behavior. Automatic JXL archives follow the current photo output folder in its `VSA-Archive` subfolder.
 
-The monitoring toggle controls whether VSA actively monitors VRChat's activity.
+#### Log folder
 
-**How to Enable**:
-1. Locate the monitoring toggle switch
-2. Click to toggle ON
-3. VSA will now monitor VRChat processes
+VSA reads VRChat logs from this folder to obtain world and user information and to build the Time Machine timeline. When unset, the OS default is used.
 
-**What Monitoring Does**:
-- Detects when VRChat starts and stops
-- Monitors for new screenshots
-- Prepares metadata extraction
-- Triggers automatic import if enabled
+- **Change** selects a VRChat log folder.
+- **Reset** returns to the OS default.
 
-**Monitoring Status Indicator**:
-- Green indicator: Monitoring is active
-- Gray indicator: Monitoring is inactive
+The usual log folder is:
 
-### Checking Monitoring Status
+```
+C:\Users\[Username]\AppData\LocalLow\VRChat\VRChat
+```
 
-**Current Status Display**:
-- The indicator at the top shows if monitoring is currently active
-- Status updates in real-time
-- Visual confirmation when VRChat is detected
+### OSC settings
 
-## Detailed Settings (Accordion Sections)
+OSC (Open Sound Control) lets VSA receive camera parameters from VirtualLens2, Integral, FishEye, and TelePortraitLens.
 
-Expand the accordion sections to access detailed configuration options.
+- **Enable OSC communication**: Turns OSC communication on.
+- **Start OSC automatically when the game starts**: Starts OSC when VRChat is detected. This switch is disabled while OSC is off.
+- **VSA receive port (VRChat sends)**: Port for messages from VRChat to VSA; default `9001`.
+- **VSA send port (VRChat receives)**: Port for messages from VSA to VRChat; default `9000`.
 
-### Folder Settings
+VRChat's standard pairing is VSA receive `9001` and VSA send `9000`. If another OSC application uses a port, change the corresponding values on both sides. If the receive port is busy, VSA may move to another port and show a warning.
 
-Configure the folders where VSA reads and writes data.
+### Automatic saving
 
-**Screenshot Folder**:
-- Default: `C:\Users\[Username]\Pictures\VRChat`
-- The location where VRChat saves screenshot files
-- Used for automatic photo detection and import
-- **How to Change**:
-  1. Click "Select Folder" button
-  2. Browse to your VRChat screenshot folder
-  3. Click "Select Folder" to confirm
-- **Tooltip**: Hover over the folder path field to see the full path
+Switches save immediately; numeric fields save after input settles. Folder-selection and migration results are shown in notifications, while plugin failures appear on the card. The Game Settings screen has no manual **Save settings** button.
 
-**Changing or Migrating the Photo Output Folder**:
-- Enable **Change output folder** to place processed photos outside the VRChat folder. Disable it to use the VRChat folder.
-- The JXL archive destination follows the current photo output folder.
-- **Change** updates the destination for future photos only.
-- **Migrate** first lists VSA-managed candidate photos, then moves the confirmed set to the current destination.
-- A conflicting file with the same name but different content stops the migration before changes are committed.
-- During migration, the dialog shows the processed count, percentage, and current file. On failure, VSA keeps the original photos and setting.
+## Plugins
 
-**Log Folder**:
-- VSA's internal log directory for troubleshooting
-- Default: `%APPDATA%\VSA\logs\`
-- Contains debugging information if issues occur
-- **Reset to Default**:
-  1. Click "Reset" button next to the field
-  2. Folder returns to default location
+Use the switch on each card to enable or disable a plugin. Click a card to see its current state and details. Cards show **Needs attention** or **Unavailable** when the environment or an external setting prevents normal operation.
 
-**Folder Path Display with Tooltip**:
-- Full paths are hidden by default (shows shortened version)
-- Hover over any folder path to see the complete path
-- Useful for verifying correct folder configuration
+### Start VSA with VRChat (Steam)
 
-### Auto Functions Settings
+Starts VSA when VRChat is launched from Steam. This is available for Steam VRChat on Windows (App ID `438100`).
 
-Configure automatic processes when VRChat is detected.
+- Quit Steam before changing the switch.
+- VSA adds its launch entry to Steam Launch Options.
+- If Steam-side options were changed elsewhere, VSA does not overwrite them automatically.
+- When a conflict is shown, review the Steam options and retry.
 
-**Automatic Import**:
-- When enabled: New screenshots are automatically imported into VSA when detected
-- When disabled: Manual import required
-- **Recommendation**: Enable for seamless workflow during VRChat sessions
+### Launch VRChat when Virtual Desktop connects
 
-Configure automatic JXL archiving on the “JXL Compression” screen as described in the [JXL Compression Guide](jxl-compression.md).
+After Virtual Desktop and the headset connect, VSA launches VRChat only when VRChat is not already running. This is available on Windows and requires VSA to be running.
 
-### Virtual Desktop auto-launch
+### VRChat outage notifications
 
-On Windows, enable **Launch VRChat when Virtual Desktop connects** to launch Steam VRChat after the Virtual Desktop Streamer and headset connection are confirmed. It is off by default and VSA must be running.
+VSA checks the official VRChat status and notifies you about outages and maintenance every 5 minutes. The plugin detail view provides switches for:
 
-### Steam integration
+- Outage notifications
+- Scheduled or active maintenance notifications
+- In-app toast notifications in the bottom-right corner
+- Windows notification-center notifications
 
-Enable **Start VSA with VRChat (Steam)** to add VSA to Steam VRChat's Launch Options (App ID 438100). Existing safe arguments are preserved. If Steam-side options were changed outside VSA, VSA does not overwrite them. Disabling the integration or uninstalling VSA restores VSA-managed options when they have not been changed.
+The detail view also shows the overall status, possible stale data, last check, next update, online player count, maintenance, unresolved incidents, and per-component server status. **Manual refresh** has a 60-second cooldown. **View official details** opens the official VRChat status page.
 
-### OSC Settings
+## Time Machine
 
-OSC (Open Sound Control) enables camera parameter extraction from VRChat.
+Search and review events parsed from VRChat logs. A correct log-folder setting is required.
 
-**OSC Port Configuration**:
-- Default Port: 9001
-- This is the port VSA uses to receive OSC messages from VRChat
-- **How to Configure**:
-  1. Verify VRChat OSC setting uses the same port (9001 by default)
-  2. If port conflict exists, change to another port (e.g., 9002)
-  3. Update both VRChat and VSA to use the same port
+### Filters
 
-**OSC Communication Overview**:
-- VRChat sends camera parameter data via OSC protocol
-- VSA receives and stores these parameters
-- Parameters are embedded in screenshot metadata
-- Requires compatible camera (VirtualLens2 or Integral)
+- Presets: **Last day / Last week / Last month / All time**
+- Custom: start and end dates
+- Event type: **All events / World entered / World left / User joined / User left**
+- Search: user name, world name, or log text
 
-**Supported Cameras for OSC**:
-- VirtualLens2 (recommended for parameter extraction)
-- Integral (advanced lens with OSC support)
-- Standard VRChat camera (no OSC parameters)
-
-**How OSC Works**:
-1. User adjusts camera settings in VRChat
-2. VRChat broadcasts OSC messages with camera data
-3. VSA listens on OSC port and stores the parameters
-4. When screenshot is taken, parameters are embedded
-5. VSA can later display detailed camera information
-
-**Verifying OSC is Working**:
-1. Adjust a camera parameter (e.g., Aperture) in VRChat
-2. Check VSA logs for OSC messages
-3. Open Developer Mode to see OSC statistics
-4. See Troubleshooting section if no data received
-
-## Saving Settings
-
-Changes to Game Config settings are automatically detected.
-
-**Auto-Save Behavior**:
-- Settings save automatically when changed
-- No manual save button required
-- Visual confirmation shows when changes are saved
-
-**Change Indicators**:
-- Fields highlight when modified
-- Status message confirms successful save
-- Error messages display if save fails
-
-**Important**: Do not close the app immediately after changing settings - allow a moment for changes to save.
+The event table shows time, event type, world, and user. Click a user name to filter by that user; use **Clear** to remove it. **Refresh** reloads the list, which is paginated at 50 events per page.
 
 ## Troubleshooting
 
-### Monitoring Cannot Be Started
+### Photos are not imported automatically
 
-**Symptom**: Toggle switch won't enable or monitoring shows as inactive
+1. In **Display Settings**, verify that the watch folder is the actual VRChat screenshot folder.
+2. Leave VSA running and check that the sidebar reports folder monitoring.
+3. Check the watch interval (1–60 seconds in the UI) and confirm that a new image is created in the selected folder.
+4. Check folder read permissions and whether security software is blocking VSA.
 
-**Causes and Solutions**:
+### World or user information is missing / the timeline is empty
 
-**VSA doesn't have permission to monitor VRChat**:
-1. Run VSA as Administrator
-   - Right-click VSA shortcut → "Run as Administrator"
-2. Check Windows Defender isn't blocking VSA
-   - Open Windows Security
-   - Add VSA to Firewall exceptions
-3. Disable antivirus monitoring temporarily
-   - Some security software blocks process monitoring
+1. In **Display Settings > Log folder**, select the folder that contains VRChat logs.
+2. After VRChat records a world move or user event, check a new photo or refresh the timeline.
+3. If no log exists, launch VRChat, enter a world once, and check whether a log is created.
 
-**VRChat isn't installed or not running**:
-1. Install VRChat from official source
-2. Launch VRChat at least once to initialize
-3. Close VRChat completely before testing VSA monitoring
-4. Try toggling monitoring again
+### OSC camera information is missing
 
-### Metadata Not Extracted
+1. Enable **OSC communication**.
+2. Enable OSC in VRChat and verify VSA receive `9001` / VSA send `9000` (or the corresponding custom values).
+3. Enable OSC output in the camera you use (VirtualLens2, Integral, FishEye, or TelePortraitLens).
+4. Check for port conflicts and firewall rules. Also check whether VSA warned that it moved the receive port.
 
-**Symptom**: World names and user information showing as "Unknown"
+### The Steam plugin cannot be changed
 
-**Check VRChat Log Output**:
-1. Confirm VRChat is outputting logs
-2. Check location: `C:\Users\[Username]\AppData\LocalLow\VRChat\VRChat\`
-3. Look for `output_log_*.txt` files dated today
-4. If not found, VRChat logging may be disabled
+Quit Steam completely and retry. If the card says **Needs attention**, review VRChat's Steam Launch Options and preserve wrappers or arguments belonging to other applications while adjusting only the VSA portion.
 
-**Verify Game Config Settings**:
-1. Open Game Config panel
-2. Confirm "Metadata Output Folder" is set to VRChat log directory
-3. Verify folder path is correct
-4. Try changing to absolute path if using shortcuts
+### Server status does not update
 
-**Test Metadata Extraction**:
-1. Open VRChat and enter a world
-2. Wait 5-10 seconds for world information to be logged
-3. Take a screenshot in VRChat
-4. Return to VSA and check if metadata appears
-5. If still not working, check troubleshooting below
+Check the network connection and try **Manual refresh**. Manual refresh cannot be run again during its 60-second cooldown. If data may be stale, compare it with the official status page.
 
-### OSC Communication Not Established
+## Related documentation
 
-**Symptom**: Camera parameters not showing in screenshot details
-
-**Verify VRChat OSC Settings**:
-1. Open VRChat Settings
-2. Navigate to OSC configuration
-3. Ensure OSC is enabled
-4. Confirm port matches VSA setting (default 9001)
-5. If port is different, update VSA to match
-
-**Check Port Availability**:
-1. Open Command Prompt (Windows + R, type `cmd`)
-2. Run: `netstat -ano | findstr :9001`
-3. If port is in use, change to different port:
-   - VSA: Change "OSC Port" to 9002
-   - VRChat: Change OSC port to 9002
-4. Restart both applications
-
-**Test OSC Connection**:
-1. Start VSA and enable monitoring
-2. Open VRChat
-3. Select VirtualLens2 camera
-4. Adjust Aperture slider
-5. Return to VSA and check logs
-6. Look for OSC message confirmation
-
-**Enable Developer Mode for OSC Debugging**:
-1. Go to Settings > Developer Mode
-2. Enable Developer Features
-3. Check OSC statistics in Developer panel
-4. Review received/sent message counts
-
-### Configuration File Corruption
-
-**Symptom**: Settings reset to defaults or won't save
-
-**Solution**:
-1. Close VSA completely
-2. Navigate to: `%APPDATA%\VSA\`
-3. Delete `config.json` file
-4. Restart VSA
-5. Reconfigure Game Config settings
-
-## Time Machine Feature
-
-Time Machine tab displays VRChat past activity history and rejoin previously visited instances.
-
-### VRChat Timeline Feature
-
-Auto-analyze VRChat log files and visualize activity history.
-
-**Displayed Information**:
-- **World Changes**: Migration history between worlds
-- **User Events**: Other user join/leave events
-- **Timeline Display**: Activity history in chronological order
-
-**Timeline View**:
-1. Open Time Machine tab
-2. VRChat log files auto-analyze
-3. Timeline shows activity events
-4. Click event for details
-
-### Instance History Display
-
-View list of previously visited instances.
-
-**Display Information**:
-
-| Item | Description |
-|------|-------------|
-| World Name | VRChat world name |
-| Instance ID | Instance identifier |
-| Visit Time | Last visited date/time |
-| Stay Duration | Time spent in instance |
-| User Count | Users present at visit |
-
-**List Operations**:
-- Click world name to filter
-- Copy instance ID
-- Sort by date/time
-
-### Rejoin from History
-
-Directly rejoin from instance history.
-
-**Rejoin Steps**:
-1. Select instance to rejoin from history
-2. Click "Rejoin" button
-3. Auto-generate instance URL
-4. Rejoin dialog displays in VRChat
-5. Confirm to rejoin
-
-**Copy Instance URL**:
-1. Select instance
-2. Click "Copy URL" button
-3. Instance URL copies to clipboard
-4. Paste in VRChat Jump screen to move
-
-### Use Cases and Examples
-
-**Example 1: Revisit Favorite World**
-1. Find world in Time Machine
-2. Click "Rejoin"
-3. Move in VRChat executed
-
-**Example 2: Confirm Event World**
-1. Filter by event date
-2. Confirm visited worlds
-3. Revisit memory worlds
-
-**Example 3: Move to Friend's World**
-1. Check friend's timeline event
-2. Discover common visited world
-3. Rejoin with same world
-
-### Notes
-
-**Log File Required**:
-- VRChat log files required
-- Confirm "Log Folder" set correctly in "Display Settings Tab"
-
-**Private Instances**:
-- Private instance rejoin may require owner permission
-- Deleted instances not rejoinable
-
-**History Retention**:
-- Based on VRChat log files
-- History disappears when VRChat deletes logs
-
-### Troubleshooting
-
-**Instance History Not Displaying**:
-1. Check Log Folder setting
-   - Verify "Log Folder" setting correct in Display Settings Tab
-2. Enable VRChat logging
-   - Confirm logging enabled in VRChat settings
-3. Check recent logs
-   - Launch VRChat, move world, check log generation
-
-## Server Status Feature
-
-Server tab monitors VRChat server status and maintenance information.
-
-### VRChat Server Status Display
-
-Display official VRChat server status in real-time.
-
-**Display Information**:
-
-| Item | Description |
-|------|-------------|
-| Server Status | Online/Offline/Maintenance |
-| Status Icon | Visual status display |
-| Last Update | Status last updated date/time |
-| Details | Maintenance time, etc. |
-
-**How to Read Status**:
-- **Green**: All servers operating normally
-- **Yellow**: Some servers have issues
-- **Red**: Main servers down or maintenance
-
-### Maintenance Information
-
-View VRChat maintenance information.
-
-**Maintenance Information Content**:
-- **Start Time**: Scheduled maintenance start
-- **End Time**: Scheduled maintenance end
-- **Impact Range**: Affected services
-- **Description**: Maintenance details
-
-**Update Method**:
-1. Click "Update" button for latest info
-2. Auto-update periodically (default: every 5 minutes)
-
-### Status Send Settings
-
-Configure status sending to VRChat.
-
-#### Enable/Disable Status Send
-
-Toggle sending VSA status to VRChat.
-
-**When Enabled**:
-- Notify VRChat of VSA status
-- Viewable in VRChat
-
-**When Disabled**:
-- Stop status sending to VRChat
-- Reduce network communication
-
-#### Update Interval Setting
-
-Configure status update frequency.
-
-**Setting Values**:
-- **1 minute**: Always confirm latest (high network load)
-- **5 minutes**: Balanced setting (default)
-- **10 minutes**: Low network load
-- **30 minutes**: Minimal communication
-
-**Recommended**: 5-10 minutes (adjust per environment)
-
-### Usage Examples
-
-**Example 1: Confirm Maintenance Time**
-1. Open Server tab
-2. Check maintenance info
-3. Connect after end time
-
-**Example 2: Check Server Issue**
-1. Unable to connect to VRChat
-2. Check Server tab status
-3. If "red", server-side problem possible
-4. Contact support before troubleshooting
-
-### Troubleshooting
-
-**Status Info Not Updating**:
-1. Check internet connection
-   - Test internet with other apps
-2. Check firewall settings
-   - Confirm firewall not blocking VSA
-3. Manual update with "Update" button
-   - Periodic update may have failed
-4. Restart app
-   - Completely restart VSA
-
-## Related Documentation
-
-- [VRChat Integration Guide](vrchat-integration.md) - Understanding metadata extraction
-- [JXL Compression Guide](jxl-compression.md) - Auto compression configuration
-- [Troubleshooting Guide](troubleshooting.md) - Detailed problem solutions
-- [FAQ](faq.md) - Common questions
-
-## Tips
-
-- **Automatic Monitoring**: Enable monitoring when planning to use VRChat for smooth metadata extraction
-- **OSC Verification**: If camera parameters aren't extracting, verify OSC is working before troubleshooting other settings
-- **Log Review**: Check VSA logs (`%APPDATA%\VSA\logs\`) for detailed error information
-- **Port Conflicts**: Use `netstat` command to check if port 9001 is available before configuring
-- **Regular Testing**: After changing settings, take a test screenshot in VRChat to verify settings work correctly
+- [VRChat Integration Guide](vrchat-integration.md) - Metadata and OSC behavior
+- [JXL Compression Guide](jxl-compression.md) - Automatic archiving
+- [Settings Guide](settings-guide.md) - All settings panels
+- [Initial Setup Guide](setup-wizard.md) - First-run folder and startup settings
+- [Troubleshooting Guide](troubleshooting.md)
+- [FAQ](faq.md)

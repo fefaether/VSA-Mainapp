@@ -11,7 +11,7 @@ Open **Person Search** from the VSA sidebar.
 ---
 
 
-The Person Search feature lets you quickly find photos containing specific VRChat users. Search by username, using romaji (romanized Japanese), and even search for multiple people in the same photos using AND logic.
+The Person Search feature lets you quickly find photos containing specific VRChat users or taken in a specific world. Search by username or world name, use romaji (romanized Japanese), and find photos with multiple people using AND logic.
 
 ## Overview
 
@@ -20,7 +20,8 @@ With Person Search, you can:
 - **Tag-Based Search**: Add usernames as tags
 - **Multiple User Search**: Find photos with up to 5 people (AND search)
 - **Romaji Support**: Type Japanese names in romanized form
-- **Favorite Users**: Save frequently searched names
+- **World Search**: Find photos by world name
+- **Favorites**: Save frequently searched users and worlds
 - **User Directory**: Browse all users in your photo collection
 
 ## Prerequisites
@@ -32,22 +33,22 @@ Person Search requires VRChat metadata in your photos.
 **What You Need**:
 - Photos must have VRChat metadata attached
 - Metadata comes from VRChat log files
-- Requires proper Game Config setup
+- Requires a correct watch-folder and log-folder setup in Game Settings
 
 **How Metadata is Added**:
 1. VRChat screenshot captured
-2. VSA "Game Config" monitors VRChat logs
+2. VSA "Game Settings" watches the screenshot folder and reads VRChat logs
 3. User names extracted from logs
 4. Metadata embedded in screenshot
 
 **When Metadata is NOT Added**:
-- Photos from before Game Config setup
+- Photos from before Game Settings setup
 - VRChat not running during screenshot
-- VRChat logging disabled
-- Game Config not properly configured
+- VRChat logging is unavailable
+- Game Settings watch or log folder is not configured correctly
 
 **Setup Required**:
-See [Game Configuration Guide](game-config.md) to enable metadata extraction.
+See [Game Settings Guide](game-config.md) to enable metadata extraction.
 
 ## Search Methods
 
@@ -141,6 +142,23 @@ Find photos with multiple specific people.
 2. Tag removes immediately
 3. Results update automatically
 
+## World Search
+
+Use the **World Search** tab at the top of Person Search to find photos by world name.
+
+**Steps**:
+1. Open the **World Search** tab
+2. Type part or all of a world name
+3. Click the desired world in the filtered list
+4. View photos taken in that world
+
+**Notes**:
+- Click the heart beside a world name to add it to favorites
+- One world can be selected at a time
+- The selected world and photo count are shown above the results
+- Click the × button to clear the selected world
+- Photos normally load in batches of about 50 as you scroll
+
 ## User Directory
 
 Browse all users in your photo collection.
@@ -182,33 +200,23 @@ Mark frequently searched users as favorites.
 2. Star empties (☆)
 3. User removed from favorites
 
-## Favorite Users Tab
+## Favorites Tab
 
-Switch between all users and favorites.
+Person Search has **Friend Search**, **World Search**, and **Favorites** tabs. In Favorites, use **Favorite type** to switch between friends and worlds.
 
-### Tab Switching
+### Favorite Users
 
-At top of Person Search panel:
-- **"All" Tab**: Shows all users (default)
-- **"Favorites" Tab**: Shows only marked users
-  - Tab shows count: "★ 5" means 5 favorites
+- Select **Friends** in **Favorite type**
+- Only marked users are shown
+- Click a user name to search that user's photos
+- Click the star to remove the user from favorites
 
-### Favorite Tab Usage
+### Favorite Worlds
 
-**View Favorites**:
-1. Click "Favorites" tab
-2. Only marked users display
-3. Same alphabetical order
-
-**Quick Search**:
-1. Open Favorites tab
-2. Marked users always available
-3. Faster access to frequent searches
-
-**Multiple Selection** (if supported):
-1. Click first user
-2. Ctrl+Click additional users
-3. AND search with all selected
+- Select **Worlds** in **Favorite type**
+- Only marked worlds are shown
+- Click a world name to search its photos
+- Click the heart to remove the world from favorites
 
 ## Search Results Display
 
@@ -323,31 +331,30 @@ Click photos to view detailed information.
 
 **Causes**:
 - VRChat metadata not extracted
-- Game Config not properly set up
+- Game Settings not properly set up
 - Old photos without metadata
 - VRChat logging disabled
 
 **Solutions**:
 
-**Check Game Config**:
-1. Open Game Config settings
-2. Verify monitoring is enabled
-3. Confirm metadata output folder set
-4. Test by taking new screenshot in VRChat
+**Check Game Settings**:
+1. Open Game Settings from the sidebar
+2. In Display Settings, confirm the watch folder and log folder
+3. Test by taking a new screenshot in VRChat
 
 **New Screenshots**:
-1. After fixing Game Config
+1. After fixing Game Settings
 2. Launch VRChat
 3. Capture new screenshot
 4. Return to VSA (wait a moment)
 5. New users should appear
 
-**Database Rebuild** (if still not working):
-1. Enable Developer Mode
-2. Rebuild database
-3. Restart VSA
+**If it still does not work**:
+1. Check the watch and log folders in Game Settings > Display Settings
+2. Capture a new photo and wait for import to finish
+3. Contact support with the log and reproduction steps
 
-See [Game Configuration Guide](game-config.md) for details.
+See [Game Settings Guide](game-config.md) for details.
 
 ### No Search Results for Existing User
 
@@ -366,11 +373,10 @@ See [Game Configuration Guide](game-config.md) for details.
 3. Check user list in sidebar
 4. Verify username spelling matches
 
-**Database Rebuild**:
-1. Enable Developer Mode
-2. Rebuild metadata database
-3. Restart VSA
-4. Retry search
+**If the result is still empty**:
+1. Check the photo metadata in the detail sidebar
+2. Verify that the watch and log folders are correct
+3. Contact support with the log and reproduction steps
 
 ### Romaji Search Not Working
 
@@ -411,7 +417,7 @@ See [Game Configuration Guide](game-config.md) for details.
 
 ## Related Documentation
 
-- [Game Configuration Guide](game-config.md) - Metadata extraction setup
+- [Game Settings Guide](game-config.md) - Metadata extraction setup
 - [Gallery Operation Guide](gallery-guide.md) - Photo browsing and sidebar details
 - [VRChat Integration Guide](vrchat-integration.md) - How metadata works
 - [Troubleshooting Guide](troubleshooting.md) - Detailed problem solutions

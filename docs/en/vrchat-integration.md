@@ -2,7 +2,7 @@
 
 ## How to open
 
-Open the VRChat integration options from Settings.
+Open **Game Settings** from the sidebar. Folder and OSC options are in the **Display Settings** tab.
 
 ![VRChat integration settings](../assets/screenshots/vrchat-settings-metadata.webp)
 
@@ -13,8 +13,8 @@ Open the VRChat integration options from Settings.
 
 VSA automatically extracts and saves metadata from photos taken in VRChat. This guide explains the metadata VSA saves and how it works.
 
-> **Note (Integral support status)**
-> Integral support is currently in progress. Some Integral camera parameter values may not be recorded or displayed correctly.
+> **Note (Integral parameters)**
+> Integral is supported, but some camera parameter values may not be recorded or displayed correctly.
 
 ## Metadata Overview
 
@@ -25,7 +25,7 @@ When you take a photo in VRChat, VSA automatically embeds the following informat
 - Camera parameters
 - Capture time
 
-This information is saved in the PNG file's tEXt chunk and can be read by other tools without using VSA.
+This information is saved as PNG metadata and can be read by compatible tools without using VSA.
 
 ## World Information
 
@@ -52,7 +52,7 @@ The participants list includes the usernames of everyone who was in the instance
 
 ## Camera Parameters
 
-The camera settings used in VRChat are recorded. VSA supports the following cameras.
+The captured camera type and OSC parameters are recorded when available. The fields depend on the camera, avatar, and OSC state at capture time.
 
 ### VirtualLens2
 
@@ -60,16 +60,9 @@ Parameters recorded when using VirtualLens2:
 
 | Parameter | Description |
 |-----------|-------------|
-| Aperture | F-stop value |
+| Aperture | Aperture value; the avatar's minimum and maximum may also be shown |
 | Focal Length | Focal length |
 | Exposure | Exposure compensation |
-| Zoom | Zoom level |
-| Brightness | Brightness |
-| Contrast | Contrast |
-| Saturation | Saturation |
-| Sharpness | Sharpness |
-| FOV | Field of view |
-| Focus Distance | Focus distance |
 
 ### Integral
 
@@ -82,12 +75,16 @@ Parameters recorded when using Integral:
 | Exposure | Exposure compensation |
 | Shutter Speed | Shutter speed |
 | Bokeh Shape | Bokeh shape |
-| Resolution Scale | Resolution scale |
-| Render Distance | Render distance |
+
+If focus, aberration, composition, or other values were saved, the photo detail's Integral section shows them as additional rows.
+
+### FishEye / TelePortraitLens
+
+Both are controllable from Camera Controller. When a TelePortraitLens snapshot is stored, the photo detail shows a dedicated section. FishEye is currently focused on controller operation and has no dedicated photo-detail section.
 
 ### Normal Camera
 
-When using the standard VRChat camera, camera parameters are not recorded.
+The shipped v0.8.2 release does not record parameters from the standard VRChat camera. The v0.9.0 development version records and displays only values VSA could confirm over OSC at capture time. Unconfirmed values are not included, and available fields depend on what OSC provides.
 
 ## How OSC Communication Works
 
@@ -105,7 +102,7 @@ VSA communicates with VRChat using the OSC (Open Sound Control) protocol to obta
 To enable OSC communication:
 
 1. Enable OSC in VRChat settings
-2. Enable OSC output on the supported camera (VirtualLens2 or Integral)
+2. Enable OSC output on the camera you use
 
 ## VRChat Log Analysis
 
@@ -129,11 +126,20 @@ Usually located at `C:\Users\[Username]\AppData\LocalLow\VRChat\VRChat\`.
 
 You can check which camera was used for each photo in the gallery detail view.
 
-- VirtualLens2: Displayed as "VL2" or "VirtualLens2"
-- Integral: Displayed as "Integral"
+- VirtualLens2: Displayed as "VL2" or "VirtualLens2" with aperture, focal length, and exposure rows
+- Integral: Displayed as "Integral" with the five base rows and any saved additional values
+- TelePortraitLens: Displayed as "TelePortraitLens" with stored snapshot rows
 - Normal camera: Displayed as "Normal Camera"
 
 Camera parameters are displayed in accordion format and can be expanded by clicking.
+
+## Related settings
+
+See the [Game Settings Guide](game-config.md) for the settings used by VRChat integration:
+
+- **Display Settings**: Watch, output, and log folders plus OSC
+- **Plugins**: Steam, Virtual Desktop, and VRChat outage notifications
+- **Time Machine**: Event timeline parsed from VRChat logs
 
 ## Troubleshooting
 
@@ -143,7 +149,8 @@ Camera parameters are displayed in accordion format and can be expanded by click
    - VRChat Settings > OSC > Enable
 
 2. **Check if using a supported camera**
-   - VirtualLens2 or Integral is required
+   - Use VirtualLens2, Integral, FishEye, or TelePortraitLens
+   - The shipped v0.8.2 release does not record parameters from the standard camera. In the v0.9.0 development version, only values confirmed over OSC are available
 
 3. **Check if VSA is running in the background**
    - VSA must be running while VRChat is active
@@ -155,3 +162,12 @@ Camera parameters are displayed in accordion format and can be expanded by click
 
 2. **Check capture timing**
    - Photos taken immediately after entering a world may miss log data
+
+3. **Check the log folder**
+   - In Game Settings > Display Settings, verify the **Log folder** points to the folder containing VRChat logs
+
+## Related documentation
+
+- [Game Settings Guide](game-config.md) - VRChat integration settings
+- [FAQ](faq.md) - Frequently asked questions
+- [Person Search Guide](person-search-guide.md) - Search using photo metadata

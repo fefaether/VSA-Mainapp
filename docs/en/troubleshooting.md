@@ -16,21 +16,19 @@ This guide provides solutions for problems that may occur in the VSA application
 **Symptom**: Screenshots taken in VRChat are not automatically imported into VSA
 
 **Possible Causes**:
-- Monitoring function is disabled
+- VSA is not running or the watch folder is incorrect
 - Folder path is incorrect
-- Firewall is blocking the application
 
 **Solution (Step-by-Step)**:
 
-**Step 1: Check Monitoring Function**
-1. Open the Game-Side Settings
-2. Verify that the toggle switch is enabled (ON)
-3. If disabled, click to enable it
-4. Take a screenshot in VRChat
+**Step 1: Check Monitoring Status**
+1. Leave VSA running
+2. Check that the sidebar reports folder monitoring
+3. Take a screenshot in VRChat
 
 **Step 2: Verify Folder Path**
-1. Open the Game-Side Settings
-2. Check the "Screenshot Folder" setting
+1. Open Game Settings > Display Settings
+2. Check the "Watch folder" setting
 3. Default path is typically `C:\Users\[YourUsername]\Pictures\VRChat`
 4. Verify the path is correct and re-select if necessary
 
@@ -39,14 +37,7 @@ This guide provides solutions for problems that may occur in the VSA application
 2. Open Windows Explorer and check if photo files exist in the specified folder
 3. Verify that the filename and capture time match
 
-**Step 4: Check Firewall Settings**
-1. Open Windows Security Center
-2. Click on "Firewall & network protection"
-3. Click on "Allow an app through firewall"
-4. Verify that VSA is included in the allowed apps list
-5. If not, add it by clicking "Allow another app"
-
-**Step 5: Restart the Application**
+**Step 4: Restart the Application**
 1. Completely close VSA
 2. Close VRChat as well
 3. Restart VSA
@@ -63,7 +54,6 @@ Refer to [Checking Log Files](#how-to-check-log-files) to examine detailed error
 **Possible Causes**:
 - Thumbnail generation is in progress
 - Thumbnail generation failed
-- Cache is corrupted
 
 **Solution (Step-by-Step)**:
 
@@ -75,7 +65,6 @@ Refer to [Checking Log Files](#how-to-check-log-files) to examine detailed error
 **Step 2: Try Scrolling**
 1. Scroll up and down in the gallery
 2. Thumbnails will be loaded dynamically while scrolling
-3. Verify network connection (if using external storage)
 
 **Step 3: Restart the Application**
 1. Completely close VSA
@@ -83,24 +72,8 @@ Refer to [Checking Log Files](#how-to-check-log-files) to examine detailed error
 3. Restart VSA
 4. Display the gallery
 
-**Step 4: Clear Cache**
-1. Close VSA
-2. Delete the following folder:
-   ```
-   %APPDATA%/VSA/cache/
-   ```
-3. Restart VSA
-4. Thumbnails will be regenerated (may take time)
-
-**Step 5: Rebuild Database**
-1. Enable Developer Mode (Settings > Appearance > Developer Mode)
-2. A "Developer" menu will appear in the sidebar
-3. Click on "Developer"
-4. Click "Rebuild Database"
-5. Select "OK" in the confirmation dialog
-6. Restart VSA
-
-**Note**: Rebuilding the database may result in loss of favorites, tags, and other custom data.
+**Step 4: Contact Support with Logs**
+If the problem persists, provide the log and reproduction steps to support.
 
 ### Gallery Display-Related Issues
 
@@ -158,8 +131,8 @@ Refer to [Checking Log Files](#how-to-check-log-files) to examine detailed error
 **Solution (Step-by-Step)**:
 
 **Step 1: Verify Import Folder**
-1. Open the Game-Side Settings
-2. Check the "Screenshot Folder" path
+1. Open Game Settings > Display Settings
+2. Check the "Watch folder" path
 3. Open that folder in Windows Explorer
 4. Verify that photo files exist (`.png` or `.jpg` files)
 
@@ -173,11 +146,10 @@ Refer to [Checking Log Files](#how-to-check-log-files) to examine detailed error
 2. Click the "Reload" button (⟲) in the toolbar
 3. This will refresh the photo list
 
-**Step 4: Check Database**
-1. Enable Developer Mode
-2. Display "Database Info" from the Developer menu
-3. Check "Total Photos"
-4. If it shows 0, the firewall may be blocking the application
+**Step 4: Check Settings and Logs**
+1. Open Game Settings > Display Settings and verify the watch folder
+2. Capture a new photo and wait for import to finish
+3. If the problem persists, contact support with the log and symptoms
 
 ### JPEG XL Compression-Related Issues
 
@@ -219,14 +191,7 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 - Images output by VRChat are already compressed, so no visual changes from further compression are expected
 - This is normal behavior
 
-**Cause 2: Viewer Does Not Support JXL**
-- Windows standard "Photos" app does not support JXL
-- Install a JXL-compatible viewer:
-  - IrfanView (Free)
-  - FastStone Image Viewer (Free)
-  - Other JXL-compatible image viewers
-
-**Cause 3: File Is Corrupted**
+**Cause 2: File Is Corrupted**
 1. Check detailed logs (Developer Mode)
 2. If errors exist, redo the compression
 3. If the same error occurs, the original file may be corrupted
@@ -238,28 +203,25 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 **Symptom**: World name, user name, capture time, and other photo metadata are not displayed
 
 **Possible Causes**:
-- Metadata output is disabled
+- VRChat logs cannot be read
 - Log folder path is incorrect
 - VRChat is an old version
 
 **Solution (Step-by-Step)**:
 
-**Step 1: Verify Metadata Output Folder**
-1. Open the Game-Side Settings
-2. Expand Advanced Settings
-3. Check if "Metadata Output Folder" is configured
-4. If not, specify the VRChat log folder
+**Step 1: Verify the Log Folder**
+1. Open Game Settings > Display Settings
+2. Confirm that "Log folder" points to the VRChat log folder
 
-**Step 2: Verify VRChat Settings**
-1. Open VRChat settings menu
-2. Verify that metadata output is enabled
-3. If disabled, enable it
-4. Restart VRChat
+**Step 2: Verify VRChat Logs**
+1. Launch VRChat and enter a world
+2. Check that a log is created in `C:\Users\[Username]\AppData\LocalLow\VRChat\VRChat`
+3. Restart VRChat if no log is created
 
 **Step 3: Check Log Folder**
-1. Verify the log folder path shown in Game-Side Settings
+1. Verify the log folder path shown in Game Settings
 2. Open that folder in Windows Explorer
-3. Verify that log files such as `output.log` exist
+3. Verify that log files such as `output_log_*.txt` exist
 4. If not, reconfigure the log folder path
 
 **Step 4: Take New Screenshots**
@@ -272,7 +234,7 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 **Symptom**: Camera parameters (such as VirtualLens2) cannot be retrieved
 
 **Possible Causes**:
-- OSC port numbers do not match
+- OSC receive and send ports are not paired correctly
 - OSC is disabled on VRChat side
 - Firewall is blocking
 - Port number is in use
@@ -280,10 +242,10 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 **Solution (Step-by-Step)**:
 
 **Step 1: Verify Port Number**
-1. Open the Game-Side Settings
-2. Expand Advanced Settings
-3. Check the "OSC Port" (Default: 9001)
-4. Verify the same port number is configured on VRChat side
+1. Open Game Settings > Display Settings
+2. Check "VSA receive port (VRChat sends)" (default: 9001)
+3. Check "VSA send port (VRChat receives)" (default: 9000)
+4. Verify the corresponding VRChat send and receive ports
 
 **Step 2: Enable OSC on VRChat Side**
 1. Launch VRChat
@@ -295,14 +257,14 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 1. Open Windows Security Center
 2. Click on "Firewall & network protection"
 3. Click on "Advanced settings"
-4. Verify that the OSC port (9001, etc.) is allowed in both "Inbound rules" and "Outbound rules"
+4. Verify that the OSC ports (9001, 9000, etc.) are allowed in both "Inbound rules" and "Outbound rules"
 5. If not allowed, add a new rule
 
 **Step 4: Check for Port Conflicts**
 1. Open Command Prompt (Windows + R → cmd)
 2. Run the following command:
    ```
-   netstat -ano | findstr :9001
+   netstat -ano | findstr ":9001 :9000"
    ```
 3. Verify that no other processes are using the port
 4. If in use, change to a different port number
@@ -318,81 +280,23 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 **Symptom**: VSA does not detect when VRChat is launched (notification does not appear)
 
 **Possible Causes**:
-- Monitoring function is disabled
+- VSA is not running or process detection failed
 - VRChat process detection failed
 
 **Solution**:
 
-**Step 1: Verify Monitoring Function Is Enabled**
-1. Open the Game-Side Settings
-2. Verify the toggle switch is enabled (ON)
+**Step 1: Verify Monitoring Status**
+1. Leave VSA running
+2. Check the folder-monitoring status in the sidebar
 
 **Step 2: Restart VRChat**
 1. Completely close VRChat
 2. Restart VSA as well
 3. Launch VRChat
 
-### Account Linking and Cloud Save
+### Account or Cloud Controls Are Missing
 
-#### Cloud Save Fails or Is Unavailable
-
-**Symptom**: Favorite cloud save fails, menus are missing, or errors occur
-
-**Possible Causes**:
-- Environment not in current rollout, or plan/account status does not qualify
-- No network connection
-- Expired authentication or temporary third-party outage
-
-**Solution (Step-by-Step)**:
-
-**Step 1: Check Rollout and Plan**
-1. Verify plan and connection on the Account screen
-2. If cloud menus are missing, the feature may not be offered yet
-3. Review the [Terms of Service](terms.md) and in-app pricing/limit display
-
-**Step 2: Verify Network Connection**
-1. Check the Windows network icon
-2. Verify internet connection is working properly
-3. If unable to connect, restart your Wi-Fi router
-
-**Step 3: Verify Authentication Status**
-1. Open Account Settings
-2. Check connection status
-3. Log out and sign in again following on-screen prompts
-
-**Step 4: Maintain Local Backups**
-1. Periodically copy `%APPDATA%\VSA\favorites.db`
-2. Do not rely on cloud save alone
-
-#### Authentication Error Occurs
-
-**Symptom**: "Authentication failed" or similar error during account linking
-
-**Possible Causes**:
-- Browser cache is corrupted
-- Pop-up blocker is blocking login
-- Network or third-party service outage
-
-**Solution (Step-by-Step)**:
-
-**Step 1: Clear Browser Cache**
-1. Open a browser (Chrome recommended)
-2. Press Ctrl + Shift + Delete
-3. Check "Cached images and files"
-4. Click "Clear browsing data"
-
-**Step 2: Check Pop-up Blocker**
-1. Check the icon on the left side of the browser address bar
-2. If pop-ups are blocked, allow them
-
-**Step 3: Try Another Browser**
-1. Try with another browser (Edge or Firefox)
-2. Verify if authentication succeeds
-
-**Step 4: Restart VSA**
-1. Completely close VSA
-2. Wait a few seconds
-3. Restart VSA and try linking again
+Accounts, cloud save, X posting, and event capture are being prepared for general availability and are hidden with normal settings. A missing menu alone does not indicate a connection failure. Local photo management works without an account. Keep important photos backed up separately.
 
 ### Notification-Related Issues
 
@@ -403,7 +307,7 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 **Possible Causes**:
 - VSA is not allowed in Windows notification settings
 - Focus Assist is enabled
-- Notification volume is muted
+- Windows notification sounds or VSA notification sounds are disabled
 
 **Solution (Step-by-Step)**:
 
@@ -422,13 +326,12 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 **Step 3: Check Notification Settings**
 1. Open VSA Settings
 2. Select the "Notifications" panel
-3. Verify that "Desktop Notifications" is enabled
+3. Verify that **OS notifications** or **Toast notifications** is enabled
 4. Verify that individual notification types are enabled
 
-**Step 4: Check Notification Volume**
-1. Check Windows Volume Mixer
-2. Verify that VSA app is not muted
-3. Check master volume level
+**Step 4: Check Notification Sound**
+1. In Settings > Notification, verify that **Play notification sound** is enabled
+2. Verify that Windows notification sounds and the VSA app are not muted
 
 ### Performance-Related Issues
 
@@ -437,27 +340,16 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 **Symptom**: VSA takes tens of seconds or more to start
 
 **Possible Causes**:
-- Database is large
 - Large number of photos
-- Disk is slow
+- Slow disk access
 
 **Solution (By Priority)**:
 
 **Solution 1: Delete Unnecessary Photos**
 1. Select old photos in the gallery
 2. Click the Delete button
-3. Database size will be reduced
+3. This reduces the amount of work at startup
 4. Verify if startup speed improves
-
-**Solution 2: Optimize Disk**
-1. Open Windows Settings
-2. Click on "Storage"
-3. Click on "Drive optimization"
-4. Select the drive and click "Optimize"
-
-**Solution 3: Install on SSD**
-- Installing VSA on an SSD will improve startup speed
-- If running on HDD, consider migrating to SSD
 
 #### Memory Usage Is High
 
@@ -465,8 +357,6 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 
 **Possible Causes**:
 - Large number of photos being loaded
-- Memory leak
-- Thumbnail cache is large
 
 **Solution (By Priority)**:
 
@@ -486,14 +376,6 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 3. Restart VSA
 4. Memory will be reset
 
-**Solution 4: Clear Cache**
-1. Close VSA
-2. Delete the following folder:
-   ```
-   %APPDATA%/VSA/cache/
-   ```
-3. Restart VSA
-
 ## How to Check Log Files
 
 By examining VSA's detailed logs, you can more accurately identify the cause of problems.
@@ -512,16 +394,15 @@ By examining VSA's detailed logs, you can more accurately identify the cause of 
 
 ### Log File Structure
 
-Log files are generated on a daily basis:
+Log files rotate daily:
 
 ```
 logs/
-├── 2024-01-10.log
-├── 2024-01-09.log
-└── 2024-01-08.log
+├── vsa-mainapp.log
+└── vsa-mainapp.log.2026-08-31
 ```
 
-**To open the latest log file**: Open the file with today's date.
+**To open the latest log file**: Open `vsa-mainapp.log`.
 
 ### How to Read Log Files
 
@@ -544,74 +425,18 @@ Log files are text files that can be opened in Notepad or VSCode.
 
 **Example**:
 ```
-[2024-01-10 14:32:15] [ERROR] Failed to connect to screenshot folder: Access Denied
+ERROR Failed to connect to screenshot folder: Access Denied
 ```
 
 This error indicates that there are no access permissions to the screenshot folder.
 
-## Database Rebuild
+## Managed Data or Settings Problems
 
-If the database becomes corrupted, it can be rebuilt.
+The current public build does not provide a supported procedure to delete, replace, or rebuild VSA-managed data or settings manually. Incorrect changes can remove photos or favorite state.
 
-**Warning**: Rebuilding the database may result in loss of favorite tags and other custom data. Back up your data before proceeding.
-
-### Steps
-
-**Step 1: Enable Developer Mode**
-1. Open Settings
-2. Select the "Appearance" panel
-3. Enable "Developer Mode"
-4. Click "Save"
-
-**Step 2: Open Developer Menu**
-1. A "Developer" menu will appear in the sidebar
-2. Click on "Developer"
-
-**Step 3: Rebuild Database**
-1. Find the "Rebuild Database" button
-2. Click it
-3. Select "Rebuild" in the confirmation dialog
-
-**Step 4: Restart the Application**
-1. VSA will automatically restart
-2. Database rebuild will complete
-
-**Step 5: Verify**
-1. Display the gallery
-2. Verify that photos are displayed correctly
-
-## Reset Settings File
-
-If the settings file becomes corrupted, it can be reset.
-
-**Warning**: After reset, all settings will revert to defaults. Take note of important settings beforehand.
-
-### Steps
-
-**Step 1: Close VSA**
-1. Completely close VSA
-2. Verify all VSA processes have closed (check Task Manager)
-
-**Step 2: Delete Settings File**
-1. Windows Key + R
-2. Type `%APPDATA%` and press Enter
-3. Open the `VSA` folder
-4. Delete the `settings.json` file
-
-**Step 3: Restart VSA**
-1. Launch VSA
-2. Setup wizard will appear
-3. Perform initial setup again
-
-**How to Create a Backup**:
-1. Close VSA
-2. Copy `%APPDATA%/VSA/settings.json`
-3. Save it to a safe location as `settings.json.backup`
-
-**How to Restore from Backup**:
-1. Copy `settings.json.backup` to the `%APPDATA%/VSA/` folder
-2. Rename it to `settings.json`
-3. Restart VSA
+1. Completely close and restart VSA
+2. Check permissions and free space for the watch, output, and log folders
+3. If the problem persists, contact support with the log, VSA version, and reproduction steps
 
 ## How to Contact Support
 
@@ -635,7 +460,7 @@ Please provide the following information:
 - Take a screenshot of any displayed error messages
 
 **4. Log Files**:
-- Latest log file (`%APPDATA%/VSA/logs/[date].log`)
+- Latest log file (`%APPDATA%/VSA/logs/vsa-mainapp.log`)
 
 ### Contact Methods
 
@@ -645,12 +470,12 @@ Please provide the following information:
 - Provide detailed information according to the template
 
 **Email**:
-- support@vsa-app.com (provisional)
+- virtualsnaparchive@gmail.com
 - Include detailed inquiry and the above information
 
 ## Related Information
 
 - [FAQ](faq.md) - Frequently Asked Questions
-- [Game-Side Configuration Guide](game-config.md) - Configuration Troubleshooting
+- [Game Settings Guide](game-config.md) - Configuration Troubleshooting
 - [Settings Screen Complete Guide](settings-guide.md) - Settings Details
 - [Favorites Guide](favorites-guide.md) - Cloud save and favorites troubleshooting

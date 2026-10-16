@@ -13,30 +13,40 @@ Open **Settings** from the VSA sidebar.
 
 The Settings panel allows you to customize VSA's appearance, behavior, integrations, update checks, and user-facing legal/support information.
 
+The **Application Info** and **Tutorial** panel descriptions apply to development build v0.9.0. They may not appear in distributed v0.8.2.
+
 ## Accessing Settings
 
 Click the gear icon (⚙️) in the sidebar to open the Settings screen.
 
-The left menu includes these panels:
+The left menu normally contains 11 panels. When the cloud UI is available, **X Post** appears after **Shortcut**, for 12 panels:
 
 1. **System** - startup and background behavior
-2. **Appearance** - theme, color, and language
-3. **Animation** - motion and transition settings
-4. **Game Settings** - watched folders, OSC, Virtual Desktop, and Steam integration
-5. **Notification** - notification settings
-6. **Shortcut** - keyboard shortcuts
-7. **X Post** - posting presets and posting-related settings
+2. **Application Info** - version and connection status
+3. **Appearance** - theme, color, and language
+4. **Animation** - motion and transition settings
+5. **Game Settings** - watch, output, and log folders plus OSC
+6. **Notification** - notification settings
+7. **Shortcut** - keyboard shortcuts
 8. **Favorites** - favorites management
-9. **Update** - update checks and release notes
-10. **Other** - terms, privacy policy, licenses, external links, and important notices
+9. **Tutorial** - start in-app tutorials
+10. **Update** - update checks and release notes
+11. **Other** - terms, privacy policy, licenses, external links, and important notices
+
+When the cloud UI is available, **X Post** appears after **Shortcut**, shifting the panels that follow down by one.
 
 ## System Panel
 
 - **Run at PC startup**: Starts VSA when you sign in to Windows.
-- **Open new photos in VR preview**: Works with a compatible VR preview app to show newly imported photos automatically.
+- **Open new photos in VR preview**: Automatically shows VSA's VR capture mode when a new photo is detected.
 - **VR preview curvature**: Adjusts the curvature of the photo surface shown in VR.
 - **Automatically archive older photos**: Choose an age threshold of 1, 2, 3, 4, 6, or 12 months. Archives are stored in `VSA-Archive` under the current photo output folder.
-- **Automatic cloud upload**: Adds newly imported photos to the cloud upload queue. A signed-in VSA account is required.
+
+Start **Photographer Mode** from the VR icon in the title bar to review newly captured photos full screen. Configure automatic VR preview display and its curvature in this System panel. See the [Photographer Mode Guide](photographer-mode.md) for the full-screen controls.
+
+## Application Info Panel
+
+Review the installed version, VRChat connection status, and photo-watcher status. Use **Refresh status** to retrieve the current status again.
 
 ## Appearance Panel
 
@@ -61,16 +71,16 @@ Choose the visual theme for the application.
 Choose the UI language for the entire application.
 
 **Available Languages**:
-- **Japanese**: Complete UI, menus, and dialogs in Japanese
-- **English**: Complete UI, menus, and dialogs in English
+- **Japanese**: Most of the interface appears in Japanese.
+- **English**: Most of the interface appears in English. In-app tutorials are currently shown in Japanese.
 
 **How to Change**:
 1. Select language from dropdown
 2. Application UI updates immediately
-3. All dialogs and tooltips change to selected language
+3. Most translated text updates to the selected language; some content may remain in Japanese
 4. Setting persists across sessions
 
-**Note**: Documentation language can be set independently in the Documents panel.
+**Note**: Some interface text may still appear in Japanese.
 
 ### Theme Color Selector
 
@@ -118,65 +128,53 @@ Enable or disable UI animations and transition effects.
 
 ## Notification Panel
 
-Configure desktop notifications and alerts.
+Configure notification methods, event types, and notification sound.
 
-### Desktop Notifications
+### Notification Methods
 
-Control whether VSA sends Windows notifications.
+Toggle OS notifications and in-app toast notifications independently.
 
-**Enable/Disable**:
-- Toggle desktop notifications ON or OFF
-- When disabled, no system notifications appear
+- **OS notifications**: Show in the Windows notification center
+- **Toast notifications**: Show a toast in the bottom-right of the app
+- When both are OFF, no notifications are shown.
+
+Allow VSA notifications in Windows settings when using OS notifications.
 
 ### Notification Types
 
-Choose which events trigger notifications:
+When either notification method is enabled, configure these events independently:
 
-**Import Notifications**:
-- Trigger when importing folder completes
-- Shows file count and status
+- **Import complete**: When image import finishes
+- **Photo import in progress**: When the game takes a photo
+- **Compression complete**: When JXL compression finishes
+- **Error notifications**: When an error occurs
+- **VRChat startup**: When VRChat starts
+- **VRChat exit**: When VRChat exits
 
-**Photo Import In-Progress**:
-- Notify when new screenshots detected
-- Shows count of incoming photos
+### Sound
 
-**Compression Complete**:
-- Notify when JXL compression finishes
-- Shows compression statistics
+Turn on **Play notification sound** to play a sound when a notification is shown. There is no volume slider or notification-history setting in this panel.
 
-**Error Notifications**:
-- Alert when errors occur
-- Prevents silent failures
-
-**VRChat Startup/Shutdown**:
-- Notify when VRChat detected starting/stopping
-- Useful for workflow awareness
-
-### Notification Sound
-
-**Enable/Disable Sound**:
-- Toggle notification sounds ON or OFF
-- When enabled, audible alert for each notification
-
-**Volume Control**: (if available)
-- Adjust notification volume level
-- Range typically 0-100%
-
-### Notification History
-
-Use the notification button in the footer to review photo-import and background-task notifications. History is stored on the device and can be removed one item at a time or cleared at once.
+Open the bell icon in the bottom status bar to review notification history. Opening it marks the current items as read; there are no per-item delete or clear-all controls.
 
 ## Shortcut Panel
 
 Manage keyboard shortcuts for frequent operations.
 
-### Implemented Shortcuts (4 total)
+### Implemented Shortcuts (9 total)
 
 **Display Operations**:
 - **Screen Size Toggle** (F10): Cycle through window sizes (1280×720 → 1600×900 → 1920×1080 → 2560×1440)
 - **Fullscreen Toggle** (F11): Switch between window and fullscreen modes
 - **Gallery Zoom In** (Ctrl + =): Increase thumbnail size
 - **Gallery Zoom Out** (Ctrl + −): Decrease thumbnail size
+- **Retouch Fit to Window** (F): Fit the retouch preview to the window
+- **Retouch Zoom In** (Ctrl + ;): Increase the retouch preview size
+- **Retouch Zoom Out** (Ctrl + −): Decrease the retouch preview size
+- **Retouch Rotate Left**: Check the current binding in Settings > Shortcut
+- **Retouch Rotate Right**: Check the current binding in Settings > Shortcut
+
+In development build v0.9.0, a rotation key may be unassigned. Check the Shortcut panel for the current binding before using it.
 
 ### Customizing Shortcuts
 
@@ -188,20 +186,19 @@ Manage keyboard shortcuts for frequent operations.
    - While holding modifiers, press your desired key
    - Release all keys
 4. New combination displays in the field
-5. Click "Save" to confirm
+5. The new binding is saved automatically; there is no Save button.
 
 **Example Combinations**:
-- Single key: `F5`
+- Single key: `F2`
 - With modifier: `Ctrl + Shift + S`
-- Multiple modifiers: `Ctrl + Alt + Delete`
+- Multiple modifiers: `Ctrl + Shift + Alt + S`
 
 ### Resetting to Defaults
 
 **Reset All Shortcuts**:
 1. Open Settings > Shortcut panel
-2. Click "Reset to Default" button
-3. Confirm in dialog
-4. All shortcuts return to default values
+2. Click **Reset all**
+3. All shortcuts return to default values
 
 **Warning**: This action cannot be undone. Note current customizations if needed.
 
@@ -209,76 +206,46 @@ See [Keyboard Shortcuts Complete List](keyboard-shortcuts.md) for detailed infor
 
 ## Game Settings Panel
 
-Configure folders, OSC, Virtual Desktop, and Steam integration for VRChat.
+The Game Settings panel in Settings contains the sidebar Game Settings **Display Settings**: watch, output, and log folders plus OSC. Switches and fields save automatically; there is no manual Save button.
 
-### Virtual Desktop auto-launch
-
-On Windows, enable **Launch VRChat when Virtual Desktop connects** to launch Steam VRChat after the Virtual Desktop Streamer and headset connection are confirmed. It is off by default and VSA must be running.
-
-### Steam integration
-
-Enable **Start VSA with VRChat (Steam)** to add VSA to Steam VRChat's Launch Options (App ID 438100). Existing safe arguments are preserved. If Steam-side options were changed outside VSA, VSA does not overwrite them. Disabling the integration or uninstalling VSA restores VSA-managed options when they have not been changed.
+Configure Steam, Virtual Desktop, and VRChat outage notifications in [Game Settings](game-config.md) > **Plugins**. Review the event history in its **Time Machine** tab.
 
 ## Favorites Panel
 
-Manage favorites data and legacy folder migration.
+Choose the folder used to keep copies of favorite photos and migrate existing favorites.
 
 ### Favorites Folder Migration
 
-**Purpose**: Move favorites data from old locations to new database.
+**Purpose**: Copy existing favorite photos to the selected favorites folder.
 
-**Legacy Folder Import**:
-1. Click "Import Legacy Folder"
-2. Select old favorites folder location
-3. VSA imports all legacy data
-4. Favorites appear in Favorites view
+**Steps**:
+1. Choose a folder under **Save destination folder**
+2. Click **Migrate favorite photos**
+3. Review the successful and failed counts and any failed-photo details
 
-**Note**: Modern VSA uses SQLite database for favorites. Legacy folder migration preserves existing data.
-
-### Database Management
-
-**View Favorites Database**:
-- Location: `%APPDATA%\VSA\favorites.db`
-- Automatically created on first favorites action
-
-**Backup Favorites**:
-1. Locate `%APPDATA%\VSA\favorites.db`
-2. Copy to safe location
-3. Keep as backup
-
-**Restore from Backup**:
-1. Copy backup file to `%APPDATA%\VSA\`
-2. Overwrite current `favorites.db`
-3. Restart VSA
+When you mark a photo as a favorite, VSA copies the original to the configured folder. Removing one favorite with the star button in the detail sidebar deletes the tracked copy. Bulk removal in Favorites selection mode only clears favorite status and leaves both the original and the copy.
 
 See [Favorites Guide](favorites-guide.md) for complete favorites information.
 
+## Tutorial Panel
+
+Select a tutorial in Settings > Tutorial to start its in-app walkthrough. A check mark indicates a completed tutorial. Tutorial content is currently shown in Japanese.
+
 ## Update Panel
 
-Control automatic update checking and version information.
+Check the installed version, check for updates, and open release notes.
 
-### Auto-Update Check
+### Check for Updates
 
-**Enable/Disable Checking**:
-- Toggle automatic update checking
-- When enabled, VSA checks for updates periodically
+Click **Check for updates** to look for a newer version. When one is available, review the details and download it to restart VSA.
 
-### Version Information
+### Version Information and Release Notes
 
 **Current Version Display**:
 - Shows installed VSA version
 - Format: X.X.X
 
-**External Links**:
-- External links such as GitHub Releases and documentation have moved to the **Other** panel.
-- The Update panel now focuses on the installed version, release notes, and update checks.
-
-### Update Notifications
-
-When new version available:
-- Notification appears in UI
-- Can download or dismiss
-- Check can be done manually anytime
+Click **Release notes** to open the notes for the current version. External links such as GitHub Releases and documentation are in the **Other** panel.
 
 ## Other Panel
 
@@ -307,50 +274,71 @@ The panel summarizes:
 - The correct app name is **Virtual Snap Archive**. VSA is unofficial and is not affiliated with, endorsed by, or supported by VRChat Inc., VirtualLens2, Integral, or their respective rights holders.
 - Core local features are free. Cloud storage and X API features may require payment beyond the free allowance.
 - External communication occurs when using VSA accounts, cloud storage, X posting, Turnstile, update checks, or server status features.
-- Broad local file permissions are used so users can choose watched folders and export destinations.
+- Local file access is centered on the watched folders, export destinations, and managed app data that the user selects or configures.
 - Windows installers may be unsigned and may trigger SmartScreen or security software warnings.
 
-## Resetting All Settings
+## Returning Settings to Defaults
 
-**Reset to Defaults**:
-1. Settings > scroll to bottom
-2. Click "Reset All Settings" button
-3. Confirm in dialog
-4. All settings revert to default values
-5. Application restarts automatically
+There is currently no single button that resets every setting. Use the reset action provided by the relevant screen:
 
-**Warning**: This action cannot be undone. All customizations will be lost.
+- Game Settings: reset the output or log folder individually
+- Shortcut: **Reset all** returns all 9 shortcuts to their defaults (no confirmation dialog)
+- Other settings: select the desired values manually
+
+Do not delete or replace VSA-managed data manually. If the problem persists, contact support with the log and symptoms.
+
+## Saving Settings
+
+Settings are saved automatically when a panel value changes. Folder selections and migration results are reported in the app; there is no general Save button. Do not edit or replace settings files manually.
+
+## Example Configurations
+
+### Working in a dark environment
+
+1. Set the theme to **Dark**.
+2. Choose a darker theme color preset if desired.
+3. Disable animations if performance is limited.
+
+### Reducing load on an older PC
+
+1. Disable animations.
+2. Disable automatic VR preview opening if it is not needed.
+3. Enable automatic archiving of older photos when storage management is a priority.
+
+### Customizing shortcuts
+
+1. Open the **Shortcut** panel.
+2. Select the shortcut to change.
+3. Enter the new key combination.
+4. The accepted combination is saved automatically; there is no Save button.
+
+## Troubleshooting
+
+### A setting does not take effect
+
+Restart VSA after changing the setting. If the value still has no effect, use the reset action in the relevant panel and try again.
+
+### A setting does not persist
+
+Check write permission for `%APPDATA%\\VSA\\` and available disk space. If the problem continues, contact support with the log and the steps that reproduce it.
 
 ## Settings Storage
 
-Settings are stored in:
-```
-%APPDATA%\VSA\settings.json
-```
-
-**Backup Settings**:
-1. Navigate to `%APPDATA%\VSA\`
-2. Copy `settings.json` to safe location
-3. Keep as backup before major changes
-
-**Restore Settings**:
-1. Copy backup `settings.json` to `%APPDATA%\VSA\`
-2. Overwrite current file
-3. Restart VSA
+Settings are saved automatically as each panel changes. Do not edit or replace settings files manually. If a setting does not persist, verify folder permissions and free disk space, then contact support with the log and symptoms.
 
 ## Tips
 
 - **Performance**: Disable animations if VSA feels slow on older hardware
 - **Notifications**: Disable non-critical notifications to reduce distractions
 - **Shortcuts**: Create shortcuts for operations you perform frequently
-- **Backup**: Backup settings.json periodically in case of corruption
+- **Backup**: Back up the configured photo and favorites folders when you need a local copy
 - **Theme**: Use System-Linked theme for automatic light/dark switching
 
 ## Related Documentation
 
 - [Keyboard Shortcuts Complete List](keyboard-shortcuts.md) - All shortcut details
 - [Favorites Guide](favorites-guide.md) - Favorites feature overview
-- [Game Configuration Guide](game-config.md) - VRChat integration settings
+- [Game Settings Guide](game-config.md) - VRChat integration settings
 - [Terms of Service](terms.md) - Usage terms
 - [Privacy Policy](privacy.md) - Data handling
 - [License Information](../license.md) - Licenses and third-party software

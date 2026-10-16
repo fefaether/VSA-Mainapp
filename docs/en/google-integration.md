@@ -1,85 +1,35 @@
-# Cloud and Account Integration (formerly Google Integration)
+# Cloud Integration Guide
+
+> **Provisional — not generally available.** This page describes the VSA v0.9.0 development build. The features are hidden with normal settings. This page is available by direct URL. Screens and behavior may change.
 
 ## How to open
 
-Open the Account screen to check cloud integration status.
+In a test environment where cloud controls are visible, open **Account** or **Albums** from the sidebar. These cloud controls are hidden with normal settings.
 
 ![Cloud integration screen](../assets/screenshots/account-rollout-status.webp)
+
+This image is a reference from released v0.8.2. The current v0.9.0 development build may look different.
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---
 
-VSA provides and expands account-linked features such as cloud save, share links, and X posting. Some environments may use third-party authentication (e.g. Google OAuth, X OAuth), but **this guide does not assume Google Drive or Google Photos are generally available to all users**.
+## Account connection
 
-## Feature Overview (Staged Rollout)
+When the Account screen and linking features are available, follow the on-screen prompts to sign in and check the connection status. Authentication methods and screens may change between versions. Check the current UI, Terms, and Privacy Policy.
 
-The following are subject to **staged rollout**. Availability depends on release status, plan, account status, and environment.
+## Cloud album operations
 
-- Sign-in with a VSA account
-- Cloud save (optional backup for favorites and related data)
-- Share link generation
-- X posting integration
-- Cross-device sync (when offered)
+When cloud features are shown, use the Albums screen:
 
-If the relevant UI does not appear in the app, the feature may not be enabled for your environment yet.
+1. Browse albums in the cloud list. Select an album and choose **Import locally** to use it as an album on this device.
+2. To save a local album to the cloud, open it, choose **Save to cloud too**, and confirm.
+3. For a linked album, choose **Pause sync** or **Resume sync**. If both this device and the cloud have changed, choose **Review conflict** to compare the versions and select which one to use.
 
-## Guide Update Status
+The cloud list is for viewing. Read each confirmation before choosing an operation that removes an album or photo from this device or the cloud.
 
-Earlier versions documented Google Photos and Google Drive steps in detail. Because public scope and implementation are evolving, **specific step-by-step instructions are being revised**.
+## Cloud sync for favorites
 
-For now, rely on:
+Favorites and export remain available locally when cloud features are hidden. Where account-linked sync is available, follow the status and retry controls shown in the app. The Favorites screen itself is for selecting photos, exporting them, and removing favorites.
 
-1. **In-app UI** (menus, buttons, error messages)
-2. **Canonical Terms and Privacy** on GitHub Pages
-   - [Terms of Service](./terms.md)
-   - [Privacy Policy](./privacy.md)
-3. Related guides
-   - [Account Management Guide](account-guide.md)
-   - [Favorites Guide](favorites-guide.md)
-   - [X Posting Feature Guide](x-post-guide.md)
-
-## Typical Authentication Flow (When Shown)
-
-When external account linking is enabled:
-
-1. Open Settings or the Account screen
-2. Follow prompts for the VSA account or linked service
-3. Complete authentication in the browser and return to the app
-4. Verify connection status and plan
-
-Requested permissions vary by service and rollout stage. See the auth screen and [Privacy Policy](./privacy.md).
-
-## Privacy and Security
-
-- Local data (favorites, settings) stays on your PC
-- Cloud save and sharing are described in the Privacy Policy
-- OAuth flows request least-privilege access where possible
-- Disconnect via the Account screen or the third-party service settings when available
-
-## Troubleshooting (General)
-
-### Linking Menu Not Visible
-
-- Your environment may not be in the current rollout
-- Update the app and check account status
-
-### Authentication Does Not Complete
-
-1. Verify internet connectivity
-2. Disable popup blockers
-3. Try another browser
-4. Restart VSA
-
-### Sync or Upload Fails
-
-1. Check plan, monthly limits, and free tiers in the app
-2. Use a stable network
-3. Keep local backups of important data
-4. See [Troubleshooting](troubleshooting.md) and [FAQ](faq.md) if issues persist
-
-## Related Documentation
-
-- [Account Management Guide](account-guide.md)
-- [Terms of Service](./terms.md)
-- [Privacy Policy](./privacy.md)
+This guide does not set availability, prices, or usage limits. Check the in-app display and the [Terms of Service](./terms.md). See the [Privacy Policy](./privacy.md) for data handling.

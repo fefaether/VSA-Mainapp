@@ -1,26 +1,26 @@
-# VirtualLens Controller Guide
+# Camera Controller Guide
 
 ## How to open
 
-Open **VirtualLens Controller** from the VSA sidebar.
+Open **Camera Controller** from the VSA sidebar.
 
-![VirtualLens Controller screen](../assets/screenshots/controller-overview.webp)
+![Camera Controller screen](../assets/screenshots/controller-overview.webp)
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---
 
 
-VirtualLens Controller allows you to operate VirtualLens2 camera settings in real-time. Integration with VirtualLens2 avatars in VRChat is possible via OSC (Open Sound Control).
+Camera Controller sends camera parameters to VRChat over OSC (Open Sound Control). Use the top tabs to switch between:
 
-## VirtualLens Controller Overview
+- **VirtualLenz2 (VirtualLens2)**
+- **Integral**
+- **FishEye**
+- **TelePortraitLens**
 
-Using VirtualLens Controller:
+## VirtualLens2
 
-- **Real-time Control**: Parameters reflect in VRChat real-time
-- **Multiple Parameters**: Support focal distance, aperture, exposure, and more
-- **Preset Saving**: Save frequently used settings as presets
-- **Intuitive UI**: Easy operation with sliders and knobs
+The VirtualLens2 tab contains lens and camera settings. Value ranges are supplied by the connected avatar and may vary.
 
 ## Access Controller Screen
 
@@ -28,91 +28,41 @@ Using VirtualLens Controller:
 
 **Steps**:
 1. Check sidebar menu (left side)
-2. Look for "Controller" item
+2. Look for the "Camera Controller" item
 3. Click to open controller screen
 
 ### Keyboard Shortcut
 
-Controller screen may have dedicated shortcut keys. See [Keyboard Shortcuts](keyboard-shortcuts.md) for details.
+There is no controller-specific shortcut. See [Keyboard Shortcuts](keyboard-shortcuts.md) for common shortcuts.
 
 ## Using Controller Screen
 
 ### Screen Composition
 
-Controller screen consists of these sections:
+The VirtualLens2 tab contains:
 
-- **Parameter Section**: Various camera parameter settings
-- **Preset Section**: Preset save and load
-- **OSC Status Display**: Communication status confirmation
-- **Preview**: Real-time preview of settings reflected in VRChat
+- Lens settings
+- Camera settings
+- VirtualLens2 presets
+- Connection status (shown when connected)
 
-### Parameter Settings
+### Lens Settings
 
-#### Focal Length
+- **Aperture**
+- **Focal length**
+- **Exposure**
 
-Corresponds to VirtualLens2 zoom setting.
+Adjust each item with its slider and use the item reset button to return to its default. Value ranges are supplied by the connected avatar and may vary.
 
-**Range**: 16mm - 300mm
-**Unit**: mm
-**Operation**:
-- Drag slider left/right to adjust
-- Direct input to specify value
-- "Reset" button returns to default (50mm)
+### Camera Settings
 
-**Examples**:
-- 16mm: Suitable for wide-angle shooting
-- 50mm: Standard portrait shooting
-- 200mm: Captures distant subjects large
-
-#### Aperture
-
-Controls image brightness and depth of field (bokeh).
-
-**Range**: F1.4 - F16
-**Unit**: F-stop
-**Operation**:
-- Drag slider left/right
-- Direct input value
-- "Reset" button returns to default (F4.0)
-
-**Examples**:
-- F1.4-F2.8: Background bokeh emphasizes subject (portrait-oriented)
-- F4.0-F8.0: Balanced exposure and bokeh
-- F11-F16: Overall sharp, background clear
-
-#### Exposure
-
-Adjusts overall image brightness.
-
-**Range**: -5.0 - +5.0
-**Unit**: EV (Exposure Value)
-**Operation**:
-- Drag slider left/right
-- Direct input value
-- "Auto" button sets to auto exposure
-
-**Examples**:
-- -5.0 - -2.0: Adjust darker environment shots (darker)
-- 0.0: Standard exposure
-- +2.0 - +5.0: Shoot dark areas brighter
-
-#### Depth of Field
-
-Controls bokeh strength.
-
-**Range**: 0 - 100
-**Operation**:
-- Drag slider left/right
-- Direct input value
-
-**Examples**:
-- 0: No bokeh (overall sharp)
-- 50: Moderate bokeh
-- 100: Maximum bokeh (strong background bokeh)
+- **AF mode**: Point AF, Face-detection AF, or Selfie AF
+- **Grid**: None, 3×3, 3×3 plus diagonals, or 6×4
+- **Information**: Toggle camera information display
 
 ### Real-time Reflection
 
-Parameter changes immediately reflect in VRChat camera.
+Parameter changes are sent to the connected VRChat instance over OSC. The camera start button is unavailable until VRChat is running.
 
 **Verification**:
 1. Equip VirtualLens2 in VRChat
@@ -121,7 +71,12 @@ Parameter changes immediately reflect in VRChat camera.
 
 **Notes**:
 - OSC communication must be properly established
-- Network latency may cause frame delay reflection
+
+### Supported camera tabs
+
+- **Integral**: Operate lens, focus, shutter, bokeh, aberration, and display settings. The tab provides reset and camera start/stop controls.
+- **FishEye**: Toggle the lens and blur, and adjust blur amount. Focal length, FOV, and distortion are read-only.
+- **TelePortraitLens**: Toggle the lens, adjust Main FOV and front/back bokeh, and control AutoFocus, AutoFocus Dof, and WorldFix.
 
 ## Integral Camera Control
 
@@ -129,7 +84,7 @@ Integral is a camera system for VRChat. You can operate it from the controller s
 
 ### Accessing Integral Controller
 
-From the Controller screen in the sidebar menu, switch tabs to use VirtualLens2 and Integral interchangeably.
+From the Camera Controller screen in the sidebar menu, switch tabs to use VirtualLens2 and Integral interchangeably.
 
 ### Main Parameters
 
@@ -186,6 +141,8 @@ Select Integral's bokeh shape:
 - **Weight**: Filter effect strength
 - **Scale**: Cross size
 - **Angle**: Cross rotation angle
+- **Wave amplitude / frequency**: Adjust the light wave pattern
+- **Shape**: Choose 2, 4, 6, or 8 lines
 
 #### Tilt (Tilt Shift)
 
@@ -199,9 +156,17 @@ Select image processing algorithm:
 |------|-------------|
 | **Normal** | Standard image processing |
 | **Lighten** | Emphasize bright areas |
+| **Lighten (single)** | Single-frame lighten mode |
 | **Darken** | Emphasize dark areas |
+| **Darken (single)** | Single-frame darken mode |
 | **Depth** | Use depth information |
+| **Dither** | Dither processing |
 | **Movie** | Film-style processing |
+
+#### Curve / LUT
+
+- **Curve**: Linear, Log, LUT1, LUT2, or LUT3
+- **LUT Mix**: Amount of LUT blending
 
 #### Other Features
 
@@ -210,8 +175,16 @@ Select image processing algorithm:
 | **Grid Display** | Show composition guide |
 | **Histogram** | Check exposure |
 | **Selfie Mode** | Front-facing camera |
-| **Auto Level** | Auto exposure adjustment |
-| **Drone Speed** | Movement speed in drone mode |
+| **Auto Level** | Off / R / Up / L |
+
+The Display / Other card also provides:
+
+- **FixMode**: World or Avatar
+- **FixWhileOpen**: Hold the value while the shutter is open
+- **Timer**: Timer capture
+- **Screen Info / Screen Font Size**: On-screen information and text size
+- **HUD**: Head-up display
+- **Layer**: Toggle Local Player, Remote Player, and UI layers
 
 ---
 
@@ -223,11 +196,9 @@ OSC (Open Sound Control) is a protocol that transmits parameters real-time over 
 
 ### Port Settings
 
-#### Default Port
+#### Default Ports
 
-**Default Value**: 9001
-
-VRChat initial settings use port 9001. Usually works with this setting.
+Game Settings defaults are VSA receive (VRChat sends) `9001` and VSA send (VRChat receives) `9000`.
 
 #### Change Port Number
 
@@ -236,20 +207,20 @@ VRChat initial settings use port 9001. Usually works with this setting.
 - Network requires different port
 
 **How to Change**:
-1. Open "OSC Settings" section in controller screen
-2. Enter desired port number in "Port Number" field
-3. Click "Apply"
-4. Set same port number on VRChat side too
+1. Open sidebar Game Settings > Display Settings
+2. Change "VSA receive port (VRChat sends)" or "VSA send port (VRChat receives)"
+3. Verify the corresponding VRChat send and receive ports
+
+The controller screen has no port fields; it uses the ports configured in Game Settings.
 
 ### Verify Communication Status
 
 #### Status Display
 
-Communication status displays on controller screen:
+The controller screen shows the connection indicator when connected:
 
 - **Connected (green)**: Properly communicating with VRChat
-- **Disconnected (gray)**: Communication not established with VRChat
-- **Error (red)**: Communication error occurred
+- If connection is not established, the indicator is not shown
 
 #### Diagnosis Method
 
@@ -260,6 +231,8 @@ Communication status displays on controller screen:
 4. Change one parameter to test, confirm VRChat reflection
 
 ## Preset Management
+
+Presets store the VirtualLens2 settings (aperture, focal length, exposure, AF mode, grid, and information). The Integral, FishEye, and TelePortraitLens tabs do not show this preset section.
 
 ### What are Presets?
 
@@ -276,18 +249,9 @@ Save preset settings combining camera parameters (focal distance, aperture, expo
 ### Load Preset
 
 **Steps**:
-1. Select preset to load from list in "Preset" section
-2. Click "Load" button
-3. Saved parameter values all apply
-4. Auto-reflect in VRChat
-
-### Edit Preset
-
-**Steps**:
-1. Load preset
-2. Change parameters
-3. Click "Overwrite" button next to original preset name
-4. Click "Overwrite" in confirmation dialog
+1. Click the preset-name button in the "Preset" section
+2. All saved parameter values apply
+3. The values are sent to VRChat automatically
 
 ### Delete Preset
 
@@ -300,7 +264,7 @@ Save preset settings combining camera parameters (focal distance, aperture, expo
 
 ### Equip VirtualLens2 Avatar
 
-VirtualLens Controller requires equipping avatar with VirtualLens2 camera in VRChat.
+VirtualLens2 requires equipping an avatar with a VirtualLens2 camera in VRChat.
 
 **Verification**:
 1. Equip avatar in VRChat
@@ -310,23 +274,22 @@ VirtualLens Controller requires equipping avatar with VirtualLens2 camera in VRC
 
 **VRChat Setup**:
 1. Launch VRChat
-2. Open Settings > OSC
+2. Open VRChat's OSC settings
 3. Check "Enable OSC"
-4. Verify port number is 9001 (or VSA-specified value)
-5. Save settings
+4. Verify VSA receive 9001 and VSA send 9000 (or the corresponding custom values)
 
 ### Verify VirtualLens2 Parameters
 
-Confirm VRChat VirtualLens2 supports these parameters:
+The main OSC parameters used by the VirtualLens2 tab are:
 
-- `/avatar/parameters/VL2_FocalLength` - Focal distance
-- `/avatar/parameters/VL2_Aperture` - Aperture
-- `/avatar/parameters/VL2_Exposure` - Exposure
-- `/avatar/parameters/VL2_DepthOfField` - Depth of field
+- `/avatar/parameters/VirtualLens2_Zoom` - Focal length
+- `/avatar/parameters/VirtualLens2_Aperture` - Aperture
+- `/avatar/parameters/VirtualLens2_Exposure` - Exposure
+- `/avatar/parameters/VirtualLens2_AFMode` - AF mode
+- `/avatar/parameters/VirtualLens2_Grid` - Grid
+- `/avatar/parameters/VirtualLens2_Information` - Information display
 
-**Verification**:
-1. VRChat Settings > Developer > Display advanced info
-2. Check avatar parameters list
+Check parameter names and value ranges against the documentation for the VirtualLens2 avatar you use.
 
 ## Troubleshooting
 
@@ -337,13 +300,13 @@ Confirm VRChat VirtualLens2 supports these parameters:
 **Solutions**:
 1. Verify VRChat OSC settings
    - Confirm "Enable OSC" checked
-   - Confirm port number matches (default: 9001)
+   - Confirm the VSA receive/send ports match the corresponding VRChat ports (9001/9000 by default)
 2. Check firewall settings
    - Confirm firewall not blocking communication
    - Check security software settings
 3. Verify port not in use
    ```
-   netstat -ano | findstr :9001
+   netstat -ano | findstr ":9001 :9000"
    ```
    - If port in use by other process, change to different port
 4. Restart VRChat and VSA
@@ -370,11 +333,8 @@ Confirm VRChat VirtualLens2 supports these parameters:
 **Symptom**: Parameter changes delayed in VRChat reflection
 
 **Solutions**:
-1. Check network connection
-   - Verify internet connection stability
-   - Check ping value (`ping 127.0.0.1`)
+1. Confirm VSA and VRChat are running on the same PC
 2. Check other app loads
-   - Stop apps consuming network bandwidth
    - Check CPU usage not high
 3. Check VRChat load
    - Many players in instance may reduce performance
@@ -391,55 +351,12 @@ Confirm VRChat VirtualLens2 supports these parameters:
 3. Restart controller
    - Close controller screen and reopen
 
-## Usage Examples
+## Using presets
 
-### Example 1: Portrait Shooting Preset
-
-**Goal**: VRChat portrait-focused shooting
-
-**Settings**:
-- Focal Length: 85mm (portrait standard)
-- Aperture: F2.0 (background bokeh)
-- Exposure: 0 EV (standard brightness)
-- Depth of Field: 80 (background bokeh)
-
-**Steps**:
-1. Set above values in controller
-2. Save as "Portrait" preset
-3. Click "Load" for portrait shooting
-
-### Example 2: Landscape Shooting Preset
-
-**Goal**: Capture world full-view
-
-**Settings**:
-- Focal Length: 35mm (wide-angle)
-- Aperture: F8.0 (overall sharp)
-- Exposure: 0.5 EV (slightly bright)
-- Depth of Field: 20 (minimal bokeh)
-
-**Steps**:
-1. Set above values in controller
-2. Save as "Landscape" preset
-3. Click "Load" for landscape shooting
-
-### Example 3: Night Shooting Preset
-
-**Goal**: Sufficient brightness in dark world
-
-**Settings**:
-- Focal Length: 50mm (standard)
-- Aperture: F1.4 (maximum brightness)
-- Exposure: +3.0 EV (bright adjust)
-- Depth of Field: 50 (moderate bokeh)
-
-**Steps**:
-1. Set above values in controller
-2. Save as "Night Shooting" preset
-3. Click "Load" for night shooting
+VirtualLens2 ranges depend on the connected avatar. Adjust the desired values, save them with a name, and load the preset when needed.
 
 ## Related Documentation
 
 - [VRChat Integration](vrchat-integration.md) - General VRChat integration info
-- [Game Config Guide](game-config.md) - Detailed OSC settings
+- [Game Settings Guide](game-config.md) - Detailed folders, OSC, plugins, and timeline settings
 - [Keyboard Shortcuts](keyboard-shortcuts.md) - Shortcut list

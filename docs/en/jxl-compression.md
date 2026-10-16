@@ -23,6 +23,7 @@ Open “JXL Compression” from the sidebar to configure automatic archiving.
 - Opening an archived photo creates a temporary PNG for viewing without changing the archive itself.
 
 The schedule time, file-count trigger, monitor interval, snooze, and VRChat-state pause settings from older versions are no longer available.
+Automatic archive work is deferred while VRChat is running and resumes after VRChat exits.
 
 ## Archive Manager
 
@@ -42,6 +43,8 @@ You can compress a folder of PNG files as one batch.
 2. Select the input and output folders.
 3. Click “Start Compression.”
 4. Follow the processed count, total count, and current file in the progress display.
+
+While it is running, use **Cancel compression** to stop the job. Review the result and any errors before retrying.
 
 Manual compression uses batch processing. The background processing mode from older versions is no longer available.
 

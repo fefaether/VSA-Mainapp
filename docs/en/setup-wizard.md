@@ -21,10 +21,7 @@ The setup wizard supports basic configuration when using VSA for the first time.
 
 **When Wizard Appears**:
 - When launching VSA for the first time
-- When settings file is deleted
-- During major version upgrades
-
-**Skippable**: You can skip at any time with the "Skip" button
+- After resetting setup from Settings > Appearance > Developer Mode > Developer
 
 ## Setup Steps
 
@@ -41,11 +38,9 @@ An introduction page for the VSA application.
 - VRChat photo management
 - JPEG XL compression feature
 - Automatic metadata extraction
-- Account-linked features (cloud save, share links, etc.—staged rollout)
 
 **Operations**:
 - "Next" button: Proceed to next step
-- "Skip" button: Skip setup and go to main screen
 
 ### Step 2: Language and Theme Selection
 
@@ -54,8 +49,8 @@ Select the app display language and visual theme.
 #### Language Settings
 
 **Options**:
-- **Japanese**: All UI elements and documents display in Japanese
-- **English**: All UI elements and documents display in English
+- **Japanese**: Most of the interface appears in Japanese.
+- **English**: Most of the interface appears in English. In-app tutorials are currently shown in Japanese.
 
 **How to Select**:
 1. Select language from radio button or dropdown
@@ -148,21 +143,17 @@ If photos are stored outside the VRChat output folder, you can register addition
 
 ### Step 5: Startup Method
 
-Choose how VSA starts alongside your VRChat workflow. Both options can be changed later.
+Choose whether VSA should start automatically when you sign in to Windows. You can change this later in Settings > System.
 
 **Options**:
-- **Start with Steam VRChat** (recommended): On Windows, adds VSA to Steam VRChat's Launch Options (App ID 438100). Existing safe arguments are preserved.
 - **Start when Windows signs in**: Keeps VSA resident in the background after Windows login.
 
-Steam integration is available only for Steam VRChat on Windows. If Steam-side Launch Options were changed outside VSA, VSA leaves them untouched for safety.
-
 **How to Select**:
-1. Turn on the switch for the startup method you want.
-2. If Steam is running, quit Steam and retry the change.
+1. Turn on the switch if you want VSA to start at Windows sign-in.
 
 **Change Later**:
-- Steam integration: Settings > Game Settings
 - Windows startup: Settings > System
+- Steam integration: [Game Settings](game-config.md) > Plugins
 
 ### Step 6: JXL Archive and Complete
 
@@ -181,41 +172,19 @@ Setup is complete and move to main screen.
 4. VSA performs the selected migration and import while showing counts, percentage, and the current file
 5. If finalization fails, completed work is kept and you can close setup or return to Folder Settings
 
-## Skipping Setup
-
-To skip setup mid-process:
-
-**Method 1: Click "Skip" at Each Step**
-- Skip current step
-- Move to main screen
-- Remaining steps not shown
-
-**Method 2: Click "Skip" Button (Wizard Side)**
-- All steps are skipped
-- App launches with default settings
-
-**After Skipping**:
-- All settings set to default values
-- Can be changed later in settings screen
-
 ## Re-running Setup
 
 To redo setup:
 
-### Method 1: Delete Settings File
+### Method 1: Reset from the Developer Menu
 
 **Steps**:
-1. Close VSA
-2. Windows Key + R
-3. Type `%APPDATA%` and press Enter
-4. Open `VSA` folder
-5. Delete `settings.json` file
-6. Restart VSA
-7. Setup wizard reappears
+1. Enable Settings > Appearance > Developer Mode
+2. Open **Developer** from the sidebar
+3. In the Reset section, reset **Setup wizard**
+4. Restart VSA
 
-### Method 2: From Wizard (Planned for Future)
-
-Future versions will add option to re-run setup from settings screen.
+Do not delete or replace settings files manually.
 
 ## Troubleshooting
 
@@ -287,7 +256,7 @@ Future versions will add option to re-run setup from settings screen.
 
 **Language Settings**:
 - Select language you understand well
-- Documents display in same language
+- Use the corresponding language version of the guides as needed
 
 **Theme Selection**:
 - Recommended: "System" to match Windows settings
@@ -298,8 +267,8 @@ Future versions will add option to re-run setup from settings screen.
 - If using multiple folders, specify main folder
 
 **Auto-Launch Setting**:
-- Enable if you want VSA monitoring when playing VRChat
-- Disable if temporarily not using VSA
+- Enable if you want VSA resident after Windows sign-in
+- Disable if you do not want it to start automatically
 
 ## After Setup
 
@@ -307,13 +276,12 @@ After completing setup, recommend these steps:
 
 1. **Check Gallery**: Verify imported photos
 2. **Check Metadata**: Confirm world name and usernames display in photo details
-3. **Verify Game Config**: See [Game Config Guide](game-config.md) for complete VRChat setup
-4. **Account linking (optional)**: If cloud save or share links are available, see the [Account Guide](account-guide.md) (staged rollout)
-5. **Run Tutorial**: Learn features from in-app tutorial
+3. **Verify Game Settings**: See [Game Settings Guide](game-config.md) for watch folders, logs, OSC, and plugins
+4. **Run a tutorial**: In development build v0.9.0, open Settings > Tutorial and select one to start. This does not reset the setup wizard. Tutorial content is in Japanese, and the panel may not appear in distributed v0.8.2.
 
 ## Related Documentation
 
 - [Basic Usage](../basic-usage.md) - Overall VSA usage
-- [Game Config Guide](game-config.md) - Detailed VRChat integration settings
+- [Game Settings Guide](game-config.md) - Detailed VRChat integration settings
 - [Settings Guide](settings-guide.md) - Detailed settings options
 - [Troubleshooting Guide](troubleshooting.md) - If problems occur

@@ -13,12 +13,12 @@ Open **Gallery** from the VSA sidebar.
 
 The gallery screen allows you to view imported photos in a list format, check detailed information, and perform operations such as adding favorites.
 
-> **Note (Integral support status)**
-> Integral support is currently in progress. Some Integral camera parameter values may not be recorded or displayed correctly.
+> **Note (Integral parameters)**
+> Integral is supported, but some camera parameter values may not be recorded or displayed correctly.
 
 ## Display Modes
 
-The gallery has two display modes.
+The gallery has three display modes.
 
 ### Grid View
 
@@ -38,18 +38,21 @@ Displays photos in a list format.
 
 Switch display modes using the toolbar button.
 
+### Group View
+
+Groups photos by capture date. Like grid view, the thumbnail size can be adjusted.
+
 ## Sorting
 
 You can sort by the following items.
 
 | Sort Item | Description |
 |-----------|-------------|
-| Created Date | File creation date (default) |
+| Created Date | File creation date |
 | World Name | VRChat world name |
 | File Name | Alphabetical order of file names |
 | File Size | File size |
-| Capture Time | Photo capture time |
-| Photographer | User who took the photo |
+| Capture Time | Photo capture time (descending by default) |
 
 How to sort:
 
@@ -94,9 +97,14 @@ Click a photo to display a sidebar on the right showing detailed information.
 - List of users in the instance
 
 **Camera Info:**
-- Camera type (VirtualLens2/Integral/Normal Camera)
+- Camera type (VirtualLens2, Integral, FishEye, TelePortraitLens, or Normal Camera)
 - VirtualLens2 parameters (Aperture, FocalLength, Exposure, etc.)
 - Integral parameters (ShutterSpeed, BokehShape, etc.)
+- Stored TelePortraitLens snapshot values when available
+
+Normal Camera parameters are not recorded in the shipped v0.8.2 release. The v0.9.0 development version records and displays only values VSA could confirm over OSC at capture time. Unconfirmed values are not included, and available fields depend on what OSC provides.
+
+In the v0.9.0 development version, for a Normal Camera photo registered locally with its PNG file present, open **Correct Focus mode** under **Normal Camera** in the photo details, choose a **Focus mode**, and click **Save**. The selection is written to the photo's PNG, and the photo details refresh after a successful save. This control is not available in v0.8.2. The existing screenshot may not show development controls.
 
 Camera information is displayed in an accordion format and can be expanded by clicking.
 
@@ -124,22 +132,6 @@ A "Read QR Code" button displays above the preview image in the detail sidebar.
 - **Text**: Click "Copy to Clipboard" to copy content
 - Multiple code detection displays all codes
 
-#### X Post Button
-
-"Post to X" button displays in detail sidebar (per photo).
-
-**Features**:
-- Open selected photo in X post modal
-- Support simultaneous posting of multiple photos (maximum 4)
-
-**How to Use**:
-1. Click photo to open detail sidebar
-2. Click "Post to X" button
-3. X post modal displays
-4. Configure text and presets then post
-
-See [X Posting Feature Guide](x-post-guide.md) for details.
-
 ## Favorites
 
 You can mark photos as favorites.
@@ -150,7 +142,7 @@ You can mark photos as favorites.
 - Click the star button in the detail sidebar
 - Click the star icon in table view
 
-Favorite status is saved to the database and persists after restarting the app.
+Favorite status is saved locally and persists after restarting the app.
 
 ## Deleting Images
 
@@ -160,7 +152,7 @@ You can move unwanted images to the trash.
 2. Click the trash icon
 3. Select "Delete" in the confirmation dialog
 
-Deleted images are moved to the system trash (not permanently deleted).
+Deleted images are moved to VSA's trash. Restore them from the trash or permanently delete them in selection mode.
 
 ## User Search
 
@@ -182,7 +174,7 @@ See [Person Search Guide](person-search-guide.md) for details.
 
 ## Bulk Selection Feature
 
-Select multiple photos simultaneously to perform bulk favorite registration or trash move operations.
+Select multiple photos simultaneously to add favorites, add to albums, or move photos to trash.
 
 ### Start Selection Mode
 
@@ -204,8 +196,9 @@ Select multiple photos simultaneously to perform bulk favorite registration or t
 2. All photos on screen select
 
 **Deselect**:
-1. Click "Deselect" button in toolbar
-2. Clear all selections
+1. When all photos are selected, click "Select All" again
+2. Or click "Cancel" to leave selection mode
+3. All selections clear
 
 ### Selection Display
 
@@ -234,25 +227,13 @@ With multiple photos selected, perform these operations:
 3. Click "Move" in confirmation dialog
 4. All selected photos move to trash
 
-### X Post Mode (Photo Selection)
+#### Add to an Album in Bulk
 
-Special selection mode to select maximum 4 photos for X posting.
+1. Select multiple photos
+2. Click "Add to Album" in the toolbar
+3. Choose the destination album
 
-**Start**:
-1. Click "X Post Mode" button in toolbar
-2. Special selection mode enables
-
-**Selection**:
-1. Click X post photos (maximum 4)
-2. Selection stops when reaching 4
-3. Click selected photos to deselect
-
-**Post**:
-1. Click "Post to X" button
-2. X post modal displays
-3. Configure text and presets then post
-
-See [X Posting Feature Guide](x-post-guide.md) for details.
+Up to 200 photos can be added at once.
 
 ### Exit Selection Mode
 
@@ -269,28 +250,29 @@ In the trash tab, confirm deleted photos, restore them, or permanently delete.
 
 **Steps**:
 1. Check tab menu above Gallery
-2. Three tabs display: "Gallery", "Favorites", "Trash"
+2. Four tabs display: "Gallery", "Favorites", "Trash", and "Import"
 3. Click "Trash"
 
 ### Trash View Features
 
-Trash view supports same display formats as normal gallery (grid/table).
+Trash view uses a thumbnail grid. Each card shows the world name and days remaining before automatic deletion. More cards load as you scroll.
 
 **Deleted Photo List**:
-- All photos moved to trash display
-- Confirm file name, deletion time, original world name, etc.
-- Toggle grid or table view
+- Photos are listed by most recent deletion time
+- Check the world name and days remaining before automatic deletion
+- Select cards for bulk actions
 
 ### Restore Feature
 
 Restore deleted photos to gallery.
 
 **Steps**:
-1. Open Trash tab
-2. Click photo to restore
-3. Click "Restore" button in detail sidebar
-4. Click "Restore" in confirmation dialog
-5. Photo returns to gallery
+1. Open the Trash tab
+2. Click **Selection Mode**
+3. Select the photo cards to restore
+4. Click **Restore** in the toolbar
+5. Confirm the action
+6. Photos return to the gallery
 
 **Bulk Restore**:
 1. Select multiple photos
@@ -299,34 +281,27 @@ Restore deleted photos to gallery.
 
 ### Permanently Delete Feature
 
-Move photos to system trash, permanently delete from VSA.
+Delete the photo file, thumbnail, and related data from VSA's trash. This cannot be undone.
 
 **Steps**:
-1. Select photo to delete from Trash tab
-2. Click "Permanently Delete" button in detail sidebar
-3. Click "Permanently Delete" in confirmation dialog
-4. Photo moves to system trash
+1. Open the Trash tab and click **Selection Mode**
+2. Select the photo cards to delete
+3. Click **Delete** in the toolbar
+4. Confirm the action
 
 **Bulk Permanent Delete**:
 1. Select multiple photos
-2. Click "Permanently Delete" button in toolbar
-3. Click "Delete" in confirmation dialog
-4. All selected photos permanently delete
+2. Click **Delete** in the toolbar
+3. Confirm the action
 
 ### Notes
 
-**Restore Period**:
-- No limit on storage period in trash
-- Maintained until manually restored or permanently deleted
+**Retention**:
+- Photos moved to the app trash are automatically deleted after 7 days
 
 **About Permanent Deletion**:
-- Moved to Windows trash, may be recoverable from Windows trash
-- Once Windows trash empties, recovery impossible
-- Recommend backup of important photos beforehand
-
-**Clear Trash**:
-- "Empty Trash" button permanently deletes all photos
-- This action cannot be undone
+- VSA removes the photo data from its trash, so it cannot be restored
+- Back up important photos beforehand
 
 ## Keyboard Shortcuts
 
@@ -350,17 +325,7 @@ The gallery performs smoothly even with large numbers of images thanks to virtua
 
 - Only renders images visible on screen
 - Lazy loading of thumbnails
-- Page caching for fast redisplay
 
-## Cloud Save (Optional, Staged Rollout)
+## Filters
 
-Cloud backup for favorites is released in stages. Availability depends on release status, plan, account status, and environment. See the [Favorites Guide](favorites-guide.md) and [Account Guide](account-guide.md). Follow in-app UI for current controls.
-
-## Current Limitations
-
-The following features are currently under development.
-
-- Filter function (filtering by date, world, user, etc.)
-- Search function (keyword search)
-
-These features will be added in future updates.
+Use the filter button in the toolbar to filter by capture date range, metadata presence, world name, or username. Enter multiple usernames separated by commas for an AND search. Use **Reset** in the filter menu to clear the conditions.

@@ -2,7 +2,7 @@
 
 ## How to open
 
-Select a photo and open the Retouch screen.
+Open **Retouch (alpha)** from the sidebar, or open it from a photo's detail view in Gallery.
 
 ![Retouch screen](../assets/screenshots/retouch-auto-exposure.webp)
 
@@ -10,168 +10,97 @@ Select a photo and open the Retouch screen.
 
 ---
 
+Retouch edits a photo and exports the result as a separate file; it does not overwrite the source. Adjustments are not saved automatically, so use **Export** for any result you want to keep.
 
-The retouch feature lets you edit photos directly within the application. You can adjust brightness, contrast, color temperature, tone curves, and more.
+## Screen layout
 
-## Opening the Retouch Editor
+- Center: preview with zoom, fit-to-window, and 90-degree left/right rotation.
+- Bottom: a filmstrip with **Recent** and **Favorites** sources. Recent photos load more when you reach the end.
+- Right: adjustment panel with **Standard**, **Advanced**, and **Crop** tabs.
+- Title bar: **Undo**, **Redo**, **Reset**, and **Export**.
 
-Select a photo in the gallery and click the "Retouch" button to open the retouch editor.
+## Compare Photos
 
-## Screen Layout
+This comparison feature is available in the shipped v0.8.2 release. Select two or more photos from the filmstrip to enter comparison (up to four). With one photo selected, click **Compare** in the title bar to include its adjacent photo.
 
-The retouch editor consists of three main areas:
+In comparison, toggle **Before/After** for each photo. When comparing two photos, switch between side-by-side and top/bottom layouts. Use **Apply target** to choose all comparison photos or only the focused photo. Click **Back** to leave comparison; if you made edits, choose whether to keep or discard them.
 
-### Left Area (Main Editing)
+## Standard tab
 
-- **Zoom Controls** — Adjust the display scale of the photo
-- **Preview Canvas** — View real-time preview of edits
-- **Filmstrip** — Quick access to recent photos for fast switching
+### Auto exposure
 
-### Right Panel (Parameter Adjustment)
+Click **Apply Auto Exposure** to analyze the preview and adjust exposure compensation, black level, Lightness, highlight compression, and contrast. Set the clip percentage first if needed. The current implementation is low-accuracy and may clip highlights.
 
-Adjust editing parameters using sliders or numeric input.
+### Manual adjustments
 
-## Editing Parameters
+- **Exposure Compensation**: EV-based brightness correction
+- **Black Level / Lightness**: dark tones and overall brightness
+- **Highlight Compression**: reduce bright-area clipping
+- **Brightness / Contrast / Saturation**
+- **Color Temperature**: cool-to-warm adjustment (displayed as -100 to +100)
+- **Highlights / Shadows**
 
-### Basic Parameters
+Each row supports a slider and a numeric field. Use the reset icon on a row to restore that parameter's default.
 
-| Parameter | Description | Range |
-|-----------|-------------|-------|
-| **Brightness** | Adjust overall brightness of the photo | -100% ～ +100% |
-| **Contrast** | Adjust the difference between light and dark areas | -100% ～ +100% |
-| **Saturation** | Adjust color vividness | -100% ～ +100% |
-| **Color Temperature** | Adjust warm/cool color tone | 2000K ～ 10000K |
-| **Highlights** | Adjust bright areas (whites) | -100% ～ +100% |
-| **Shadows** | Adjust dark areas (blacks) | -100% ～ +100% |
+### Tone curve
 
-### How to Adjust Parameters
+Choose the RGB, R, G, or B channel, click the curve to add a control point, drag points to move them, and right-click to remove a point.
 
-#### Using Sliders
+## Advanced tab
 
-Drag the slider next to each parameter to adjust the value.
+The Advanced tab provides accordion sections for:
 
-#### Direct Numeric Input
+- **HSL adjustments**: hue, saturation, and luminance for red, orange, yellow, green, aqua, blue, purple, and magenta
+- **Sharpness**
+- **Noise reduction**: luminance and color
+- **Vignette**: strength, size, and feather
+- **Color grading**: shadows, midtones, and highlights
+- **Monochrome**: enable it and adjust RGB weights
 
-Click the numeric field to enter values directly or as percentages.
+### Film Look (development version)
 
-- `50` or `50%` for +50%
-- `-30` or `-30%` for -30%
+In the v0.9.0 development version, open **Film Look** in Advanced to choose a look and amount, then adjust grain strength, density, and size. Use **Import .cube** to add a 3D LUT. This is not included in the shipped v0.8.2 release. The existing screenshot may not show development controls.
 
-#### Reset to Default
+## Crop and rotation
 
-Click the reset button (↻ icon) at the end of each parameter row to restore the default value.
+1. In the **Crop** tab, choose **Specify crop area**.
+2. Drag the crop area on the preview to move or resize it.
+3. If needed, choose **Free / Original / 1:1 / 4:3 / 3:2 / 16:9 / 9:16 / 4:5**.
+4. Use **Clear crop** to remove the range.
 
-## Tone Curve Editor
+The range is committed as you drag; there is no separate **Apply** button. The selected range is included in the export. Rotate with the 90-degree buttons below the preview; rotation is part of the edit history.
 
-Use the tone curve editor for more detailed color correction.
+## Export
 
-### Tone Curve Basics
+Click **Export** in the title bar and choose a format and preset:
 
-The tone curve shows the relationship between input values (horizontal axis) and output values (vertical axis).
+- Format: **JPEG** or **PNG**
+- **Original**: export at the original resolution
+- **For X**: a local image-export size preset that fits within 1920×1080 px
+- **For VRChat website**: set the maximum long side (640–8192 px)
 
-- **RGB** — Adjust all color channels simultaneously
-- **R (Red)** — Adjust red channel only
-- **G (Green)** — Adjust green channel only
-- **B (Blue)** — Adjust blue channel only
+Confirm the destination and filename to save a separate file. The output folder opens after a successful export. The dialog cannot be closed while export is running.
 
-### Operating the Tone Curve
+## EXIF Studio (camera info frames)
 
-1. Open the "Tone Curve" section in the parameter panel on the right
-2. Click a channel button (RGB/R/G/B) to select the channel to adjust
-3. Click anywhere on the curve to add a point
-4. Drag the point to adjust the curve
-5. Select an unnecessary point and remove it with the `Delete` key or the delete action
+Open **EXIF Studio (beta)** from the sidebar to create a camera-information frame below a photo. Use the Recent/Favorites filmstrip and live preview. The available controls include:
 
-Basic adjustments, color controls, and tone curves are arranged in collapsible sections. Keep only the section you are editing open to leave more room for the preview.
+- Save, apply, delete, and reorder EXIF presets
+- Layout (split/simple), text alignment, font, and color theme
+- Border width, bottom-bar height, and font size
+- Camera type, aperture, focal length, world name, and photographer visibility
+- Watermark visibility, position, text, size, and opacity
 
-### Tone Curve Adjustment Examples
+EXIF Studio also has JPEG/PNG export and the same export presets.
 
-**Lift Shadows** — Drag the lower-left portion of the curve upward to brighten dark areas
-
-**Control Highlights** — Drag the upper-right portion of the curve downward to manage bright area exposure
-
-**Enhance Contrast** — Create an S-curve to emphasize the difference between shadows and highlights
-
-## Zoom Operations
-
-### Zoom Buttons
-
-Use the zoom controls above the preview canvas:
-
-- **Zoom In (+)** — Enlarge details
-- **Zoom Out (-)** — Display smaller
-- **Fit Window** — Fit entire photo to screen (default)
-
-### Keyboard Shortcuts
-
-| Action | Shortcut |
-|--------|----------|
-| Zoom In | `Ctrl` + `=` |
-| Zoom Out | `Ctrl` + `-` |
-| Fit Window | `Ctrl` + `0` |
-
-## Filmstrip
-
-The filmstrip at the bottom displays recent photos and loads more as you move toward the end.
-
-### Filmstrip Operations
-
-- **Photo Selection** — Click a photo in the filmstrip to switch instantly
-- **Scroll** — Scroll left/right using mouse wheel or scrollbar
-
-## Toolbar Buttons
-
-### Edit Operations
-
-| Button | Function |
-|--------|----------|
-| **Undo** | Cancel the last operation (`Ctrl` + `Z`) |
-| **Redo** | Reapply the last undone operation (`Ctrl` + `Shift` + `Z`) |
-| **Reset** | Reset all parameters to default values |
-
-### Export Feature
-
-Click the **Export** button to save with these options:
-
-- **File Format** — Select PNG or JPEG
-- **Filename** — Specify save location and new filename
-- **Quality** — Adjust compression quality for JPEG saving
-
-## Common Operations
-
-### Brighten a Dark Photo
-
-1. Move the **Brightness** slider to the right to brighten overall
-2. Adjust **Highlights** as needed to prevent blown-out whites
-
-### Warm Up Photo Color
-
-1. Move the **Color Temperature** slider to the right (higher = warmer)
-2. Preview the result
-
-### Increase Color Vividness
-
-Move the **Saturation** slider to the right for more vivid colors
-
-### Balance Shadows and Light
-
-1. Adjust **Shadows** to fine-tune dark areas
-2. Adjust **Highlights** to fine-tune bright areas
-3. Verify overall balance and make fine adjustments
+The v0.9.0 development version adds **Auto**, **Landscape**, **Square**, and **Portrait** templates. **Auto** chooses a layout from the photo's aspect ratio. These templates are not included in the shipped v0.8.2 release.
 
 ## Notes
 
-- **Auto-save** — Adjustments are not saved automatically. Export the result you want to keep
-- **Original File Impact** — Export asks for a destination and filename, then saves the edited result as a separate file
-- **Large File Processing** — High-resolution photos may take time to process
-- **Memory Usage** — Retouching multiple photos simultaneously consumes memory
+- Retouch adjustments are not auto-saved; export anything you want to keep.
+- The original photo file is not modified.
 
-## Keyboard Shortcuts Summary
+## Related documentation
 
-| Action | Shortcut |
-|--------|----------|
-| Undo | `Ctrl` + `Z` |
-| Redo | `Ctrl` + `Shift` + `Z` |
-| Zoom In | `Ctrl` + `=` |
-| Zoom Out | `Ctrl` + `-` |
-| Fit Window | `Ctrl` + `0` |
+- [Gallery Guide](gallery-guide.md) - Photo selection and detail sidebar
+- [Settings Guide](settings-guide.md) - Application-wide settings
