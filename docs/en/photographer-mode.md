@@ -6,15 +6,9 @@
 
 Photographer Mode is a full-screen view for checking newly captured photos. Open it from the VR icon in the title bar.
 
-Released v0.8.2 and v0.9.0 in development have different startup controls. Development controls and behavior may change.
-
 The main display controls are currently shown in Japanese in the app: `比較` (Compare), `選択を残す` (Keep selected), and `さらに10件` (Load 10 more).
 
 ## Start and exit
-
-**Released v0.8.2**: Open the Photographer mode menu (VR icon) in the title bar and choose **Start photographer mode**.
-
-**v0.9.0 in development**:
 
 1. Click the **Photographer Mode** VR icon on the right side of the title bar.
 2. The app enters full screen and shows recently imported photos in the filmstrip at the bottom.
@@ -38,7 +32,7 @@ Use **選択を残す** (Keep selected) to confirm moving photos left out of the
 
 ## Automatically show new photos
 
-To automatically show new photos in VSA's VR capture mode, open **Settings > System > Open new photos in VR preview**. The mode appears when a new photo is detected; adjust its curvature in the same panel. This trigger is separate from manually starting Photographer Mode from the title bar.
+To automatically show new photos in VSA's VR capture mode, open **Settings > VR Mode > Open new photos in VR preview**. The panel appears after enabling Developer Mode in Settings > System. Adjust the preview curvature in the same panel. This trigger is separate from manually starting Photographer Mode from the title bar.
 
 ## Startup guidance
 
@@ -47,4 +41,4 @@ The current UI has no separate Photographer Mode setting for showing the startup
 ## Related guides
 
 - [Gallery Guide](gallery-guide.md) — photo operations and trash
-- [Settings Guide](settings-guide.md) — system settings
+- [Settings Guide](settings-guide.md) — VR Mode settings

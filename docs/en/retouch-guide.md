@@ -21,7 +21,7 @@ Retouch edits a photo and exports the result as a separate file; it does not ove
 
 ## Compare Photos
 
-This comparison feature is available in the shipped v0.8.2 release. Select two or more photos from the filmstrip to enter comparison (up to four). With one photo selected, click **Compare** in the title bar to include its adjacent photo.
+Select two or more photos from the filmstrip to enter comparison (up to four). With one photo selected, click **Compare** in the title bar to include its adjacent photo.
 
 In comparison, toggle **Before/After** for each photo. When comparing two photos, switch between side-by-side and top/bottom layouts. Use **Apply target** to choose all comparison photos or only the focused photo. Click **Back** to leave comparison; if you made edits, choose whether to keep or discard them.
 
@@ -57,9 +57,9 @@ The Advanced tab provides accordion sections for:
 - **Color grading**: shadows, midtones, and highlights
 - **Monochrome**: enable it and adjust RGB weights
 
-### Film Look (development version)
+### Film Look
 
-In the v0.9.0 development version, open **Film Look** in Advanced to choose a look and amount, then adjust grain strength, density, and size. Use **Import .cube** to add a 3D LUT. This is not included in the shipped v0.8.2 release. The existing screenshot may not show development controls.
+Open **Film Look** in Advanced to choose a look and amount, then adjust grain strength, density, and size. Use **Import .cube** to add a 3D LUT. The current screenshot may not show these controls.
 
 ## Crop and rotation
 
@@ -85,15 +85,15 @@ Confirm the destination and filename to save a separate file. The output folder 
 
 Open **EXIF Studio (beta)** from the sidebar to create a camera-information frame below a photo. Use the Recent/Favorites filmstrip and live preview. The available controls include:
 
-- Save, apply, delete, and reorder EXIF presets
-- Layout (split/simple), text alignment, font, and color theme
+- Save EXIF presets, and apply, delete, or reorder presets you saved
+- Layout (Default: split / Simple: single column), text alignment, font, and color theme
 - Border width, bottom-bar height, and font size
 - Camera type, aperture, focal length, world name, and photographer visibility
 - Watermark visibility, position, text, size, and opacity
 
 EXIF Studio also has JPEG/PNG export and the same export presets.
 
-The v0.9.0 development version adds **Auto**, **Landscape**, **Square**, and **Portrait** templates. **Auto** chooses a layout from the photo's aspect ratio. These templates are not included in the shipped v0.8.2 release.
+Choose **Auto**, **Landscape**, **Square**, or **Portrait** from the template controls. **Auto** adjusts the layout to the photo's aspect ratio. Templates set the layout, text alignment, border width, and bottom-bar height while keeping other settings, such as camera information and watermark, as currently configured. Adjust the remaining controls as needed and save your configuration as an EXIF preset.
 
 ## Notes
 

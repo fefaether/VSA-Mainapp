@@ -56,7 +56,7 @@ Even if I am the only person who uses it, I build what I want to use. This is VS
 
 最新のドキュメントはGitHub Pagesで公開しています。
 
-配布済み **v0.8.2** の使い方に加え、**開発中v0.9.0向け**と明記した先行案内を掲載しています。開発版の説明にある操作は、配布済み版では利用できない場合があります。
+このドキュメントはVSA v0.9.0の現行UIと操作を基準にしています。使用中のバージョンが0.9.0より前の場合、画面や利用できる機能が異なることがあります。
 
 - [ドキュメントトップ](https://fefaether.github.io/VSA-Mainapp/)
 - [利用規約](https://fefaether.github.io/VSA-Mainapp/ja/terms.html)
@@ -94,8 +94,8 @@ Even if I am the only person who uses it, I build what I want to use. This is VS
 |------|------|---------|
 | **アルバム・お気に入り** | 写真を分類し、重要な写真をすぐに表示 | ✅ |
 | **ユーザー検索** | 撮影時のユーザー情報から写真を検索 | ✅ |
-| **レタッチ** | 明度・コントラスト・色温度・トーンカーブを調整 | ✅ |
-| **カメラ情報フレーム** | 写真に撮影情報を重ねて書き出し | ✅ |
+| **レタッチ** | 基本調整、フィルムルック、クロップ、写真比較 | ✅ |
+| **カメラ情報フレーム** | EXIF情報を重ねて書き出し。自動・横長・正方形・縦長のテンプレートにも対応 | ✅ |
 | **カメラコントローラー** | VirtualLens2、Integral、FishEye、TelePortraitLensのカメラパラメータをOSCで操作 | ✅ |
 
 ---

@@ -84,7 +84,7 @@ Both are controllable from Camera Controller. When a TelePortraitLens snapshot i
 
 ### Normal Camera
 
-The shipped v0.8.2 release does not record parameters from the standard VRChat camera. The v0.9.0 development version records and displays only values VSA could confirm over OSC at capture time. Unconfirmed values are not included, and available fields depend on what OSC provides.
+For the standard VRChat camera, VSA records and displays only parameters it can confirm over OSC at capture time. Unconfirmed values are not included, and available fields depend on what OSC provides.
 
 ## How OSC Communication Works
 
@@ -150,7 +150,7 @@ See the [Game Settings Guide](game-config.md) for the settings used by VRChat in
 
 2. **Check if using a supported camera**
    - Use VirtualLens2, Integral, FishEye, or TelePortraitLens
-   - The shipped v0.8.2 release does not record parameters from the standard camera. In the v0.9.0 development version, only values confirmed over OSC are available
+   - For the standard camera, only values confirmed over OSC are recorded. Values VSA cannot receive are not displayed
 
 3. **Check if VSA is running in the background**
    - VSA must be running while VRChat is active

@@ -42,6 +42,10 @@ Switch display modes using the toolbar button.
 
 Groups photos by capture date. Like grid view, the thumbnail size can be adjusted.
 
+### Folder View
+
+Select the folder icon in the toolbar to switch to Folder View. Open a folder to browse its child folders and photos stored directly in that folder. Use the breadcrumb to move between levels, or search for folders by name or path.
+
 ## Sorting
 
 You can sort by the following items.
@@ -102,9 +106,9 @@ Click a photo to display a sidebar on the right showing detailed information.
 - Integral parameters (ShutterSpeed, BokehShape, etc.)
 - Stored TelePortraitLens snapshot values when available
 
-Normal Camera parameters are not recorded in the shipped v0.8.2 release. The v0.9.0 development version records and displays only values VSA could confirm over OSC at capture time. Unconfirmed values are not included, and available fields depend on what OSC provides.
+For Normal Camera photos, VSA records and displays only parameters it can confirm over OSC at capture time. Unconfirmed values are not included, and available fields depend on what OSC provides.
 
-In the v0.9.0 development version, for a Normal Camera photo registered locally with its PNG file present, open **Correct Focus mode** under **Normal Camera** in the photo details, choose a **Focus mode**, and click **Save**. The selection is written to the photo's PNG, and the photo details refresh after a successful save. This control is not available in v0.8.2. The existing screenshot may not show development controls.
+For a Normal Camera photo registered locally with its PNG file present, open **Correct Focus mode** under **Normal Camera** in the photo details, choose a **Focus mode**, and click **Save**. The selection is written to the photo's PNG, and the photo details refresh after a successful save. The existing screenshot may not show this control.
 
 Camera information is displayed in an accordion format and can be expanded by clicking.
 
@@ -328,4 +332,4 @@ The gallery performs smoothly even with large numbers of images thanks to virtua
 
 ## Filters
 
-Use the filter button in the toolbar to filter by capture date range, metadata presence, world name, or username. Enter multiple usernames separated by commas for an AND search. Use **Reset** in the filter menu to clear the conditions.
+Use the filter button in the toolbar to filter by capture date range, metadata presence, world name, username, or folder. Enter multiple usernames separated by commas for an AND search. Under **Folders**, search by folder name or path and select one or more folders; photos in the selected folders and their descendants are included. Use **Reset** in the filter menu to clear the conditions.

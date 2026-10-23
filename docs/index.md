@@ -58,11 +58,11 @@ Even if I am the only person who uses it, I build what I want to use. This is VS
 
 #### 写真編集・共有
 - [撮影者モードガイド](./ja/photographer-mode.md) - 全画面表示、写真比較
-- [レタッチガイド](./ja/retouch-guide.md) - 自動露光、トーンカーブ、詳細調整、クロップ、EXIFスタジオ
+- [レタッチガイド](./ja/retouch-guide.md) - 自動露光、トーンカーブ、詳細調整、クロップ、EXIFテンプレートとプリセット
 - [JXL圧縮](./ja/jxl-compression.md) - JPEG XL形式での写真圧縮
 
 #### カスタマイズと設定
-- [設定ガイド](./ja/settings-guide.md) - 外観、システム、状態確認、チュートリアル、ショートカットなど
+- [設定ガイド](./ja/settings-guide.md) - アプリ情報、外観、システム、状態確認、チュートリアル、ショートカットなど
 - [キーボードショートカット](./ja/keyboard-shortcuts.md) - ショートカット一覧とカスタマイズ
 - [セットアップウィザード](./ja/setup-wizard.md) - 初回セットアップガイド
 
@@ -89,11 +89,11 @@ Even if I am the only person who uses it, I build what I want to use. This is VS
 
 #### Photo Editing & Sharing
 - [Photographer Mode Guide](./en/photographer-mode.md) - Full-screen review and photo comparison
-- [Retouch Guide](./en/retouch-guide.md) - Auto exposure, tone curve, advanced adjustments, crop, and EXIF Studio
+- [Retouch Guide](./en/retouch-guide.md) - Auto exposure, tone curve, advanced adjustments, crop, and EXIF templates and presets
 - [JXL Compression](./en/jxl-compression.md) - Photo compression in JPEG XL format
 
 #### Customization & Settings
-- [Settings Guide](./en/settings-guide.md) - Appearance, system, status, tutorials, shortcuts, and more
+- [Settings Guide](./en/settings-guide.md) - Application info, appearance, system, status, tutorials, shortcuts, and more
 - [Keyboard Shortcuts](./en/keyboard-shortcuts.md) - Shortcut list and customization
 - [Setup Wizard](./en/setup-wizard.md) - Initial setup guide
 
@@ -107,14 +107,12 @@ Even if I am the only person who uses it, I build what I want to use. This is VS
 
 ## バージョン情報
 
-配布済み **VSA v0.8.2** を基準に、**開発中v0.9.0向け**と明記した先行案内を併記しています。開発版の機能や操作は、配布済み版では利用できない場合があります。
+このガイドは、VSA v0.9.0の現行ローカル機能と操作を基準にしています。使用中のバージョンが0.9.0より前の場合、画面や利用できる機能が異なることがあります。
 
-- 最終照合日: 2026-10-16
-- 配布版: v0.8.2
-- 先行案内: 開発中v0.9.0の設定、通常カメラ情報、Film Look、EXIFテンプレート、撮影者モードの開始方法
-- 主な一般機能: ローカル写真管理、アルバム、お気に入り、JPEG XL圧縮、レタッチ・比較、カメラコントローラー、サーバーステータス、カメラ情報フレーム
+- ガイド基準: VSA v0.9.0
+- 主なローカル機能: 写真管理、アルバム、お気に入り、JPEG XL圧縮、レタッチ・比較、EXIFフレームテンプレート、カメラコントローラー
 
-The guides cover released **v0.8.2**, with explicitly marked previews for **v0.9.0 in development**. Preview controls may be unavailable in the released app.
+These guides describe current local features and controls in VSA v0.9.0. Features that are not generally available are identified separately.
 
 ## 重要なお知らせ
 

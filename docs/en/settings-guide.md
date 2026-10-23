@@ -13,40 +13,41 @@ Open **Settings** from the VSA sidebar.
 
 The Settings panel allows you to customize VSA's appearance, behavior, integrations, update checks, and user-facing legal/support information.
 
-The **Application Info** and **Tutorial** panel descriptions apply to development build v0.9.0. They may not appear in distributed v0.8.2.
+This guide describes the Settings screen in VSA v0.9.0.
 
 ## Accessing Settings
 
 Click the gear icon (⚙️) in the sidebar to open the Settings screen.
 
-The left menu normally contains 11 panels. When the cloud UI is available, **X Post** appears after **Shortcut**, for 12 panels:
+The left menu normally contains 11 panels. When Developer Mode is enabled, **VR Mode** appears after **Notification** and before **Shortcut**. When the cloud UI is available, **X Post** appears after **Shortcut**.
 
 1. **System** - startup and background behavior
-2. **Application Info** - version and connection status
+2. **Application Info** - version, connection, and photo-watcher status
 3. **Appearance** - theme, color, and language
 4. **Animation** - motion and transition settings
 5. **Game Settings** - watch, output, and log folders plus OSC
 6. **Notification** - notification settings
 7. **Shortcut** - keyboard shortcuts
 8. **Favorites** - favorites management
-9. **Tutorial** - start in-app tutorials
+9. **Tutorials** - launch or replay in-app tutorials
 10. **Update** - update checks and release notes
 11. **Other** - terms, privacy policy, licenses, external links, and important notices
-
-When the cloud UI is available, **X Post** appears after **Shortcut**, shifting the panels that follow down by one.
 
 ## System Panel
 
 - **Run at PC startup**: Starts VSA when you sign in to Windows.
-- **Open new photos in VR preview**: Automatically shows VSA's VR capture mode when a new photo is detected.
-- **VR preview curvature**: Adjusts the curvature of the photo surface shown in VR.
+- **Developer Mode**: Enables the Developer menu and other development support features.
 - **Automatically archive older photos**: Choose an age threshold of 1, 2, 3, 4, 6, or 12 months. Archives are stored in `VSA-Archive` under the current photo output folder.
 
-Start **Photographer Mode** from the VR icon in the title bar to review newly captured photos full screen. Configure automatic VR preview display and its curvature in this System panel. See the [Photographer Mode Guide](photographer-mode.md) for the full-screen controls.
+Start **Photographer Mode** from the VR icon in the title bar to review newly captured photos full screen. See the [Photographer Mode Guide](photographer-mode.md) for the full-screen controls.
+
+### Developer Mode
+
+Enable Developer Mode in the System panel to show the Developer menu. The **VR Mode** panel is also shown only while Developer Mode is enabled.
 
 ## Application Info Panel
 
-Review the installed version, VRChat connection status, and photo-watcher status. Use **Refresh status** to retrieve the current status again.
+Review the installed version, VRChat connection, and photo-watcher status. Use the refresh button to retrieve the connection status again.
 
 ## Appearance Panel
 
@@ -157,6 +158,13 @@ Turn on **Play notification sound** to play a sound when a notification is shown
 
 Open the bell icon in the bottom status bar to review notification history. Opening it marks the current items as read; there are no per-item delete or clear-all controls.
 
+## VR Mode Panel
+
+This panel appears after Notification and before Shortcut when Developer Mode is enabled. VR Mode is a beta feature; read the in-app notice before using it.
+
+- **Open new photos in VR preview**: Automatically shows VSA's VR capture mode when a new photo is detected.
+- **VR preview curvature**: Adjusts the curvature of the photo surface shown in VR.
+
 ## Shortcut Panel
 
 Manage keyboard shortcuts for frequent operations.
@@ -174,7 +182,7 @@ Manage keyboard shortcuts for frequent operations.
 - **Retouch Rotate Left**: Check the current binding in Settings > Shortcut
 - **Retouch Rotate Right**: Check the current binding in Settings > Shortcut
 
-In development build v0.9.0, a rotation key may be unassigned. Check the Shortcut panel for the current binding before using it.
+Check the Shortcut panel for the current binding for rotation before using it.
 
 ### Customizing Shortcuts
 
@@ -210,6 +218,8 @@ The Game Settings panel in Settings contains the sidebar Game Settings **Display
 
 Configure Steam, Virtual Desktop, and VRChat outage notifications in [Game Settings](game-config.md) > **Plugins**. Review the event history in its **Time Machine** tab.
 
+The Steam plugin details show its current operation and the launch options passed to VRChat. If Steam settings changed elsewhere, VSA displays a warning and does not overwrite them automatically.
+
 ## Favorites Panel
 
 Choose the folder used to keep copies of favorite photos and migrate existing favorites.
@@ -227,9 +237,9 @@ When you mark a photo as a favorite, VSA copies the original to the configured f
 
 See [Favorites Guide](favorites-guide.md) for complete favorites information.
 
-## Tutorial Panel
+## Tutorials Panel
 
-Select a tutorial in Settings > Tutorial to start its in-app walkthrough. A check mark indicates a completed tutorial. Tutorial content is currently shown in Japanese.
+Select a tutorial to start or replay it in the app. A check mark identifies completed tutorials. Tutorial content is currently shown in Japanese.
 
 ## Update Panel
 
@@ -301,7 +311,7 @@ Settings are saved automatically when a panel value changes. Folder selections a
 ### Reducing load on an older PC
 
 1. Disable animations.
-2. Disable automatic VR preview opening if it is not needed.
+2. Disable automatic opening of new photos in **Settings > VR Mode** if it is not needed.
 3. Enable automatic archiving of older photos when storage management is a priority.
 
 ### Customizing shortcuts

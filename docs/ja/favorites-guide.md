@@ -6,7 +6,7 @@
 
 ![お気に入り画面](../assets/screenshots/favorites-overview.webp)
 
-画像は配布済みv0.8.2の参考です。現行の開発版v0.9.0とは表示が異なる場合があります。
+画像はVSA v0.8.2の参考です。VSA v0.9.0では表示が異なる場合があります。
 
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 

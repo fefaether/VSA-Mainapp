@@ -21,7 +21,7 @@ The setup wizard supports basic configuration when using VSA for the first time.
 
 **When Wizard Appears**:
 - When launching VSA for the first time
-- After resetting setup from Settings > Appearance > Developer Mode > Developer
+- After enabling Developer Mode in Settings > System and resetting setup from the Developer menu
 
 ## Setup Steps
 
@@ -179,7 +179,7 @@ To redo setup:
 ### Method 1: Reset from the Developer Menu
 
 **Steps**:
-1. Enable Settings > Appearance > Developer Mode
+1. Enable Developer Mode in Settings > System
 2. Open **Developer** from the sidebar
 3. In the Reset section, reset **Setup wizard**
 4. Restart VSA
@@ -276,7 +276,6 @@ After completing setup, recommend these steps:
 1. **Check Gallery**: Verify imported photos
 2. **Check Metadata**: Confirm world name and usernames display in photo details
 3. **Verify Game Settings**: See [Game Settings Guide](game-config.md) for watch folders, logs, OSC, and plugins
-4. **Run a tutorial**: In development build v0.9.0, open Settings > Tutorial and select one to start. This does not reset the setup wizard. Tutorial content is in Japanese, and the panel may not appear in distributed v0.8.2.
 
 ## Related Documentation
 
