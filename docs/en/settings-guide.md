@@ -4,7 +4,7 @@
 
 Open **Settings** from the VSA sidebar.
 
-![Settings screen](../assets/screenshots/settings-system.webp)
+![Settings screen](../assets/screenshots/en/settings-system.webp)
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 

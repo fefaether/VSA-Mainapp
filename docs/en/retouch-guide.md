@@ -4,7 +4,7 @@
 
 Open **Retouch (alpha)** from the sidebar, or open it from a photo's detail view in Gallery.
 
-![Retouch screen](../assets/screenshots/retouch-auto-exposure.webp)
+![Retouch screen](../assets/screenshots/en/retouch-auto-exposure.webp)
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 

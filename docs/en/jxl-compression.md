@@ -4,7 +4,7 @@
 
 Open **JXL Compression** from the VSA sidebar.
 
-![JXL Compression screen](../assets/screenshots/jxl-simple-mode.webp)
+![JXL Compression screen](../assets/screenshots/en/jxl-simple-mode.webp)
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 

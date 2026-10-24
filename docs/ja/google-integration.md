@@ -6,7 +6,7 @@
 
 検証対象の環境で連携機能が表示される場合に、サイドバーの「アカウント」または「アルバム」を開きます。通常設定ではこれらのクラウド操作は表示されません。
 
-![クラウド連携画面](../assets/screenshots/account-rollout-status.webp)
+![クラウド連携画面](../assets/screenshots/ja/account-rollout-status.webp)
 
 画像は配布済みv0.8.2の参考です。現行の開発版v0.9.0とは表示が異なる場合があります。
 

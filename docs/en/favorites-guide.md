@@ -4,7 +4,7 @@
 
 Open **Gallery** from the sidebar, then select the **Favorites** tab at the top.
 
-![Favorites screen](../assets/screenshots/favorites-overview.webp)
+![Favorites screen](../assets/screenshots/en/favorites-overview.webp)
 
 This image is a reference from VSA v0.8.2. The VSA v0.9.0 screen may look different.
 

@@ -6,7 +6,7 @@
 
 検証対象の環境で「アカウント」がサイドバーに表示される場合に、その項目を開きます。
 
-![アカウント画面](../assets/screenshots/account-overview.webp)
+![アカウント画面](../assets/screenshots/ja/account-overview.webp)
 
 画像は配布版の参考表示です。開発中のログイン・バックアップ画面とは異なる場合があります。
 

@@ -6,7 +6,7 @@
 
 クラウド連携UIが利用できる環境では、ギャラリーから投稿画面を開けます。
 
-![X投稿画面](../assets/screenshots/xpost-modal.webp)
+![X投稿画面](../assets/screenshots/ja/xpost-modal.webp)
 
 画像は配布済みv0.8.2の参考です。現行の開発版v0.9.0とは表示が異なる場合があります。
 

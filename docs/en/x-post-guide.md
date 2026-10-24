@@ -6,7 +6,7 @@
 
 When the cloud UI is available, open the posting modal from Gallery.
 
-![X posting screen](../assets/screenshots/xpost-modal.webp)
+![X posting screen](../assets/screenshots/en/xpost-modal.webp)
 
 This image is a reference from released v0.8.2. The current v0.9.0 development build may look different.
 

@@ -4,7 +4,7 @@
 
 サイドバーの「ギャラリー」を開き、画面上部の「お気に入り」タブを選択します。
 
-![お気に入り画面](../assets/screenshots/favorites-overview.webp)
+![お気に入り画面](../assets/screenshots/ja/favorites-overview.webp)
 
 画像はVSA v0.8.2の参考です。VSA v0.9.0では表示が異なる場合があります。
 

@@ -4,7 +4,7 @@
 
 Open **Game Settings** from the VSA sidebar.
 
-![Game Settings screen](../assets/screenshots/game-config-settings.webp)
+![Game Settings screen](../assets/screenshots/en/game-config-settings.webp)
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 

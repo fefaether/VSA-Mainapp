@@ -4,7 +4,7 @@
 
 VSAのサイドバーから「カメラコントローラー」を開きます。
 
-![カメラコントローラー画面](../assets/screenshots/controller-overview.webp)
+![カメラコントローラー画面](../assets/screenshots/ja/controller-overview.webp)
 
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 

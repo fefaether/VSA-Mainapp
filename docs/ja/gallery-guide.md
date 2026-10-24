@@ -4,7 +4,7 @@
 
 VSAのサイドバーから「ギャラリー」を開きます。
 
-![ギャラリー画面](../assets/screenshots/gallery-overview.webp)
+![ギャラリー画面](../assets/screenshots/ja/gallery-overview.webp)
 
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 

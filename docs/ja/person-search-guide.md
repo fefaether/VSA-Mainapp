@@ -4,7 +4,7 @@
 
 VSAのサイドバーから「ユーザー検索」を開きます。
 
-![ユーザー検索画面](../assets/screenshots/person-search-overview.webp)
+![ユーザー検索画面](../assets/screenshots/ja/person-search-overview.webp)
 
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 

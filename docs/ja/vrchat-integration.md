@@ -4,7 +4,7 @@
 
 サイドバーからゲーム関連設定を開きます。フォルダとOSCは画面設定タブで確認します。
 
-![VRChat連携設定](../assets/screenshots/vrchat-settings-metadata.webp)
+![VRChat連携設定](../assets/screenshots/ja/vrchat-settings-metadata.webp)
 
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 

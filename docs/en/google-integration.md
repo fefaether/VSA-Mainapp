@@ -6,7 +6,7 @@
 
 In a test environment where cloud controls are visible, open **Account** or **Albums** from the sidebar. These cloud controls are hidden with normal settings.
 
-![Cloud integration screen](../assets/screenshots/account-rollout-status.webp)
+![Cloud integration screen](../assets/screenshots/en/account-rollout-status.webp)
 
 This image is a reference from released v0.8.2. The current v0.9.0 development build may look different.
 

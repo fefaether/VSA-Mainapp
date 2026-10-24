@@ -4,7 +4,7 @@
 
 サイドバーの**レタッチ（アルファ版）**、またはギャラリーの写真詳細からレタッチ画面を開きます。
 
-![レタッチ画面](../assets/screenshots/retouch-auto-exposure.webp)
+![レタッチ画面](../assets/screenshots/ja/retouch-auto-exposure.webp)
 
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 

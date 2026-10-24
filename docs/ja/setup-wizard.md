@@ -4,7 +4,7 @@
 
 初回起動時にセットアップウィザードが表示されます。
 
-![セットアップウィザード](../assets/screenshots/setup-wizard-welcome.webp)
+![セットアップウィザード](../assets/screenshots/ja/setup-wizard-welcome.webp)
 
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 

@@ -4,7 +4,7 @@
 
 Open **Game Settings** from the sidebar. Folder and OSC options are in the **Display Settings** tab.
 
-![VRChat integration settings](../assets/screenshots/vrchat-settings-metadata.webp)
+![VRChat integration settings](../assets/screenshots/en/vrchat-settings-metadata.webp)
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 

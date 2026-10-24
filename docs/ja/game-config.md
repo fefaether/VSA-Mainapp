@@ -4,7 +4,7 @@
 
 VSAのサイドバーから**ゲーム関連設定**を開きます。
 
-![ゲーム関連設定画面](../assets/screenshots/game-config-settings.webp)
+![ゲーム関連設定画面](../assets/screenshots/ja/game-config-settings.webp)
 
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 

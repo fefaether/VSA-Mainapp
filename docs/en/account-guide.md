@@ -6,7 +6,7 @@
 
 In a test environment where **Account** appears in the sidebar, open that entry.
 
-![Account screen](../assets/screenshots/account-overview.webp)
+![Account screen](../assets/screenshots/en/account-overview.webp)
 
 The image is a reference from the released app. Sign-in and backup controls in development may differ.
 

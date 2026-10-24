@@ -4,7 +4,7 @@
 
 Open **Camera Controller** from the VSA sidebar.
 
-![Camera Controller screen](../assets/screenshots/controller-overview.webp)
+![Camera Controller screen](../assets/screenshots/en/controller-overview.webp)
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 

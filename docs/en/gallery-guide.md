@@ -4,7 +4,7 @@
 
 Open **Gallery** from the VSA sidebar.
 
-![Gallery screen](../assets/screenshots/gallery-overview.webp)
+![Gallery screen](../assets/screenshots/en/gallery-overview.webp)
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 

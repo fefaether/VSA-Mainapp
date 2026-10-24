@@ -4,7 +4,7 @@
 
 Open **Person Search** from the VSA sidebar.
 
-![Person Search screen](../assets/screenshots/person-search-overview.webp)
+![Person Search screen](../assets/screenshots/en/person-search-overview.webp)
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 

@@ -4,7 +4,7 @@
 
 The setup wizard appears when VSA starts for the first time.
 
-![Setup wizard](../assets/screenshots/setup-wizard-welcome.webp)
+![Setup wizard](../assets/screenshots/en/setup-wizard-welcome.webp)
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 

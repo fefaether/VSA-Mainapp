@@ -4,7 +4,7 @@
 
 VSAのサイドバーから「設定」を開きます。
 
-![設定画面](../assets/screenshots/settings-system.webp)
+![設定画面](../assets/screenshots/ja/settings-system.webp)
 
 [🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
 
