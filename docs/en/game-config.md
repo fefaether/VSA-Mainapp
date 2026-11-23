@@ -80,7 +80,7 @@ OSC (Open Sound Control) lets VSA receive camera parameters from VirtualLens2, I
 - **VSA receive port (VRChat sends)**: Port for messages from VRChat to VSA; default `9001`.
 - **VSA send port (VRChat receives)**: Port for messages from VSA to VRChat; default `9000`.
 
-VRChat's standard pairing is VSA receive `9001` and VSA send `9000`. If another OSC application uses a port, change the corresponding values on both sides. If the receive port is busy, VSA may move to another port and show a warning.
+VSA assigns its receive port automatically by default. Standard manual ports are VSA receive `9001` and VSA send `9000`. Under **Send destination mode**, choose a manual port or the port discovered through OSCQuery. When using a fixed receive port, make sure it does not overlap with another OSC app.
 
 ### Automatic saving
 
@@ -145,7 +145,7 @@ The event table shows time, event type, world, and user. Click a user name to fi
 ### OSC camera information is missing
 
 1. Enable **OSC communication**.
-2. Enable OSC in VRChat and verify VSA receive `9001` / VSA send `9000` (or the corresponding custom values).
+2. Enable OSC in VRChat, then check the active receive port and send destination in Game Settings.
 3. Enable OSC output in the camera you use (VirtualLens2, Integral, FishEye, or TelePortraitLens).
 4. Check for port conflicts and firewall rules. Also check whether VSA warned that it moved the receive port.
 

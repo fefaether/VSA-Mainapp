@@ -1,6 +1,6 @@
 # Event Capture Guide
 
-> **Provisional — not generally available.** This page describes the VSA v0.9.0 development build. The features are hidden with normal settings. This page is available by direct URL. Screens and behavior may change.
+> Provisional supplementary guide. Event features are not generally available and are hidden in normal mode.
 
 [🏠 Document Top](../index.md)
 

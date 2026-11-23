@@ -1,14 +1,14 @@
 # Cloud Integration Guide
 
-> **Provisional — not generally available.** This page describes the VSA v0.9.0 development build. The features are hidden with normal settings. This page is available by direct URL. Screens and behavior may change.
+> Provisional supplementary guide. Cloud features are not generally available and are hidden in normal mode. The instructions apply only in test environments where the controls are visible.
 
 ## How to open
 
-In a test environment where cloud controls are visible, open **Account** or **Albums** from the sidebar. These cloud controls are hidden with normal settings.
+To use cloud features, open **Account** or **Albums** from the sidebar.
 
 ![Cloud integration screen](../assets/screenshots/en/account-rollout-status.webp)
 
-This image is a reference from released v0.8.2. The current v0.9.0 development build may look different.
+This image is a reference from v0.8.2. The current release may look different.
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 

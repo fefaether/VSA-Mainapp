@@ -85,12 +85,12 @@ You can also adjust the size using the slider in the toolbar.
 
 ## Image Detail Sidebar
 
-Click a photo to display a sidebar on the right showing detailed information.
+Click a photo to display a sidebar on the right showing detailed information. In a wide window, the sidebar sits alongside the photo grid.
 
 ### Displayed Information
 
 **Basic Info:**
-- Preview image (click to open in default app)
+- Preview image (click to open the large viewer, where you can zoom and move between photos)
 - File path
 - File hash
 
@@ -331,5 +331,7 @@ The gallery performs smoothly even with large numbers of images thanks to virtua
 - Lazy loading of thumbnails
 
 ## Filters
+
+Use **Camera Settings** in the filter menu to narrow results by camera type or capture settings.
 
 Use the filter button in the toolbar to filter by capture date range, metadata presence, world name, username, or folder. Enter multiple usernames separated by commas for an AND search. Under **Folders**, search by folder name or path and select one or more folders; photos in the selected folders and their descendants are included. Use **Reset** in the filter menu to clear the conditions.

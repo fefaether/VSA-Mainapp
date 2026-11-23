@@ -1,10 +1,10 @@
 # Account Management Guide
 
-> **Provisional — not generally available; for v0.9.0 in development.** The Account screen is hidden with normal settings. The following describes test environments where the screen is visible, and does not announce general availability or a release date. Controls and behavior may change.
+> Provisional supplementary guide. Account features are not generally available and are hidden in normal mode. The instructions apply only in test environments where the screen is visible.
 
 ## How to open
 
-In a test environment where **Account** appears in the sidebar, open that entry.
+Open **Account** from the sidebar.
 
 ![Account screen](../assets/screenshots/en/account-overview.webp)
 
@@ -14,7 +14,7 @@ The image is a reference from the released app. Sign-in and backup controls in d
 
 ---
 
-In test environments, Account Management lets you check your VSA account status and configure features such as cloud save, share links, and X posting. This is a provisional guide for features in development. Basic local photo management does not require an account.
+The Account screen lets you check your VSA account status and configure available features such as cloud save, share links, and X posting. Basic local photo management does not require an account.
 
 ## Overview
 
@@ -56,7 +56,7 @@ When using the new VSA sign-in service, choose **Sign in on website** from **Acc
 
 When using the new sign-in service, create a new account on the VSA website and enter the verification code sent to your email. Accounts, cloud photos, and share links from the previous service do not transfer to the new account automatically.
 
-In a compatible test environment for MainApp v0.9.0 in development, open **Account** from the sidebar and choose **Sign in on website**. Sign in to the new account in the browser; the app updates its status when you finish. These are not instructions for released v0.8.2.
+Open **Account** from the sidebar and choose **Sign in on website**. Sign in in your browser; the app updates its status when you finish.
 
 Signing in alone does not enable automatic cloud saving for new photos or backup of registered photos. If you want either feature, enable **Automatically save new photos to the cloud** and **Automatically back up registered photos** separately in Account.
 
@@ -76,13 +76,17 @@ Free and Lite manual uploads support images up to a 3,840px long side; larger im
 
 For local favorites usage, see the [Favorites Guide](favorites-guide.md).
 
+### Restore cloud photos in bulk
+
+After signing in, choose a destination under **Restore cloud photos** on the Account screen. VSA saves photos in the `VSA Cloud Restore` folder inside that destination and adds supported photos to the gallery. Photos that were resized or recompressed when saved to the cloud are not restored at the original quality.
+
 ## Share Links
 
 Share links are released in stages. When available, you may create links from photo details or share menus. Scope, expiry, and pricing follow in-app display and the Terms of Service.
 
 ## X Posting
 
-X posting is also being prepared for general availability. Connection status may appear on the Account screen in test environments.
+If X posting is available, check your X connection status on the Account screen.
 
 ## Privacy and Security
 

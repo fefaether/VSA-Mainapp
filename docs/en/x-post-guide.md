@@ -1,6 +1,6 @@
 # X Posting Feature Guide
 
-> **Provisional — not generally available.** This page describes the VSA v0.9.0 development build. The features are hidden with normal settings. This page is available by direct URL. Screens and behavior may change.
+> Provisional supplementary guide. X posting is not generally available and is hidden in normal mode.
 
 ## How to open
 
@@ -8,13 +8,13 @@ When the cloud UI is available, open the posting modal from Gallery.
 
 ![X posting screen](../assets/screenshots/en/xpost-modal.webp)
 
-This image is a reference from released v0.8.2. The current v0.9.0 development build may look different.
+This image is a reference from v0.8.2. The current release may look different.
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---
 
-X posting is being prepared for general availability. In test environments, you need a signed-in VSA account, a linked X account, and an available posting allowance on your plan. X posting and cloud controls are hidden with normal settings.
+X posting requires a signed-in VSA account, a linked X account, and an available posting allowance on your plan.
 
 ## Posting flow
 

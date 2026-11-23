@@ -198,7 +198,7 @@ OSC (Open Sound Control) is a protocol that transmits parameters real-time over 
 
 #### Default Ports
 
-Game Settings defaults are VSA receive (VRChat sends) `9001` and VSA send (VRChat receives) `9000`.
+The receive port is assigned automatically by default. Standard manual ports are VSA receive (VRChat sends) `9001` and VSA send (VRChat receives) `9000`. You can also use the send port discovered through OSCQuery.
 
 #### Change Port Number
 
@@ -276,7 +276,7 @@ VirtualLens2 requires equipping an avatar with a VirtualLens2 camera in VRChat.
 1. Launch VRChat
 2. Open VRChat's OSC settings
 3. Check "Enable OSC"
-4. Verify VSA receive 9001 and VSA send 9000 (or the corresponding custom values)
+4. Verify the active receive port and send destination (standard manual ports are receive 9001 and send 9000)
 
 ### Verify VirtualLens2 Parameters
 
@@ -300,7 +300,7 @@ Check parameter names and value ranges against the documentation for the Virtual
 **Solutions**:
 1. Verify VRChat OSC settings
    - Confirm "Enable OSC" checked
-   - Confirm the VSA receive/send ports match the corresponding VRChat ports (9001/9000 by default)
+   - Check the active receive port and send destination in Game Settings
 2. Check firewall settings
    - Confirm firewall not blocking communication
    - Check security software settings

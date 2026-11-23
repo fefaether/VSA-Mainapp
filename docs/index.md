@@ -107,12 +107,12 @@ Even if I am the only person who uses it, I build what I want to use. This is VS
 
 ## バージョン情報
 
-このガイドは、VSA v0.9.0の現行ローカル機能と操作を基準にしています。使用中のバージョンが0.9.0より前の場合、画面や利用できる機能が異なることがあります。
+このガイドは、VSA v0.9.2のローカル機能と操作を基準にしています。以前のバージョンでは、画面や利用できる機能が異なることがあります。
 
-- ガイド基準: VSA v0.9.0
+- ガイド基準: VSA v0.9.2
 - 主なローカル機能: 写真管理、アルバム、お気に入り、JPEG XL圧縮、レタッチ・比較、EXIFフレームテンプレート、カメラコントローラー
 
-These guides describe current local features and controls in VSA v0.9.0. Features that are not generally available are identified separately.
+These guides cover local features and controls in VSA v0.9.2. Account-linked features are not generally available and are hidden in normal mode.
 
 ## 重要なお知らせ
 

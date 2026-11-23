@@ -56,7 +56,7 @@ Even if I am the only person who uses it, I build what I want to use. This is VS
 
 最新のドキュメントはGitHub Pagesで公開しています。
 
-このドキュメントはVSA v0.9.0の現行UIと操作を基準にしています。使用中のバージョンが0.9.0より前の場合、画面や利用できる機能が異なることがあります。
+このドキュメントはVSA v0.9.2を基準にしています。以前のバージョンでは、画面や利用できる機能が異なることがあります。
 
 - [ドキュメントトップ](https://fefaether.github.io/VSA-Mainapp/)
 - [利用規約](https://fefaether.github.io/VSA-Mainapp/ja/terms.html)
@@ -142,7 +142,7 @@ JXL圧縮は大きなファイルほど時間がかかります（数秒～数�
 
 ### OSC連携を使いたい
 
-VRChat側でOSCを有効にし、ゲーム関連設定 > 画面設定で「OSC通信を有効化」をオンにしてください。標準ポートはVSA受信 `9001`、VSA送信 `9000` です。使用するカメラ（VirtualLens2、Integral、FishEye、TelePortraitLens）のOSC出力を有効にするとカメラパラメータを取得できます。
+VRChat側でOSCを有効にし、ゲーム関連設定 > 画面設定で「OSC通信を有効化」をオンにしてください。受信ポートは既定で自動割り当てです。手動設定時の標準ポートはVSA受信 `9001`、VSA送信 `9000` です。使用するカメラ（VirtualLens2、Integral、FishEye、TelePortraitLens）のOSC出力を有効にするとカメラパラメータを取得できます。
 
 ### ワールド名やユーザー情報が表示されない
 
